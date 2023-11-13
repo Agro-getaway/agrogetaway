@@ -17,7 +17,11 @@ function Navbar() {
         ></IconButton>
 
         <div className="logo">
-          <img src="logo.jpg" alt="Logo" />
+          <img
+            src="logo.jpg"
+            alt="Logo"
+            style={{ maxHeight: "50px", maxWidth: "50px", marginRight: "15px" }}
+          />
         </div>
         <Typography
           variant="h6"
