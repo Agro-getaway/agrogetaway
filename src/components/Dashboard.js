@@ -1,7 +1,6 @@
 import React from "react";
 import Slider from "react-animated-slider";
 import "react-animated-slider/build/horizontal.css";
-import "./dashboard.css"; // Create a separate CSS file for styling
 
 const slides = [
   {
@@ -22,6 +21,7 @@ const slides = [
 ];
 
 const Dashboard = () => {
+  // Add CSS classes to the slider components
   const sliderClasses = {
     slider: "slider",
     previousButton: "previousButton",
@@ -37,21 +37,37 @@ const Dashboard = () => {
     animateOut: "animateOut",
   };
 
+  const imageStyle = {
+    objectFit: "cover",
+    width: "45%",
+    height: "150%",
+    margin: "10 25px",
+  };
+
   return (
     <Slider classNames={sliderClasses}>
       {slides.map((slide, index) => (
         <div key={index} className="slide">
-          <div className="image-container">
+          {Array.isArray(slide.image) ? (
+            // If the image is an array, render multiple images
+            slide.image.map((imageUrl, imageIndex) => (
+              <img
+                key={imageIndex}
+                src={imageUrl}
+                alt={`Slide ${index + 1}`}
+                style={imageStyle}
+              />
+            ))
+          ) : (
+            // If the image is a string, render a single image
             <img
               src={slide.image}
               alt={`Slide ${index + 1}`}
-              className="image"
+              style={imageStyle}
             />
-          </div>
-          <div className="content">
-            <h2>{slide.title}</h2>
-            <div>{slide.description}</div>
-          </div>
+          )}
+          <h2>{slide.title}</h2>
+          <div>{slide.description}</div>
         </div>
       ))}
     </Slider>
