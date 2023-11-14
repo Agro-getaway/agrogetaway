@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const images = [
   "https://source.unsplash.com/random?fields",
-  "https://source.unsplash.com/random?farms",
+  "https://source.unsplash.com/random?farm",
   "https://source.unsplash.com/random?crops",
   // "https://unsplash.com/photos/green-plant-on-brown-soil-DUPFowqI6oI",
   // "https://unsplash.com/photos/a-green-tractor-is-driving-through-a-field-eS6rqvLx7o0",

@@ -18,7 +18,7 @@ function Navbar() {
 
         <div className="logo">
           <img
-            src="logo.jpg"
+            src="logo.png"
             alt="Logo"
             style={{ maxHeight: "50px", maxWidth: "50px", marginRight: "15px" }}
           />
