@@ -70,7 +70,7 @@ const LandingPage = () => {
               textAlign: "left",
               fontSize: "3vw", // Responsive font size
               position: "relative",
-              fontfamily: "Times New Roman",
+              fontfamily: "Italics",
             }}
           >
             WELCOME TO AGROGETAWAY
@@ -84,7 +84,6 @@ const LandingPage = () => {
               padding: "8px 0",
               fontSize: "2.0vw", // Responsive font size
               position: "relative",
-              fontFamily: "italics",
             }}
           >
             We identify top-ranked Farms and Farmers and give You the
