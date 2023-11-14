@@ -9,40 +9,45 @@
 //   {
 //     id: 1,
 //     name: "Arable Farming",
-//     imageUrl:
+//     images: [
 //       "https://media.istockphoto.com/id/1405435576/photo/sunny-plantation-with-growing-soya.webp?b=1&s=170667a&w=0&k=20&c=qRzk74gZEsajCyUCLY2mtEjay7-ynAmv7ZViIylr1lc=",
-//   },
-//   {
-//     id: 2,
-//     imageUrl:
 //       "https://images.unsplash.com/photo-1686145546043-a847a2ff5741?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGxpdmVzdG9jayUyMGZhcm1pbmd8ZW58MHx8MHx8fDA%3D",
+//       // Add more images as needed
+//     ],
 //   },
 //   // Add more farm types as needed
 // ];
 
 // const Dashboard = () => {
-//   const settings = {
+//   const slickSettings = {
 //     dots: true,
 //     infinite: true,
 //     speed: 500,
 //     slidesToShow: 1,
 //     slidesToScroll: 1,
-//     centerMode: true, // Set to true for center mode
-//     centerPadding: "0", // Adjust the center padding to reduce space
 //   };
 
 //   return (
 //     <div>
 //       <h1>Farm Types</h1>
-//       <Slider {...settings}>
+//       <Slider {...slickSettings}>
 //         {farmTypes.map((farmType) => (
 //           <div key={farmType.id}>
 //             <h3>{farmType.name}</h3>
-//             <img
-//               src={farmType.imageUrl}
-//               alt={farmType.name}
-//               style={{ maxWidth: "auto", height: "auto" }}
-//             />
+//             <Slider {...slickSettings}>
+//               {farmType.images.map((imageUrl, index) => (
+//                 <div key={index}>
+//                   <img
+//                     src={imageUrl}
+//                     alt={`${farmType.name} - ${index + 1}`}
+//                     style={{
+//                       maxWidth: "100%",
+//                       margin: "0 10px", // Add margin for spacing between images
+//                     }}
+//                   />
+//                 </div>
+//               ))}
+//             </Slider>
 //           </div>
 //         ))}
 //       </Slider>
@@ -53,67 +58,53 @@
 // export default Dashboard;
 
 import React from "react";
-import ReactDOM from "react-dom";
-import { Carousel } from "react-responsive-carousel";
+import Slider from "react-animated-slider";
+import "react-animated-slider/build/horizontal.css";
+
+const slides = [
+  {
+    title: "Arable Farming",
+    description: "Lorem ipsum",
+    image:
+      "https://media.istockphoto.com/id/1405435576/photo/sunny-plantation-with-growing-soya.webp?b=1&s=170667a&w=0&k=20&c=qRzk74gZEsajCyUCLY2mtEjay7-ynAmv7ZViIylr1lc=",
+  },
+  {
+    title: "Livestock Farming",
+    description: "Lorem ipsum",
+    image:
+      "https://images.unsplash.com/photo-1686145546043-a847a2ff5741?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGxpdmVzdG9jayUyMGZhcm1pbmd8ZW58MHx8MHx8fDA%3D",
+  },
+  // Add more slides as needed
+];
 
 const Dashboard = () => {
-  const onChange = (index, item) => {
-    // Handle carousel change
-  };
-
-  const onClickItem = (index, item) => {
-    // Handle click on carousel item
-  };
-
-  const onClickThumb = (index, item) => {
-    // Handle click on carousel thumbnail
+  // Add CSS classes to the slider components
+  const sliderClasses = {
+    slider: "slider",
+    previousButton: "previousButton",
+    nextButton: "nextButton",
+    buttonDisabled: "disabled",
+    track: "track",
+    slide: "slide",
+    hidden: "hidden",
+    previous: "previous",
+    current: "current",
+    next: "next",
+    animateIn: "animateIn",
+    animateOut: "animateOut",
   };
 
   return (
-    <Carousel
-      showArrows={true}
-      onChange={onChange}
-      onClickItem={onClickItem}
-      onClickThumb={onClickThumb}
-    >
-      <div>
-        <image
-          url="https://images.unsplash.com/photo-1686145546043-a847a2ff5741?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGxpdmVzdG9jayUyMGZhcm1pbmd8ZW58MHx8MHx8fDA%3D"
-          alt="Livestock Farming"
-        />
-        <p className="Farming">Livestock Farming</p>
-      </div>
-      <div>
-        <image
-          url="https://media.istockphoto.com/id/1405435576/photo/sunny-plantation-with-growing-soya.webp?b=1&s=170667a&w=0&k=20&c=qRzk74gZEsajCyUCLY2mtEjay7-ynAmv7ZViIylr1lc="
-          alt="Arable Farming"
-        />
-        <p className="Farming">Arable Farming</p>
-      </div>
-      {/* <div> */}
-      {/* <img src="assets/2.jpeg" alt="Legend 2" />
-        <p className="legend">Legend 2</p>
-      </div>
-      <div>
-        <img src="assets/3.jpeg" alt="Legend 3" />
-        <p className="legend">Legend 3</p>
-      </div>
-      <div>
-        <img src="assets/4.jpeg" alt="Legend 4" />
-        <p className="legend">Legend 4</p>
-      </div>
-      <div>
-        <img src="assets/5.jpeg" alt="Legend 5" />
-        <p className="legend">Legend 5</p>
-      </div>
-      <div>
-        <img src="assets/6.jpeg" alt="Legend 6" />
-        <p className="legend">Legend 6</p>
-      </div> */}
-    </Carousel>
+    <Slider classNames={sliderClasses}>
+      {slides.map((slide, index) => (
+        <div key={index} className="slide">
+          <img src={slide.image} alt={`Slide ${index + 1}`} />
+          <h2>{slide.title}</h2>
+          <div>{slide.description}</div>
+        </div>
+      ))}
+    </Slider>
   );
 };
 
 export default Dashboard;
-
-ReactDOM.render(<Dashboard />, document.querySelector(".demo-carousel"));
