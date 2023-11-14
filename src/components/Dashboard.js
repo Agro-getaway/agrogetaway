@@ -9,13 +9,22 @@ const slides = [
       "https://images.unsplash.com/photo-1645707558064-c2bfd22a09e0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGFyYWJsZSUyMGZhcm1pbmd8ZW58MHx8MHx8fDA%3D",
     ],
     title: "Arable Farming",
-    alt: "Arable Farming",
     description: "Lorem ipsum",
   },
   {
-    image:
+    image: [
       "https://images.unsplash.com/photo-1686145546043-a847a2ff5741?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGxpdmVzdG9jayUyMGZhcm1pbmd8ZW58MHx8MHx8fDA%3D",
+      "https://images.unsplash.com/photo-1674122734030-d79c7fc0ddad?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bGl2ZXN0b2NrJTIwZmFybWluZ3xlbnwwfHwwfHx8MA%3D%3D",
+    ],
     title: "Livestock Farming",
+    description: "Lorem ipsum",
+  },
+  {
+    image: [
+      "https://images.unsplash.com/photo-1566218246241-934ad8b38ea6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fG9yZ2FuaWMlMjBmYXJtaW5nfGVufDB8fDB8fHww",
+      "https://images.unsplash.com/photo-1529313780224-1a12b68bed16?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8b3JnYW5pYyUyMGZhcm1pbmd8ZW58MHx8MHx8fDA%3D",
+    ],
+    title: "Organic Farming",
     description: "Lorem ipsum",
   },
   // Add more slides as needed
@@ -52,7 +61,7 @@ const imageStyle = {
   objectFit: "cover",
   width: "45%",
   height: "100%",
-  margin: "45px 15px 0 15px", // top, right, bottom, left
+  margin: "45px 15px 0 20px", // top, right, bottom, left
 };
 
 const titleStyle = {
