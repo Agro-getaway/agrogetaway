@@ -1,13 +1,16 @@
 import React from "react";
 import Slider from "react-animated-slider";
 import "react-animated-slider/build/horizontal.css";
+import "./dashboard.css"; // Create a separate CSS file for styling
 
 const slides = [
   {
     title: "Arable Farming",
     description: "Lorem ipsum",
-    image:
+    image: [
       "https://media.istockphoto.com/id/1405435576/photo/sunny-plantation-with-growing-soya.webp?b=1&s=170667a&w=0&k=20&c=qRzk74gZEsajCyUCLY2mtEjay7-ynAmv7ZViIylr1lc=",
+      "https://images.unsplash.com/photo-1645707558064-c2bfd22a09e0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGFyYWJsZSUyMGZhcm1pbmd8ZW58MHx8MHx8fDA%3D",
+    ],
   },
   {
     title: "Livestock Farming",
@@ -19,7 +22,6 @@ const slides = [
 ];
 
 const Dashboard = () => {
-  // Add CSS classes to the slider components
   const sliderClasses = {
     slider: "slider",
     previousButton: "previousButton",
@@ -35,24 +37,21 @@ const Dashboard = () => {
     animateOut: "animateOut",
   };
 
-  const imageStyle = {
-    objectFit: "cover",
-    width: "100%", // Ensure the image takes the full width
-    height: "100%s", // Ensure the image takes the full height
-    // display: "flex",
-  };
-
   return (
     <Slider classNames={sliderClasses}>
       {slides.map((slide, index) => (
         <div key={index} className="slide">
-          <img
-            src={slide.image}
-            alt={`Slide ${index + 1}`}
-            style={imageStyle}
-          />
-          <h2>{slide.title}</h2>
-          <div>{slide.description}</div>
+          <div className="image-container">
+            <img
+              src={slide.image}
+              alt={`Slide ${index + 1}`}
+              className="image"
+            />
+          </div>
+          <div className="content">
+            <h2>{slide.title}</h2>
+            <div>{slide.description}</div>
+          </div>
         </div>
       ))}
     </Slider>
