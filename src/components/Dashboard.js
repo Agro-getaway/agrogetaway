@@ -40,8 +40,16 @@ const Dashboard = () => {
   const imageStyle = {
     objectFit: "cover",
     width: "45%",
-    height: "150%",
-    margin: "10 25px",
+    height: "100%",
+    margin: "15px 15px 5 15px", // top, right, bottom, left
+  };
+
+  const titleStyle = {
+    fontSize: "24px",
+    color: "#333",
+    margin: "40px 0",
+    textAlign: "center",
+    // Add more styles as needed
   };
 
   return (
@@ -66,7 +74,7 @@ const Dashboard = () => {
               style={imageStyle}
             />
           )}
-          <h2>{slide.title}</h2>
+          <h2 style={titleStyle}>{slide.title}</h2>
           <div>{slide.description}</div>
         </div>
       ))}
