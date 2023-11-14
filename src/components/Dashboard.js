@@ -35,13 +35,6 @@ const Dashboard = () => {
     animateOut: "animateOut",
   };
 
-  const imageStyle = {
-    objectFit: "cover",
-    width: "1000px", // Ensure the image takes the full width
-    height: "800px", // Ensure the image takes the full height
-    // display: "flex",
-  };
-
   return (
     <Slider classNames={sliderClasses}>
       {slides.map((slide, index) => (
@@ -49,7 +42,7 @@ const Dashboard = () => {
           <img
             src={slide.image}
             alt={`Slide ${index + 1}`}
-            style={imageStyle}
+            // style={imageStyle}
           />
           <h2>{slide.title}</h2>
           <div>{slide.description}</div>
