@@ -30,10 +30,18 @@ const slides = [
 
   {
     image: [
-      "https://images.unsplash.com/photo-1529313780224-1a12b68bed16?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8b3JnYW5pYyUyMGZhcm1pbmd8ZW58MHx8MHx8fDA%3D",
+      "https://images.unsplash.com/photo-1605540691259-0bf8d0262ff5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8TW9ub2N1bHR1cmV8ZW58MHx8MHx8fDA%3D",
       "https://static.vecteezy.com/system/resources/previews/032/037/789/non_2x/green-natural-tomatoes-growing-on-a-branch-in-a-greenhouse-free-photo.JPG",
     ],
     title: "Monoculture",
+    description: "Lorem ipsum",
+  },
+  {
+    image: [
+      "https://www.vecteezy.com/photo/33360216-colorful-flowers-in-a-garden-at-sunset-ai-generated",
+      "https://www.vecteezy.com/photo/33309042-a-vibrant-bouquet-of-colorful-flowers-brightens-the-meadow-in-summer-generated-by-ai",
+    ],
+    title: "Floriculture",
     description: "Lorem ipsum",
   },
   // Add more slides as needed
