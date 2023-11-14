@@ -41,7 +41,7 @@ const Dashboard = () => {
     objectFit: "cover",
     width: "45%",
     height: "100%",
-    margin: "15px 15px 5 15px", // top, right, bottom, left
+    margin: "25px 15px 5 15px", // top, right, bottom, left
   };
 
   const titleStyle = {
