@@ -37,7 +37,10 @@ const slides = [
     description: "Lorem ipsum",
   },
   {
-    image: [],
+    image: [
+      "https://images.unsplash.com/photo-1598902468171-0f50e32a7bf2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZmxvcmljdWx0dXJlfGVufDB8fDB8fHww",
+      "https://images.unsplash.com/photo-1621371045485-c6c744e176a0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZmxvcmljdWx0dXJlfGVufDB8fDB8fHww",
+    ],
     title: "Floriculture",
     description: "Lorem ipsum",
   },
