@@ -44,6 +44,14 @@ const slides = [
     title: "Floriculture",
     description: "Lorem ipsum",
   },
+  {
+    image: [
+      "https://images.unsplash.com/photo-1644217147349-4a3381dfbee5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHBvdWx0cnklMjBmYXJtaW5nfGVufDB8fDB8fHww",
+      "https://images.unsplash.com/photo-1677851418214-df5caadf82a4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fHBvdWx0cnklMjBmYXJtaW5nfGVufDB8fDB8fHww",
+    ],
+    title: "Poultry",
+    description: "Lorem ipsum",
+  },
   // Add more slides as needed
 ];
 
