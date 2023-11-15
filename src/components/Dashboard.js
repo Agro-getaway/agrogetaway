@@ -5,8 +5,8 @@ import "react-animated-slider/build/horizontal.css";
 const slides = [
   {
     image: [
-      "https://media.istockphoto.com/id/1405435576/photo/sunny-plantation-with-growing-soya.webp?b=1&s=170667a&w=0&k=20&c=qRzk74gZEsajCyUCLY2mtEjay7-ynAmv7ZViIylr1lc=",
       "https://images.unsplash.com/photo-1645707558064-c2bfd22a09e0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGFyYWJsZSUyMGZhcm1pbmd8ZW58MHx8MHx8fDA%3D",
+      "https://media.istockphoto.com/id/1405435576/photo/sunny-plantation-with-growing-soya.webp?b=1&s=170667a&w=0&k=20&c=qRzk74gZEsajCyUCLY2mtEjay7-ynAmv7ZViIylr1lc=",
     ],
     title: "Arable Farming",
     description: "Lorem ipsum",
@@ -95,18 +95,28 @@ const imageStyle = {
   objectFit: "cover",
   width: "45%",
   height: "100%",
-  margin: "45px 20px 0 20px", // top, right, bottom, left
+  margin: "45px 20px 0 16px", // top, right, bottom, left
 };
 
 const titleStyle = {
   fontSize: "24px",
   margin: "0 15px",
-  color: "#333",
+  color: "black",
   textAlign: "center",
   position: "absolute", // Change this line
   top: "50%", // Add this line
-  transform: "translateY(-50%)", // Add this line
+  transform: "translateY(500%)",
+
+  // Add this line
   // Add more styles as needed
+};
+
+const blockStyle = {
+  backgroundColor: "#f00", // Set the background color for the block
+  height: "10px", // Set the height of the block
+  width: "100%", // Set the width of the block to 100%
+  position: "absolute", // Set the position to absolute
+  top: "110%", // Position the block 10% down from the top of its containing element (adjust as needed)
 };
 
 const FarmSection = () => (
@@ -132,6 +142,7 @@ const FarmSection = () => (
             />
           )}
           <h2 style={titleStyle}>{slide.title}</h2>
+          <div style={blockStyle}></div>
           <div>{slide.description}</div>
         </div>
       ))}
