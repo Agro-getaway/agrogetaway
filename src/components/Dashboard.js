@@ -100,9 +100,12 @@ const imageStyle = {
 
 const titleStyle = {
   fontSize: "24px",
+  margin: "0 15px",
   color: "#333",
-
-  textAlign: "left",
+  textAlign: "center",
+  position: "absolute", // Change this line
+  top: "50%", // Add this line
+  transform: "translateY(-50%)", // Add this line
   // Add more styles as needed
 };
 
