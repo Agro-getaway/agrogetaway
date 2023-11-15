@@ -65,7 +65,9 @@ const slides = [
 ];
 
 const farmSectionStyle = {
-  // Add styles for the farm section
+  // Add styles for the farm
+  fontSize: "3vw",
+  font: "Calibri",
   padding: "50px",
   backgroundColor: "#f9f9f9",
 };
@@ -106,22 +108,15 @@ const titleStyle = {
   position: "absolute", // Change this line
   top: "50%", // Add this line
   transform: "translateY(500%)",
+  font: "italics",
 
   // Add this line
   // Add more styles as needed
 };
 
-const blockStyle = {
-  backgroundColor: "#f00", // Set the background color for the block
-  height: "10px", // Set the height of the block
-  width: "100%", // Set the width of the block to 100%
-  position: "absolute", // Set the position to absolute
-  top: "110%", // Position the block 10% down from the top of its containing element (adjust as needed)
-};
-
 const FarmSection = () => (
   <section style={farmSectionStyle}>
-    <h1>Farming Methods </h1>
+    <h1>FARMING METHODS </h1>
     <Slider classNames={sliderClasses}>
       {slides.map((slide, index) => (
         <div key={index} className="slide">
@@ -142,7 +137,6 @@ const FarmSection = () => (
             />
           )}
           <h2 style={titleStyle}>{slide.title}</h2>
-          <div style={blockStyle}></div>
           <div>{slide.description}</div>
         </div>
       ))}
