@@ -9,6 +9,7 @@ const slides = [
       "https://media.istockphoto.com/id/1405435576/photo/sunny-plantation-with-growing-soya.webp?b=1&s=170667a&w=0&k=20&c=qRzk74gZEsajCyUCLY2mtEjay7-ynAmv7ZViIylr1lc=",
     ],
     title: "Arable Farming",
+    link: "./components/Farms/Arable.js",
     // description:
     //   "Arable farming refers to the cultivation of crops on fertile land",
   },
@@ -70,7 +71,7 @@ const farmSectionStyle = {
   fontSize: "30px",
   font: "Calibri",
   padding: "50px",
-  backgroundColor: "#f9f9f9",
+  backgroundColor: "#333",
 };
 
 const eventsSectionStyle = {
