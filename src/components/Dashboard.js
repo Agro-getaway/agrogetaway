@@ -75,6 +75,16 @@ const slides = [
     // description: "Lorem ipsum",
   },
 
+  {
+    image: [
+      "https://images.unsplash.com/photo-1527546712175-827fa4321096?q=80&w=1848&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1464297162577-f5295c892194?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    ],
+    title: "Fruit Farming",
+    link: "/pomology",
+    // description: "Lorem ipsum",
+  },
+
   // Add more slides as needed
 ];
 
