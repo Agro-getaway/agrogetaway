@@ -1,3 +1,5 @@
+import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+import { Avatar } from "@mui/material";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Checkbox from "@mui/material/Checkbox";
@@ -70,7 +72,10 @@ export default function SignIn() {
               alignItems: "center",
             }}
           >
-            <div sx={{ m: 1, bgcolor: "secondary.main" }}>AGROGETAWAY</div>
+            <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
+              <LockOutlinedIcon />
+            </Avatar>
+
             <Typography component="h1" variant="h5">
               Sign in
             </Typography>
