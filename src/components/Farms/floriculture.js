@@ -68,7 +68,15 @@ const Floriculture = () => {
       <h2>Floriculture Farms in Uganda</h2>
       <Grid container spacing={2}>
         {images.map((image, index) => (
-          <Grid item key={index} xs={12} sm={6} md={4} lg={3}>
+          <Grid
+            item
+            key={index}
+            xs={12}
+            sm={6}
+            md={4}
+            lg={3}
+            backgroundcolor="#333"
+          >
             <Card>
               <CardMedia
                 component="img"
