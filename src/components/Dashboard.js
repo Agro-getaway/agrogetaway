@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import Slider from "react-animated-slider";
 import "react-animated-slider/build/horizontal.css";
 
@@ -124,10 +124,35 @@ const titleStyle = {
 //   // Add this line
 //   // Add more styles as needed
 // };
+const SearchBar = ({ onSearch }) => {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const handleSearch = () => {
+    // Pass the search term to the parent component or perform the search logic here
+    onSearch(searchTerm);
+  };
+
+  return (
+    <div>
+      <input
+        type="text"
+        placeholder="Search..."
+        value={searchTerm}
+        onChange={handleChange}
+      />
+      <button onClick={handleSearch}>Search</button>
+    </div>
+  );
+};
 
 const FarmSection = () => (
   <section style={farmSectionStyle}>
     <h1>FARMING METHODS </h1>
+
     <Slider classNames={sliderClasses}>
       {slides.map((slide, index) => (
         <div key={index} className="slide">
@@ -164,6 +189,7 @@ const EventsSection = () => (
 
 const Dashboard = () => (
   <>
+    <SearchBar />
     <FarmSection />
     <EventsSection />
   </>
