@@ -12,43 +12,43 @@ const Floriculture = () => {
   // Sample data of images with names, locations, and URLs
   const images = [
     {
-      name: "Image 1",
-      location: "Location A",
+      name: "Blooming Gardens ",
+      location: "Soroti, Uganda",
       image: one,
     },
     {
-      name: "Image 1",
-      location: "Location A",
+      name: "Serenity Blossoms",
+      location: " Jinja District, Uganda",
       image: two,
     },
     {
-      name: "Image 1",
-      location: "Location A",
+      name: "Enchanted Floral Ventures",
+      location: "Fort Portal, Uganda",
       image: three,
     },
     {
-      name: "Image 1",
-      location: "Location A",
+      name: "Harmony Floral Plantations",
+      location: " Kabale District, Uganda",
       image: four,
     },
     {
-      name: "Image 1",
-      location: "Location A",
+      name: "Mystic Meadow Florals",
+      location: " Luweero District, Uganda",
       image: five,
     },
     {
-      name: "Image 1",
-      location: "Location A",
+      name: "Whispering Willow Floral Gardens",
+      location: " Kotido, Uganda",
       image: six,
     },
     {
-      name: "Image 1",
-      location: "Location A",
+      name: "Ethereal Blooms ",
+      location: "Kalangala District, Uganda",
       image: seven,
     },
     {
-      name: "Image 1",
-      location: "Location A",
+      name: "Pastel Petals Plantations",
+      location: " Kitgum District, Uganda",
       image: eight,
     },
 
