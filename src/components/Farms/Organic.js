@@ -1,7 +1,7 @@
 import { Card, CardContent, CardMedia, Grid, Typography } from "@mui/material";
 import React from "react";
 
-const Organics = () => {
+const Organic = () => {
   // Sample data of images with names, locations, and URLs
   const images = [
     {
