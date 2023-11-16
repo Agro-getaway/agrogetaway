@@ -197,7 +197,7 @@ const FarmSection = ({ onSearch, navigate }) => {
           inputProps={{ "aria-label": "search" }}
         />
       </Search>
-      <Slider classNames={sliderClasses}>
+      <Slider classNames={sliderClasses} autoplay={3000} duration={1000}>
         {slides.map((slide, index) => (
           <div key={index} className="slide">
             {Array.isArray(slide.image) ? (

@@ -11,6 +11,7 @@ import Monoculture from "./components/Farms/Monoculture";
 import Organic from "./components/Farms/Organic";
 import Pomology from "./components/Farms/Pomology";
 import Poultry from "./components/Farms/Poultry";
+import Serenity from "./components/Farms/assets/floriculture/Serenity";
 import LandingPage from "./components/Home";
 import LogOut from "./components/LogOut";
 import SignIn from "./components/SignIn";
@@ -38,7 +39,7 @@ function App() {
         <Route path="/organic" element={<Organic />}></Route>
         <Route path="/floriculture" element={<Floriculture />}></Route>
         <Route path="/pomology" element={<Pomology />}></Route>
-
+        <Route path="/serenity" element={<Serenity />}></Route>
         <Route path="/logout" element={<LogOut />}></Route>
       </Routes>
     </>

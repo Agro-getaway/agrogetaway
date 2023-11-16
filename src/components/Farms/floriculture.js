@@ -8,51 +8,57 @@ import five from "./assets/floriculture/Flower 5.jpeg";
 import six from "./assets/floriculture/Flower 6.jpeg";
 import seven from "./assets/floriculture/Flower 7.jpeg";
 import eight from "./assets/floriculture/Flower 8.jpeg";
-const Floriculture = () => {
-  // Sample data of images with names, locations, and URLs
+
+const Floriculture = ({ navigate }) => {
   const images = [
     {
-      name: "Blooming Gardens ",
+      name: "Blooming Gardens",
       location: "Soroti, Uganda",
       image: one,
+      link: "/blooming",
     },
     {
       name: "Serenity Blossoms",
-      location: " Jinja District, Uganda",
+      location: "Jinja District, Uganda",
       image: two,
+      link: "/serenity",
     },
     {
       name: "Enchanted Floral Ventures",
       location: "Fort Portal, Uganda",
       image: three,
+      link: "/enchanted",
     },
     {
       name: "Harmony Floral Plantations",
-      location: " Kabale District, Uganda",
+      location: "Kabale District, Uganda",
       image: four,
+      link: "/harmony",
     },
     {
       name: "Mystic Meadow Florals",
-      location: " Luweero District, Uganda",
+      location: "Luweero District, Uganda",
       image: five,
+      link: "/mystic",
     },
     {
       name: "Whispering Willow Floral Gardens",
-      location: " Kotido, Uganda",
+      location: "Kotido, Uganda",
       image: six,
+      link: "/whispering",
     },
     {
-      name: "Ethereal Blooms ",
+      name: "Ethereal Blooms",
       location: "Kalangala District, Uganda",
       image: seven,
+      link: "/ethereal",
     },
     {
       name: "Pastel Petals Plantations",
-      location: " Kitgum District, Uganda",
+      location: "Kitgum District, Uganda",
       image: eight,
+      link: "/pastel",
     },
-
-    // Add more images as needed
   ];
 
   return (
@@ -65,9 +71,14 @@ const Floriculture = () => {
               <CardMedia
                 component="img"
                 alt={`${image.name} - ${image.location}`}
+                onClick={() => image.link && navigate(image.link)}
                 height="250"
                 image={image.image}
-                style={{ objectFit: "cover", padding: "10px" }}
+                style={{
+                  objectFit: "cover",
+                  padding: "10px",
+                  cursor: "pointer",
+                }}
               />
               <CardContent>
                 <Typography variant="h6" component="div">
