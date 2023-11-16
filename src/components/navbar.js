@@ -12,8 +12,7 @@ function Navbar() {
           edge="start"
           //   color="inherit"
           aria-label="menu"
-          sx={{ mr: 2 }}
-          fontfamily="italics"
+          sx={{ mr: 2, fontFamily: "italics" }}
         ></IconButton>
 
         <div className="logo">

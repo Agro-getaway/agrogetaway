@@ -12,7 +12,7 @@ const slides = [
       "https://media.istockphoto.com/id/1405435576/photo/sunny-plantation-with-growing-soya.webp?b=1&s=170667a&w=0&k=20&c=qRzk74gZEsajCyUCLY2mtEjay7-ynAmv7ZViIylr1lc=",
     ],
     title: "Arable Farming",
-    link: "./components/Farms/Arable.js",
+
     // description:
     //   "Arable farming refers to the cultivation of crops on fertile land",
   },
@@ -174,6 +174,7 @@ const FarmSection = (onSearch) => (
           {Array.isArray(slide.image) ? (
             slide.image.map((imageUrl, imageIndex) => (
               <img
+                onClick={() => console.log("I am 😂")}
                 alt={`Slide ${index + 1}`}
                 style={imageStyle}
                 key={imageIndex}
@@ -202,11 +203,13 @@ const EventsSection = () => (
   </section>
 );
 
-const Dashboard = () => (
-  <>
-    <FarmSection />
-    <EventsSection />
-  </>
-);
+function Dashboard() {
+  return (
+    <>
+      <FarmSection />
+      <EventsSection />
+    </>
+  );
+}
 
 export default Dashboard;
