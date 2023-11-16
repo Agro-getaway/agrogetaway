@@ -1,41 +1,78 @@
-// src/PoultryPage.js
-import React from 'react';
+import { Card, CardContent, CardMedia, Grid, Typography } from "@mui/material";
+import React from "react";
 
-const poultryFarmsData = [
-  {
-    id: 1,
-    name: 'Uganda Poultry Farm 1',
-    location: 'Kampala, Uganda',
-    imageUrl: 'https://placekitten.com/200/150', // Replace with actual farm image URL
-  },
-  {
-    id: 2,
-    name: 'Uganda Poultry Farm 2',
-    location: 'Jinja, Uganda',
-    imageUrl: 'https://placekitten.com/201/150', // Replace with actual farm image URL
-  },
-  // Add more poultry farm data as needed
-];
+const Poultry = () => {
+  // Sample data of images with names, locations, and URLs
+  const images = [
+    {
+      name: "Image 1",
+      location: "Location A",
+      url: "https://example.com/image1.jpg",
+    },
+    {
+      name: "Image 2",
+      location: "Location B",
+      url: "https://example.com/image2.jpg",
+    },
+    {
+      name: "Image 3",
+      location: "Location C",
+      url: "https://example.com/image3.jpg",
+    },
+    {
+      name: "Image 3",
+      location: "Location C",
+      url: "https://example.com/image3.jpg",
+    },
+    {
+      name: "Image 3",
+      location: "Location C",
+      url: "https://example.com/image3.jpg",
+    },
+    {
+      name: "Image 3",
+      location: "Location C",
+      url: "https://example.com/image3.jpg",
+    },
+    {
+      name: "Image 3",
+      location: "Location C",
+      url: "https://example.com/image3.jpg",
+    },
+    {
+      name: "Image 3",
+      location: "Location C",
+      url: "https://example.com/image3.jpg",
+    },
+    // Add more images as needed
+  ];
 
-const PoultryPage = () => {
   return (
     <div>
-      <h1>Poultry Farms in Uganda</h1>
-      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-        {poultryFarmsData.map((farm) => (
-          <div key={farm.id} style={{ margin: '10px', textAlign: 'center' }}>
-            <img
-              src={farm.imageUrl}
-              alt={farm.name}
-              style={{ width: '200px', height: '150px', objectFit: 'cover' }}
-            />
-            <h3>{farm.name}</h3>
-            <p>{farm.location}</p>
-          </div>
+      <h2>Poultry Farms in Uganda</h2>
+      <Grid container spacing={2}>
+        {images.map((image, index) => (
+          <Grid item key={index} xs={12} sm={6} md={4} lg={3}>
+            <Card>
+              <CardMedia
+                component="img"
+                alt={`${image.name} - ${image.location}`}
+                height="150"
+                image={image.url}
+                style={{ objectFit: "cover" }}
+              />
+              <CardContent>
+                <Typography variant="h6" component="div">
+                  {image.name}
+                </Typography>
+                <Typography color="textSecondary">{image.location}</Typography>
+              </CardContent>
+            </Card>
+          </Grid>
         ))}
-      </div>
+      </Grid>
     </div>
   );
 };
 
-export default PoultryPage;
+export default Poultry;
