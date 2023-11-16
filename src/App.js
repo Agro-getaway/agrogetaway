@@ -20,6 +20,8 @@ function App() {
         <Route path="/signup" element={<SignUp />}></Route>
         {/* {isLogged &&  */}
         <Route path="/dashboard" element={<Dashboard />}></Route>
+        <Route path="/arable" element={<h1>sdgrhrh</h1>}></Route>
+        <Route path="/livestock" element={<h1>livettdr</h1>}></Route>
         <Route path="/logout" element={<LogOut />}></Route>
       </Routes>
     </>
