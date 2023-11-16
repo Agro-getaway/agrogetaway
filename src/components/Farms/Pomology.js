@@ -28,28 +28,28 @@ const Pomology = () => {
       image: papaya,
     },
     {
-      name: "Image 3",
-      location: "Location C",
+      name: "Tropical Fruit Symphony Farms",
+      location: " Gulu District, Uganda",
       image: pineapples,
     },
     {
-      name: "Image 3",
-      location: "Location C",
+      name: " Blossom Estates",
+      location: "Jinja District, Uganda",
       image: soursop,
     },
     {
-      name: "Image 3",
-      location: "Location C",
+      name: "Sunrise Sugars Fields",
+      location: " Fort Portal, Uganda",
       image: sugarcane,
     },
     {
-      name: "Image 3",
-      location: "Location C",
+      name: "Juicy Melon Gardens",
+      location: "Jinja District, Uganda",
       image: watermelon,
     },
     {
-      name: "Image 3",
-      location: "Location C",
+      name: "AvoHaven Agro Ventures",
+      location: " Arua, Uganda",
       image: avocado,
     },
     // Add more images as needed

@@ -130,7 +130,7 @@ const imageStyle = {
   objectFit: "cover",
   width: "45%",
   height: "100%",
-  margin: "45px 20px 0 16px", // top, right, bottom, left
+  margin: "45px 20px 0 10px", // top, right, bottom, left
 };
 
 const titleStyle = {
@@ -187,7 +187,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 const FarmSection = ({ onSearch, navigate }) => {
   return (
     <section style={farmSectionStyle}>
-      <h1 style={{ color: "white" }}>FARMING METHODS </h1>
+      <h1 style={{ color: "white", padding: "15px" }}>Explore With Us </h1>
       <Search onSearch={onSearch}>
         <SearchIconWrapper>
           <SearchIcon />
@@ -229,6 +229,7 @@ const FarmSection = ({ onSearch, navigate }) => {
 const EventsSection = () => (
   <section style={eventsSectionStyle}>
     <h1>Events</h1>
+    <strong>COMING SOON...</strong>
     {/* Add your events content here */}
   </section>
 );
