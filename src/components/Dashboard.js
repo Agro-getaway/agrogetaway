@@ -108,25 +108,13 @@ const imageStyle = {
 const titleStyle = {
   fontSize: "24px",
   margin: "0 15px",
-  color: "black",
+  color: "white",
   textAlign: "center",
   position: "absolute", // Change this line
   top: "50%", // Add this line
   transform: "translateY(500%)",
   font: "italic",
 };
-// const descriptionStyle = {
-//   fontSize: "24px",
-//   margin: "0 15px",
-//   color: "black",
-//   textAlign: "center",
-//   position: "absolute", // Change this line
-//   top: "50%", // Add this line
-//   transform: "translateY(450%)",
-//   font: "italic",
-//   // Add this line
-//   // Add more styles as needed
-// };
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -168,10 +156,10 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-const FarmSection = () => (
+const FarmSection = (onSearch) => (
   <section style={farmSectionStyle}>
-    <h1>FARMING METHODS </h1>
-    <Search>
+    <h1 style={{ color: "white" }}>FARMING METHODS </h1>
+    <Search onSearch={onSearch}>
       <SearchIconWrapper>
         <SearchIcon />
       </SearchIconWrapper>
