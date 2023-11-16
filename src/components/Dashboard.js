@@ -9,7 +9,8 @@ const slides = [
       "https://media.istockphoto.com/id/1405435576/photo/sunny-plantation-with-growing-soya.webp?b=1&s=170667a&w=0&k=20&c=qRzk74gZEsajCyUCLY2mtEjay7-ynAmv7ZViIylr1lc=",
     ],
     title: "Arable Farming",
-    description: "Lorem ipsum",
+    // description:
+    //   "Arable farming refers to the cultivation of crops on fertile land",
   },
   {
     image: [
@@ -17,7 +18,7 @@ const slides = [
       "https://images.unsplash.com/photo-1674122734030-d79c7fc0ddad?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bGl2ZXN0b2NrJTIwZmFybWluZ3xlbnwwfHwwfHx8MA%3D%3D",
     ],
     title: "Livestock Farming",
-    description: "Lorem ipsum",
+    // description: "Lorem ipsum",
   },
   {
     image: [
@@ -25,7 +26,7 @@ const slides = [
       "https://images.unsplash.com/photo-1529313780224-1a12b68bed16?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8b3JnYW5pYyUyMGZhcm1pbmd8ZW58MHx8MHx8fDA%3D",
     ],
     title: "Organic Farming",
-    description: "Lorem ipsum",
+    // description: "Lorem ipsum",
   },
 
   {
@@ -34,7 +35,7 @@ const slides = [
       "https://static.vecteezy.com/system/resources/previews/032/037/789/non_2x/green-natural-tomatoes-growing-on-a-branch-in-a-greenhouse-free-photo.JPG",
     ],
     title: "Monoculture",
-    description: "Lorem ipsum",
+    // description: "Lorem ipsum",
   },
   {
     image: [
@@ -42,7 +43,7 @@ const slides = [
       "https://images.unsplash.com/photo-1621371045485-c6c744e176a0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZmxvcmljdWx0dXJlfGVufDB8fDB8fHww",
     ],
     title: "Floriculture",
-    description: "Lorem ipsum",
+    // description: "Lorem ipsum",
   },
   {
     image: [
@@ -50,7 +51,7 @@ const slides = [
       "https://images.unsplash.com/photo-1677851418214-df5caadf82a4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fHBvdWx0cnklMjBmYXJtaW5nfGVufDB8fDB8fHww",
     ],
     title: "Poultry",
-    description: "Lorem ipsum",
+    // description: "Lorem ipsum",
   },
   {
     image: [
@@ -58,7 +59,7 @@ const slides = [
       "https://images.unsplash.com/photo-1555773443-464ec72c8515?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
     title: "Apiculture",
-    description: "Lorem ipsum",
+    // description: "Lorem ipsum",
   },
 
   // Add more slides as needed
@@ -66,7 +67,7 @@ const slides = [
 
 const farmSectionStyle = {
   // Add styles for the farm
-  fontSize: "3vw",
+  fontSize: "30px",
   font: "Calibri",
   padding: "50px",
   backgroundColor: "#f9f9f9",
@@ -108,11 +109,20 @@ const titleStyle = {
   position: "absolute", // Change this line
   top: "50%", // Add this line
   transform: "translateY(500%)",
-  font: "italics",
-
-  // Add this line
-  // Add more styles as needed
+  font: "italic",
 };
+// const descriptionStyle = {
+//   fontSize: "24px",
+//   margin: "0 15px",
+//   color: "black",
+//   textAlign: "center",
+//   position: "absolute", // Change this line
+//   top: "50%", // Add this line
+//   transform: "translateY(450%)",
+//   font: "italic",
+//   // Add this line
+//   // Add more styles as needed
+// };
 
 const FarmSection = () => (
   <section style={farmSectionStyle}>
@@ -137,7 +147,7 @@ const FarmSection = () => (
             />
           )}
           <h2 style={titleStyle}>{slide.title}</h2>
-          <div>{slide.description}</div>
+          {/* <div>{slide.description}</div> */}
         </div>
       ))}
     </Slider>
