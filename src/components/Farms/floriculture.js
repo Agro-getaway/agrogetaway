@@ -1,4 +1,5 @@
 import { Card, CardContent, CardMedia, Grid, Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 import React from "react";
 import one from "./assets/floriculture/Flower 1.jpeg";
 import two from "./assets/floriculture/Flower 2.jpeg";
@@ -9,7 +10,11 @@ import six from "./assets/floriculture/Flower 6.jpeg";
 import seven from "./assets/floriculture/Flower 7.jpeg";
 import eight from "./assets/floriculture/Flower 8.jpeg";
 
-const Floriculture = ({ navigate }) => {
+const Floriculture = () =>
+{
+  const navigate = useNavigate();
+} 
+{
   const images = [
     {
       name: "Blooming Gardens",
@@ -69,6 +74,7 @@ const Floriculture = ({ navigate }) => {
           <Grid item key={index} xs={12} sm={6} md={4} lg={3}>
             <Card>
               <CardMedia
+               const navigate = useNavigate();
                 component="img"
                 alt={`${image.name} - ${image.location}`}
                 onClick={() => image.link && navigate(image.link)}
