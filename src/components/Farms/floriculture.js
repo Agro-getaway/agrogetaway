@@ -1,49 +1,57 @@
 import { Card, CardContent, CardMedia, Grid, Typography } from "@mui/material";
 import React from "react";
-
+import one from "./assets/floriculture/Flower 1.jpeg";
+import two from "./assets/floriculture/Flower 2.jpeg";
+import three from "./assets/floriculture/Flower 3.jpeg";
+import four from "./assets/floriculture/Flower 4.jpeg";
+import five from "./assets/floriculture/Flower 5.jpeg";
+import six from "./assets/floriculture/Flower 6.jpeg";
+import seven from "./assets/floriculture/Flower 7.jpeg";
+import eight from "./assets/floriculture/Flower 8.jpeg";
 const Floriculture = () => {
   // Sample data of images with names, locations, and URLs
   const images = [
     {
       name: "Image 1",
       location: "Location A",
-      url: "https://images.unsplash.com/photo-1649099419977-2693f90934a8?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: one,
     },
     {
-      name: "Image 2",
-      location: "Location B",
-      url: "https://example.com/image2.jpg",
+      name: "Image 1",
+      location: "Location A",
+      image: two,
     },
     {
-      name: "Image 3",
-      location: "Location C",
-      url: "https://example.com/image3.jpg",
+      name: "Image 1",
+      location: "Location A",
+      image: three,
     },
     {
-      name: "Image 3",
-      location: "Location C",
-      url: "https://example.com/image3.jpg",
+      name: "Image 1",
+      location: "Location A",
+      image: four,
     },
     {
-      name: "Image 3",
-      location: "Location C",
-      url: "https://example.com/image3.jpg",
+      name: "Image 1",
+      location: "Location A",
+      image: five,
     },
     {
-      name: "Image 3",
-      location: "Location C",
-      url: "https://example.com/image3.jpg",
+      name: "Image 1",
+      location: "Location A",
+      image: six,
     },
     {
-      name: "Image 3",
-      location: "Location C",
-      url: "https://example.com/image3.jpg",
+      name: "Image 1",
+      location: "Location A",
+      image: seven,
     },
     {
-      name: "Image 3",
-      location: "Location C",
-      url: "https://example.com/image3.jpg",
+      name: "Image 1",
+      location: "Location A",
+      image: eight,
     },
+
     // Add more images as needed
   ];
 
@@ -57,9 +65,9 @@ const Floriculture = () => {
               <CardMedia
                 component="img"
                 alt={`${image.name} - ${image.location}`}
-                height="150"
-                image={image.url}
-                style={{ objectFit: "cover" }}
+                height="250"
+                image={image.image}
+                style={{ objectFit: "cover", padding: "10px" }}
               />
               <CardContent>
                 <Typography variant="h6" component="div">
