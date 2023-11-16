@@ -2,6 +2,8 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Dashboard from "./components/Dashboard";
+import Arable from "./components/Farms/Arable";
+import Poultry from "./components/Farms/poultry";
 import LandingPage from "./components/Home";
 import LogOut from "./components/LogOut";
 import SignIn from "./components/SignIn";
@@ -20,8 +22,8 @@ function App() {
         <Route path="/signup" element={<SignUp />}></Route>
         {/* {isLogged &&  */}
         <Route path="/dashboard" element={<Dashboard />}></Route>
-        <Route path="/arable" element={<h1>sdgrhrh</h1>}></Route>
-        <Route path="/livestock" element={<h1>livettdr</h1>}></Route>
+        <Route path="/arable" element={<Arable />}></Route>
+        <Route path="/poultry" element={<Poultry />}></Route>
         <Route path="/logout" element={<LogOut />}></Route>
       </Routes>
     </>
