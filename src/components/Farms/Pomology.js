@@ -1,48 +1,56 @@
 import { Card, CardContent, CardMedia, Grid, Typography } from "@mui/material";
 import React from "react";
+import avocado from "./assets/pomology/Avocado.jpeg";
+import banana from "./assets/pomology/Bananas.jpeg";
+import mangoes from "./assets/pomology/Mangoes.jpeg";
+import papaya from "./assets/pomology/Papaya.jpeg";
+import pineapples from "./assets/pomology/Pineapples.jpeg";
+import soursop from "./assets/pomology/Soursop.jpeg";
+import sugarcane from "./assets/pomology/Sugarcane.jpeg";
+import watermelon from "./assets/pomology/Watermelon.jpeg";
 
 const Pomology = () => {
-  // Sample data of images with names, locations, and URLs
+  // Sample data of images with names, locations, and imported images
   const images = [
     {
-      name: "Image 1",
-      location: "Location A",
-      url: "https://example.com/image1.jpg",
+      name: "Fruitful Haven Plantations",
+      location: "Mbale, Uganda",
+      image: banana,
     },
     {
-      name: "Image 2",
-      location: "Location B",
-      url: "https://example.com/image2.jpg",
+      name: "Mango Magic Pomology",
+      location: "Soroti, Uganda",
+      image: mangoes,
     },
     {
-      name: "Image 3",
-      location: "Location C",
-      url: "https://example.com/image3.jpg",
-    },
-    {
-      name: "Image 3",
-      location: "Location C",
-      url: "https://example.com/image3.jpg",
+      name: "Exotic Fruits Orchards Ltd.",
+      location: "Kabarole District, Uganda",
+      image: papaya,
     },
     {
       name: "Image 3",
       location: "Location C",
-      url: "https://example.com/image3.jpg",
+      image: pineapples,
     },
     {
       name: "Image 3",
       location: "Location C",
-      url: "https://example.com/image3.jpg",
+      image: soursop,
     },
     {
       name: "Image 3",
       location: "Location C",
-      url: "https://example.com/image3.jpg",
+      image: sugarcane,
     },
     {
       name: "Image 3",
       location: "Location C",
-      url: "https://example.com/image3.jpg",
+      image: watermelon,
+    },
+    {
+      name: "Image 3",
+      location: "Location C",
+      image: avocado,
     },
     // Add more images as needed
   ];
@@ -57,9 +65,9 @@ const Pomology = () => {
               <CardMedia
                 component="img"
                 alt={`${image.name} - ${image.location}`}
-                height="150"
-                image={image.url}
-                style={{ objectFit: "cover" }}
+                height="250"
+                image={image.image}
+                style={{ objectFit: "cover", padding: "10px" }}
               />
               <CardContent>
                 <Typography variant="h6" component="div">
