@@ -12,6 +12,7 @@ import Organic from "./components/Farms/Organic";
 import Pomology from "./components/Farms/Pomology";
 import Poultry from "./components/Farms/Poultry";
 import Serenity from "./components/Farms/assets/floriculture/Serenity";
+import FarmDetails from "./components/Farms/test";
 import LandingPage from "./components/Home";
 import LogOut from "./components/LogOut";
 import SignIn from "./components/SignIn";
@@ -28,6 +29,7 @@ function App() {
         <Route path="/" element={<LandingPage />}></Route>
         <Route path="/signin" element={<SignIn />}></Route>
         <Route path="/signup" element={<SignUp />}></Route>
+        <Route path="/farmdetails" element={<FarmDetails />}></Route>
         {/* {isLogged &&  */}
         <Route path="/dashboard" element={<Dashboard />}></Route>
         <Route path="/arable" element={<Arable />}></Route>
