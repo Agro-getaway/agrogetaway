@@ -5,7 +5,7 @@ import Dashboard from "./components/Dashboard";
 import Apiculture from "./components/Farms/Apiculture";
 import Aquaculture from "./components/Farms/Aquaculture";
 import Arable from "./components/Farms/Arable";
-import Floriculture from "./components/Farms/Floriculture";
+// import Floriculture from "./components/Farms/Floriculture";
 import Livestock from "./components/Farms/Livestock";
 import Monoculture from "./components/Farms/Monoculture";
 import Organic from "./components/Farms/Organic";
@@ -39,7 +39,7 @@ function App() {
         <Route path="/monoculture" element={<Monoculture />}></Route>
         <Route path="/aquaculture" element={<Aquaculture />}></Route>
         <Route path="/organic" element={<Organic />}></Route>
-        <Route path="/floriculture" element={<Floriculture />}></Route>
+        {/* <Route path="/floriculture" element={<Floriculture />}></Route> */}
         <Route path="/pomology" element={<Pomology />}></Route>
         <Route path="/serenity" element={<Serenity />}></Route>
         <Route path="/logout" element={<LogOut />}></Route>
