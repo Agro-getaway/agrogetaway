@@ -60,9 +60,15 @@ const LandingPage = () => {
         container
         alignItems="left"
         justifyContent="center"
-        style={{ height: "100%" }}
+        style={{
+          height: "100vh",
+        }}
       >
-        <Container>
+        <Container
+          style={{
+            margin: "auto",
+          }}
+        >
           <Typography
             variant="h1"
             style={{
@@ -95,6 +101,8 @@ const LandingPage = () => {
               variant: "h3",
               textAlign: "left",
               fontSize: "2.5vw", // Responsive font size
+              color: "white",
+              position: "relative",
             }}
           >
             FARMING REDEFINED

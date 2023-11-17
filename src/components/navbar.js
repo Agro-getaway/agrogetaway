@@ -1,20 +1,12 @@
 // Navbar.js
-import { AppBar, Button, IconButton, Toolbar, Typography } from "@mui/material";
+import { AppBar, Button, Toolbar, Typography } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 function Navbar() {
   return (
-    <AppBar position="static" sx={{ backgroundColor: "grey" }}>
+    <AppBar position="static" sx={{ backgroundColor: "#428247" }}>
       <Toolbar>
-        <IconButton
-          size="large"
-          edge="start"
-          //   color="inherit"
-          aria-label="menu"
-          sx={{ mr: 2, fontFamily: "italics" }}
-        ></IconButton>
-
         <div className="logo">
           <img
             src="logo.png"
