@@ -9,7 +9,7 @@ function Navbar() {
       <Toolbar>
         <div className="logo">
           <img
-            src="logo.png"
+            src="logo.jpg"
             alt="Logo"
             style={{ maxHeight: "50px", maxWidth: "50px", marginRight: "15px" }}
           />
