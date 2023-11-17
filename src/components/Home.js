@@ -70,7 +70,7 @@ const LandingPage = () => {
               textAlign: "left",
               fontSize: "3vw", // Responsive font size
               position: "relative",
-              fontfamily: "Italics",
+              fontFamily: "Italics",
             }}
           >
             WELCOME TO AGROGETAWAY

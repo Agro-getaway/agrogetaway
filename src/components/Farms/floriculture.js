@@ -1,6 +1,13 @@
-import { Card, CardContent, CardMedia, Grid, Typography } from "@mui/material";
+import {
+  Button,
+  Card,
+  CardContent,
+  CardMedia,
+  Grid,
+  Typography,
+} from "@mui/material";
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import one from "./assets/floriculture/Flower 1.jpeg";
 import two from "./assets/floriculture/Flower 2.jpeg";
 import three from "./assets/floriculture/Flower 3.jpeg";
@@ -11,7 +18,6 @@ import seven from "./assets/floriculture/Flower 7.jpeg";
 import eight from "./assets/floriculture/Flower 8.jpeg";
 
 const Floriculture = () => {
-  const navigate = useNavigate();
   const images = [
     {
       name: "Blooming Gardens",
@@ -73,7 +79,6 @@ const Floriculture = () => {
               <CardMedia
                 component="img"
                 alt={`${image.name} - ${image.location}`}
-                onClick={() => navigate(image.link)}
                 height="250"
                 image={image.image}
                 style={{
@@ -87,7 +92,9 @@ const Floriculture = () => {
                   {image.name}
                 </Typography>
                 <Typography color="textSecondary">{image.location}</Typography>
-                {/* <Button>Book</Button> */}
+                <Link to={image.link}>
+                  <Button>Book</Button>
+                </Link>
               </CardContent>
             </Card>
           </Grid>

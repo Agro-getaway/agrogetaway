@@ -25,7 +25,7 @@ function Navbar() {
         <Typography
           variant="h6"
           fontSize="2vw"
-          fontfamily="italics"
+          fontFamily="italics"
           component="div"
           sx={{ flexGrow: 1 }}
           style={{ color: "white" }}
