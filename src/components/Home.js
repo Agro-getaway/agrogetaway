@@ -58,7 +58,7 @@ const LandingPage = () => {
       />
       <Grid
         container
-        alignItems="center"
+        alignItems="left"
         justifyContent="center"
         style={{ height: "100%" }}
       >
@@ -93,7 +93,7 @@ const LandingPage = () => {
           <Typography
             style={{
               variant: "h3",
-              textAlign: "center",
+              textAlign: "left",
               fontSize: "2.5vw", // Responsive font size
             }}
           >
