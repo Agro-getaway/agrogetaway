@@ -87,6 +87,7 @@ const Floriculture = () => {
                   {image.name}
                 </Typography>
                 <Typography color="textSecondary">{image.location}</Typography>
+                {/* <Button>Book</Button> */}
               </CardContent>
             </Card>
           </Grid>

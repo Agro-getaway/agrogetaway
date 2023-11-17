@@ -130,7 +130,9 @@ const imageStyle = {
   objectFit: "cover",
   width: "45%",
   height: "100%",
-  margin: "45px 20px 0 10px", // top, right, bottom, left
+  margin: "45px 10px 0 10px", // top, right, bottom, left
+  border: "2px solid",
+  borderRadius: "15px",
 };
 
 const titleStyle = {
