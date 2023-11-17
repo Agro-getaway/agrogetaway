@@ -1,10 +1,4 @@
-import Button, {
-  Card,
-  CardContent,
-  CardMedia,
-  Grid,
-  Typography,
-} from "@mui/material";
+import { Card, CardContent, CardMedia, Grid, Typography } from "@mui/material";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import one from "./assets/floriculture/Flower 1.jpeg";
@@ -91,7 +85,6 @@ const Floriculture = () => {
               <CardContent>
                 <Typography variant="h6" component="div">
                   {image.name}
-                  <Button>Book Now </Button>
                 </Typography>
                 <Typography color="textSecondary">{image.location}</Typography>
               </CardContent>
