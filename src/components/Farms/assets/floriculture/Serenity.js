@@ -30,13 +30,13 @@ const Serenity = () => {
               <img
                 src={image}
                 alt={`Farm ${index + 1}`}
-                style={{ width: "100%", height: "100%" }}
+                style={{ width: "100%", height: "50%" }}
               />
             </div>
           ))}
         </Slider>
       </div>
-      <div style={{ flex: "1", padding: "20px" }}>
+      <div style={{ flex: "1", padding: "10px" }}>
         {/* Farm Details */}
         <h2>Serenity Blossoms</h2>
         <p>Location: Jinja District,Uganda</p>
