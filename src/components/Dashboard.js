@@ -105,11 +105,11 @@ const farmSectionStyle = {
   backgroundColor: "#222e50",
 };
 
-const eventsSectionStyle = {
-  // Add styles for the events section
-  padding: "50px",
-  backgroundColor: "#e5e5e5",
-};
+// const eventsSectionStyle = {
+//   // Add styles for the events section
+//   padding: "50px",
+//   backgroundColor: "#e5e5e5",
+// };
 
 const sliderClasses = {
   slider: "slider",
@@ -228,13 +228,13 @@ const FarmSection = ({ onSearch, navigate }) => {
   );
 };
 
-const EventsSection = () => (
-  <section style={eventsSectionStyle}>
-    <h1>Events</h1>
-    <strong>COMING SOON...</strong>
-    {/* Add your events content here */}
-  </section>
-);
+// const EventsSection = () => (
+//   <section style={eventsSectionStyle}>
+//     <h1>Events</h1>
+//     <strong>COMING SOON...</strong>
+//     {/* Add your events content here */}
+//   </section>
+// );
 
 function Dashboard() {
   const navigate = useNavigate();
@@ -242,7 +242,6 @@ function Dashboard() {
   return (
     <>
       <FarmSection navigate={navigate} />
-      <EventsSection />
     </>
   );
 }

@@ -12,7 +12,7 @@ const Serenity = () => {
 
   const sliderSettings = {
     autoplay: true,
-    autoplaySpeed: 2000, // Adjust as needed
+    autoplaySpeed: 4000, // Adjust as needed
     dots: true,
     infinite: true,
     speed: 500,
@@ -22,7 +22,7 @@ const Serenity = () => {
 
   return (
     <div style={{ display: "flex" }}>
-      <div style={{ flex: "1", maxWidth: "50%" }}>
+      <div style={{ flex: "1", maxWidth: "60%" }}>
         {/* Image Slider */}
         <Slider {...sliderSettings}>
           {images.map((image, index) => (
