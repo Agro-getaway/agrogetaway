@@ -4,9 +4,9 @@ import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
-import Flower1 from "./Flower 1.jpeg";
-import Flower2 from "./Flower 2.jpeg";
-import Flower6 from "./Flower 6.jpeg";
+import Flower1 from "./Flower1.jpeg";
+import Flower2 from "./Flower2.jpeg";
+import Flower6 from "./Flower6.jpeg";
 
 const Serenity = () => {
   const navigate = useNavigate();

@@ -8,14 +8,14 @@ import {
 } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
-import one from "./assets/floriculture/Flower 1.jpeg";
-import two from "./assets/floriculture/Flower 2.jpeg";
-import three from "./assets/floriculture/Flower 3.jpeg";
-import four from "./assets/floriculture/Flower 4.jpeg";
-import five from "./assets/floriculture/Flower 5.jpeg";
-import six from "./assets/floriculture/Flower 6.jpeg";
-import seven from "./assets/floriculture/Flower 7.jpeg";
-import eight from "./assets/floriculture/Flower 8.jpeg";
+import one from "./assets/flowers/Flower1.jpeg";
+import two from "./assets/flowers/Flower2.jpeg";
+import three from "./assets/flowers/Flower3.jpeg";
+import four from "./assets/flowers/Flower4.jpeg";
+import five from "./assets/flowers/Flower5.jpeg";
+import six from "./assets/flowers/Flower6.jpeg";
+import seven from "./assets/flowers/Flower7.jpeg";
+import eight from "./assets/flowers/Flower8.jpeg";
 
 const Floriculture = () => {
   const images = [
@@ -72,7 +72,7 @@ const Floriculture = () => {
   return (
     <div>
       <h2>Floriculture Farms in Uganda</h2>
-      <Grid container spacing={2}>
+      <Grid containerspacing={2}>
         {images.map((image, index) => (
           <Grid item key={index} xs={12} sm={6} md={4} lg={3}>
             <Card>

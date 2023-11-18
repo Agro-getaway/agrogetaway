@@ -1,13 +1,13 @@
 import { Card, CardContent, CardMedia, Grid, Typography } from "@mui/material";
 import React from "react";
-import avocado from "./assets/pomology/Avocado.jpeg";
-import banana from "./assets/pomology/Bananas.jpeg";
-import mangoes from "./assets/pomology/Mangoes.jpeg";
-import papaya from "./assets/pomology/Papaya.jpeg";
-import pineapples from "./assets/pomology/Pineapples.jpeg";
-import soursop from "./assets/pomology/Soursop.jpeg";
-import sugarcane from "./assets/pomology/Sugarcane.jpeg";
-import watermelon from "./assets/pomology/Watermelon.jpeg";
+import avocado from "./assets/fruits/Avocado.jpeg";
+import banana from "./assets/fruits/Bananas.jpeg";
+import mangoes from "./assets/fruits/Mangoes.jpeg";
+import papaya from "./assets/fruits/Papaya.jpeg";
+import pineapples from "./assets/fruits/Pineapples.jpeg";
+import soursop from "./assets/fruits/Soursop.jpeg";
+import sugarcane from "./assets/fruits/Sugarcane.jpeg";
+import watermelon from "./assets/fruits/Watermelon.jpeg";
 
 const Pomology = () => {
   // Sample data of images with names, locations, and imported images
