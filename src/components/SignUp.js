@@ -47,7 +47,11 @@ export default function SignUp() {
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <Grid container component="main" sx={{ height: "100vh" }}>
+      <Grid
+        container
+        component="main"
+        sx={{ bottom: 0, position: "absolute", top: "64px" }}
+      >
         <CssBaseline />
         <Grid
           item
