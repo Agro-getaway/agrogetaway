@@ -1,6 +1,6 @@
+import { Box } from "@mui/material";
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-
 import Booking from "./components/Booking.js";
 import Dashboard from "./components/Dashboard.js";
 import Apiculture from "./components/Farms/Apiculture.js";
@@ -26,26 +26,28 @@ function App() {
   return (
     <>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<LandingPage />}></Route>
-        <Route path="/signin" element={<SignIn />}></Route>
-        <Route path="/signup" element={<SignUp />}></Route>
-        {/* {isLogged &&  */}
-        <Route path="/dashboard" element={<Dashboard />}></Route>
-        <Route path="/arable" element={<Arable />}></Route>
-        <Route path="/poultry" element={<Poultry />}></Route>
-        <Route path="/livestock" element={<Livestock />}></Route>
-        <Route path="/apiculture" element={<Apiculture />}></Route>
-        <Route path="/monoculture" element={<Monoculture />}></Route>
-        <Route path="/aquaculture" element={<Aquaculture />}></Route>
-        <Route path="/organic" element={<Organic />}></Route>
-        <Route path="/floriculture" element={<Floriculture />}></Route>
-        <Route path="/pomology" element={<Pomology />}></Route>
-        <Route path="/serenity" element={<Serenity />}></Route>
-        <Route path="/booking" element={<Booking />}></Route>
-        <Route path="/payment" element={<Payment />}></Route>
-        <Route path="/logout" element={<LogOut />}></Route>
-      </Routes>
+      <Box sx={{ bottom: 0, position: "absolute", top: "64px" }}>
+        <Routes>
+          <Route path="/" element={<LandingPage />}></Route>
+          <Route path="/signin" element={<SignIn />}></Route>
+          <Route path="/signup" element={<SignUp />}></Route>
+          {/* {isLogged &&  */}
+          <Route path="/dashboard" element={<Dashboard />}></Route>
+          <Route path="/arable" element={<Arable />}></Route>
+          <Route path="/poultry" element={<Poultry />}></Route>
+          <Route path="/livestock" element={<Livestock />}></Route>
+          <Route path="/apiculture" element={<Apiculture />}></Route>
+          <Route path="/monoculture" element={<Monoculture />}></Route>
+          <Route path="/aquaculture" element={<Aquaculture />}></Route>
+          <Route path="/organic" element={<Organic />}></Route>
+          <Route path="/floriculture" element={<Floriculture />}></Route>
+          <Route path="/pomology" element={<Pomology />}></Route>
+          <Route path="/serenity" element={<Serenity />}></Route>
+          <Route path="/booking" element={<Booking />}></Route>
+          <Route path="/payment" element={<Payment />}></Route>
+          <Route path="/logout" element={<LogOut />}></Route>
+        </Routes>
+      </Box>
     </>
   );
 }
