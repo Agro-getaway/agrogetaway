@@ -77,7 +77,7 @@ export default function SignUp() {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              color: "#dee5d9",
+              // color: "#dee5d9",
             }}
           >
             <Avatar sx={{ m: 1, bgcolor: "#00390f" }}>
