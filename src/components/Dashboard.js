@@ -16,8 +16,8 @@ function Dashboard() {
 
   return (
     <>
-      <FarmSection navigate={navigate} />
       <SchoolSection />
+      <FarmSection navigate={navigate} />
     </>
   );
 }
