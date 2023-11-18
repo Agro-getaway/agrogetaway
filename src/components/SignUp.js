@@ -73,9 +73,10 @@ export default function SignUp() {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
+              color: "#dee5d9",
             }}
           >
-            <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
+            <Avatar sx={{ m: 1, bgcolor: "#00390f" }}>
               <LockOutlinedIcon />
             </Avatar>
             <Typography component="h1" variant="h5">
@@ -85,7 +86,7 @@ export default function SignUp() {
               component="form"
               noValidate
               onSubmit={handleSubmit}
-              sx={{ mt: 1 }}
+              sx={{ mt: 1, color: "#dee5d9" }}
             >
               <TextField
                 margin="normal"
@@ -136,13 +137,22 @@ export default function SignUp() {
                 type="submit"
                 fullWidth
                 variant="contained"
-                sx={{ mt: 3, mb: 2 }}
+                sx={{ mt: 3, mb: 2, background: "#216c2e" }}
               >
                 Sign Up
               </Button>
-              <Grid item>
+              <Grid
+                item
+                sx={12}
+                sm={12}
+                md={12}
+                alignItems={"center"}
+                justifyContent={"center"}
+                display={"flex"}
+                color={"#216c2e"}
+              >
                 <Link href="#" variant="body2">
-                  {"Already Have account? Sign In"}
+                  Already Have account? Sign In
                 </Link>
               </Grid>
 

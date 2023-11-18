@@ -102,7 +102,7 @@ const farmSectionStyle = {
   fontSize: "30px",
   font: "Calibri",
   padding: "50px",
-  backgroundColor: "#222e50",
+  backgroundColor: "#dee5d9",
 };
 
 // const eventsSectionStyle = {

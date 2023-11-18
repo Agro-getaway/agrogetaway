@@ -41,7 +41,7 @@ const LandingPage = () => {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         height: "100vh",
-        // backgroundColor: "grey",
+        backgroundColor: "#a7f5a7",
         position: "relative", // Ensure relative positioning for the overlay
       }}
     >
@@ -108,12 +108,13 @@ const LandingPage = () => {
             FARMING REDEFINED
           </Typography>
 
-          <Link to="/signup" style={{ textDecoration: "none" }}>
+          <Link to="/dashboard" style={{ textDecoration: "none" }}>
             <Button
               variant="contained"
-              color="primary"
+              // color="primary"
               size="large"
               style={{
+                backgroundColor: "#216c2e",
                 display: "block",
                 margin: "0 auto",
                 marginTop: "20px",

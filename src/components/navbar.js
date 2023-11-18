@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 function Navbar() {
   return (
-    <AppBar position="static" sx={{ backgroundColor: "#428247" }}>
+    <AppBar position="static" sx={{ backgroundColor: "#216c2e" }}>
       <Toolbar>
         <div className="logo">
           <img
