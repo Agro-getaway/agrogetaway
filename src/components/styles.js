@@ -56,9 +56,9 @@ export const titleStyle = {
 export const Search = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.white, 0.15),
+  backgroundColor: alpha( "#724940", 0.15),
   "&:hover": {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
+    backgroundColor: alpha( "#724940", 0.25),
   },
   marginRight: theme.spacing(2),
   marginLeft: 0,
@@ -96,7 +96,7 @@ export const StyledInputBase = styled(InputBase)(({ theme }) => ({
 export const FarmSection = ({ onSearch, navigate }) => {
   return (
     <section style={farmSectionStyle}>
-      <h1 style={{ color: "white", padding: "15px" }}>Explore With Us </h1>
+      <h1 style={{ color: "#424940", padding: "15px" }}>Explore With Us </h1>
       <Search onSearch={onSearch}>
         <SearchIconWrapper>
           <SearchIcon />
