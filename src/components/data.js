@@ -4,11 +4,11 @@ export const slides = [
       "https://images.unsplash.com/photo-1645707558064-c2bfd22a09e0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGFyYWJsZSUyMGZhcm1pbmd8ZW58MHx8MHx8fDA%3D",
       "https://media.istockphoto.com/id/1405435576/photo/sunny-plantation-with-growing-soya.webp?b=1&s=170667a&w=0&k=20&c=qRzk74gZEsajCyUCLY2mtEjay7-ynAmv7ZViIylr1lc=",
     ],
-    title: "Arable Farming",
-    link: "/arable",
+    title: "signup Farming",
+    link: "/signup",
 
     // description:
-    //   "Arable farming refers to the cultivation of crops on fertile land",
+    //   "signup farming refers to the cultivation of crops on fertile land",
   },
   {
     image: [
@@ -16,7 +16,7 @@ export const slides = [
       "https://images.unsplash.com/photo-1674122734030-d79c7fc0ddad?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bGl2ZXN0b2NrJTIwZmFybWluZ3xlbnwwfHwwfHx8MA%3D%3D",
     ],
     title: "Livestock Farming",
-    link: "/livestock",
+    link: "/signup",
     // description: "Lorem ipsum",
   },
   {
@@ -25,7 +25,7 @@ export const slides = [
       "https://images.unsplash.com/photo-1529313780224-1a12b68bed16?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8b3JnYW5pYyUyMGZhcm1pbmd8ZW58MHx8MHx8fDA%3D",
     ],
     title: "Organic Farming",
-    link: "/organic",
+    link: "/signup",
     // description: "Lorem ipsum",
   },
 
@@ -35,7 +35,7 @@ export const slides = [
       "https://static.vecteezy.com/system/resources/previews/032/037/789/non_2x/green-natural-tomatoes-growing-on-a-branch-in-a-greenhouse-free-photo.JPG",
     ],
     title: "Monoculture",
-    link: "/monoculture",
+    link: "/signup",
     // description: "Lorem ipsum",
   },
   {
@@ -44,7 +44,7 @@ export const slides = [
       "https://images.unsplash.com/photo-1621371045485-c6c744e176a0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZmxvcmljdWx0dXJlfGVufDB8fDB8fHww",
     ],
     title: "Floriculture",
-    link: "/floriculture",
+    link: "/signup",
     // description: "Lorem ipsum",
   },
   {
@@ -53,7 +53,7 @@ export const slides = [
       "https://images.unsplash.com/photo-1677851418214-df5caadf82a4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fHBvdWx0cnklMjBmYXJtaW5nfGVufDB8fDB8fHww",
     ],
     title: "Poultry",
-    link: "/poultry",
+    link: "/signup",
     // description: "Lorem ipsum",
   },
   {
@@ -62,7 +62,7 @@ export const slides = [
       "https://images.unsplash.com/photo-1555773443-464ec72c8515?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
     title: "Apiculture",
-    link: "/apiculture",
+    link: "/signup",
     // description: "Lorem ipsum",
   },
 
@@ -72,7 +72,7 @@ export const slides = [
       "https://images.unsplash.com/photo-1464297162577-f5295c892194?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
     title: "Fruit Farming",
-    link: "/pomology",
+    link: "/signup",
     // description: "Lorem ipsum",
   },
   {
@@ -81,7 +81,7 @@ export const slides = [
       "https://images.unsplash.com/photo-1591121213542-7020cc7a0b52?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
     title: "Aquaculture",
-    link: "/aquaculture",
+    link: "/signup",
     // description: "Lorem ipsum",
   },
 

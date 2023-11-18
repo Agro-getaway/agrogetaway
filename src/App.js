@@ -19,7 +19,6 @@ import SignIn from "./components/SignIn.js";
 import SignUp from "./components/SignUp.js";
 import Navbar from "./components/navbar.js";
 import Payment from "./components/payment.js";
-
 function App() {
   // const [isLogged, setIsLogged] = React.useState(true);
 
