@@ -1,5 +1,6 @@
-import { Button, Link } from "@mui/material";
+import { Button } from "@mui/material";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
@@ -8,6 +9,8 @@ import Flower2 from "./Flower 2.jpeg";
 import Flower6 from "./Flower 6.jpeg";
 
 const Serenity = () => {
+  const navigate = useNavigate();
+
   const images = [Flower1, Flower2, Flower6];
 
   const sliderSettings = {
@@ -19,7 +22,9 @@ const Serenity = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
-
+  const onBooking = () => {
+    navigate("/booking");
+  };
   return (
     <div style={{ display: "flex" }}>
       <div style={{ flex: "1", maxWidth: "60%" }}>
@@ -71,10 +76,9 @@ const Serenity = () => {
           inviting all who enter to experience the beauty of nature in full
           bloom.
         </p>
+
+        <Button onClick={onBooking}>Book Now</Button>
       </div>
-      <Link to="/booking">
-        <Button>Book Now</Button>
-      </Link>
     </div>
   );
 };

@@ -18,6 +18,7 @@ import LogOut from "./components/LogOut.js";
 import SignIn from "./components/SignIn.js";
 import SignUp from "./components/SignUp.js";
 import Navbar from "./components/navbar.js";
+import Payment from "./components/payment.js";
 
 function App() {
   // const [isLogged, setIsLogged] = React.useState(true);
@@ -42,6 +43,7 @@ function App() {
         <Route path="/pomology" element={<Pomology />}></Route>
         <Route path="/serenity" element={<Serenity />}></Route>
         <Route path="/booking" element={<Booking />}></Route>
+        <Route path="/payment" element={<Payment />}></Route>
         <Route path="/logout" element={<LogOut />}></Route>
       </Routes>
     </>

@@ -3,14 +3,18 @@ import {
   Button,
   Container,
   Grid,
-  Link,
   Paper,
   TextField,
   Typography,
 } from "@mui/material";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-const BookingPage = () => {
+const Booking = () => {
+  const navigate = useNavigate();
+  const onPayment = () => {
+    navigate("/payment");
+  };
   return (
     <Container maxWidth="md" style={{ marginTop: 40 }}>
       <Paper elevation={3} style={{ padding: 20 }}>
@@ -53,11 +57,14 @@ const BookingPage = () => {
           </Grid>
           {/* Add more input fields as needed for your booking form */}
           <Grid item xs={12}>
-            <Link to="/payment">
-              <Button variant="contained" color="primary" fullWidth>
-                Proceed to Payment
-              </Button>
-            </Link>
+            <Button
+              onClick={onPayment}
+              variant="contained"
+              color="primary"
+              fullWidth
+            >
+              Proceed to Payment
+            </Button>
           </Grid>
         </Grid>
       </Paper>
@@ -65,4 +72,4 @@ const BookingPage = () => {
   );
 };
 
-export default BookingPage;
+export default Booking;
