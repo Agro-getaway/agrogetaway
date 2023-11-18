@@ -78,43 +78,7 @@ export const FarmSection = ({ navigate }) => {
             {/* <div>{slide.description}</div> */}
           </div>
         ))}
-
-        
       </Slider>
     </section>
-
-const SchoolSection = () => {
-    return (
-      <Container sx={{ mt: 8, mb: 12 }}>
-        <Paper elevation={3} sx={{ padding: 4, textAlign: "center" }}>
-          <Typography variant="h4" gutterBottom>
-            Empower Your School with AgroGetaway App
-          </Typography>
-          <Typography variant="body1" paragraph>
-            Discover the benefits of using the AgroGetaway app for your school.
-            Engage students in agriculture, promote sustainable practices, and
-            enhance the learning experience.
-          </Typography>
-          <Typography variant="body1" paragraph>
-            Our app provides educational resources, virtual farm tours,
-            interactive lessons, and much more. Join AgroGetaway and bring the
-            world of farming to your classroom.
-          </Typography>
-          <Grid container spacing={2} justifyContent="center">
-            <Grid item>
-              <Button variant="contained" color="primary">
-                Learn More
-              </Button>
-            </Grid>
-            <Grid item>
-              <Button variant="outlined" color="primary">
-                Download App
-              </Button>
-            </Grid>
-          </Grid>
-        </Paper>
-      </Container>
-    );
-  };
   );
 };
