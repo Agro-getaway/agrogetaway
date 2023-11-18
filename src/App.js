@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Booking from "./components/Booking.js";
 import Dashboard from "./components/Dashboard.js";
+import Farmers from "./components/Farmer.js";
 import Apiculture from "./components/Farms/Apiculture.js";
 import Aquaculture from "./components/Farms/Aquaculture.js";
 import Arable from "./components/Farms/Arable.js";
@@ -18,7 +19,6 @@ import SignIn from "./components/SignIn.js";
 import SignUp from "./components/SignUp.js";
 import Navbar from "./components/navbar.js";
 import Payment from "./components/payment.js";
-
 function App() {
   // const [isLogged, setIsLogged] = React.useState(true);
 
@@ -44,6 +44,7 @@ function App() {
         <Route path="/booking" element={<Booking />}></Route>
         <Route path="/payment" element={<Payment />}></Route>
         <Route path="/logout" element={<LogOut />}></Route>
+        <Route path="/farmers" element={<Farmers />}></Route>
       </Routes>
     </>
   );

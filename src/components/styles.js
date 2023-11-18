@@ -1,6 +1,3 @@
-import SearchIcon from "@mui/icons-material/Search";
-import InputBase from "@mui/material/InputBase";
-import { alpha, styled } from "@mui/material/styles";
 import Slider from "react-animated-slider";
 import { slides } from "./data";
 
@@ -38,8 +35,8 @@ export const imageStyle = {
   width: "45%",
   height: "100%",
   margin: "45px 10px 0 10px", // top, right, bottom, left
-  border: "2px solid",
-  borderRadius: "15px",
+  border: "1px solid",
+  borderRadius: "10px",
 };
 
 export const titleStyle = {
@@ -53,59 +50,10 @@ export const titleStyle = {
   font: "italic",
 };
 
-export const Search = styled("div")(({ theme }) => ({
-  position: "relative",
-  borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha( "#724940", 0.15),
-  "&:hover": {
-    backgroundColor: alpha( "#724940", 0.25),
-  },
-  marginRight: theme.spacing(2),
-  marginLeft: 0,
-  width: "100%",
-  [theme.breakpoints.up("sm")]: {
-    marginLeft: theme.spacing(3),
-    width: "auto",
-  },
-}));
-
-export const SearchIconWrapper = styled("div")(({ theme }) => ({
-  padding: theme.spacing(0, 2),
-  height: "100%",
-  position: "absolute",
-  pointerEvents: "none",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-}));
-
-export const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: "inherit",
-  "& .MuiInputBase-input": {
-    padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-    transition: theme.transitions.create("width"),
-    width: "100%",
-    [theme.breakpoints.up("md")]: {
-      width: "20ch",
-    },
-  },
-}));
-
-export const FarmSection = ({ onSearch, navigate }) => {
+export const FarmSection = ({ navigate }) => {
   return (
     <section style={farmSectionStyle}>
-      <h1 style={{ color: "#424940", padding: "15px" }}>Explore With Us </h1>
-      <Search onSearch={onSearch}>
-        <SearchIconWrapper>
-          <SearchIcon />
-        </SearchIconWrapper>
-        <StyledInputBase
-          placeholder="Search…"
-          inputProps={{ "aria-label": "search" }}
-        />
-      </Search>
+      <h1 style={{ color: "white", padding: "15px" }}>Explore With Us </h1>
       <Slider classNames={sliderClasses} autoplay={3000} duration={1000}>
         {slides.map((slide, index) => (
           <div key={index} className="slide">
