@@ -1,4 +1,5 @@
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+import { MenuItem } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -36,15 +37,23 @@ function Copyright(props) {
 const defaultTheme = createTheme();
 
 export default function SignUp() {
+  const [selectedRole, setSelectedRole] = React.useState("tourist");
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     console.log({
+      role: selectedRole,
+      firstName: data.get("firstName"),
+      lastName: data.get("lastName"),
       email: data.get("email"),
       password: data.get("password"),
     });
   };
 
+  const handleRoleChange = (event) => {
+    setSelectedRole(event.target.value);
+  };
   return (
     <ThemeProvider theme={defaultTheme}>
       <Grid
@@ -92,6 +101,21 @@ export default function SignUp() {
               onSubmit={handleSubmit}
               sx={{ mt: 1, color: "#dee5d9" }}
             >
+              <TextField
+                select
+                fullWidth
+                margin="normal"
+                id="role"
+                label="Select Role"
+                name="role"
+                value={selectedRole}
+                onChange={handleRoleChange}
+              >
+                <MenuItem value="tourist">Tourist</MenuItem>
+                <MenuItem value="school">School</MenuItem>
+                <MenuItem value="farm">Farm</MenuItem>
+              </TextField>
+
               <TextField
                 margin="normal"
                 required
