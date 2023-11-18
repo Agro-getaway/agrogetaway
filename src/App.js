@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
+import Booking from "./components/Booking.js";
 import Dashboard from "./components/Dashboard.js";
 import Apiculture from "./components/Farms/Apiculture.js";
 import Aquaculture from "./components/Farms/Aquaculture.js";
@@ -40,6 +41,7 @@ function App() {
         <Route path="/floriculture" element={<Floriculture />}></Route>
         <Route path="/pomology" element={<Pomology />}></Route>
         <Route path="/serenity" element={<Serenity />}></Route>
+        <Route path="/booking" element={<Booking />}></Route>
         <Route path="/logout" element={<LogOut />}></Route>
       </Routes>
     </>

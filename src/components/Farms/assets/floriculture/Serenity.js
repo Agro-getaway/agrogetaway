@@ -1,4 +1,4 @@
-import { Button } from "@mui/material";
+import { Button, Link } from "@mui/material";
 import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
@@ -71,8 +71,10 @@ const Serenity = () => {
           inviting all who enter to experience the beauty of nature in full
           bloom.
         </p>
-        <Button onClick={() => alert("Book Now!")}>Book Now</Button>
       </div>
+      <Link to="/booking">
+        <Button>Book Now</Button>
+      </Link>
     </div>
   );
 };
