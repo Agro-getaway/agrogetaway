@@ -20,18 +20,9 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 //import MailIcon from '@mui/icons-material/Mail';
-<<<<<<< Updated upstream
-import MenuIcon from '@mui/icons-material/Menu';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import { Route, Routes } from "react-router-dom";
-import Dashboard from '../Dashboard';
-import { Label } from '@mui/icons-material';
-=======
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
->>>>>>> Stashed changes
 
 const drawerWidth = 240;
 
@@ -47,21 +38,6 @@ function ResponsiveDrawer(props) {
     <div>
       <Toolbar />
       <List>
-<<<<<<< Updated upstream
-        {['Dashbaord', 'Model Farmer', 'Schedule Tour', 'Confirm Tour'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton onClick={({key})=>{
-          
-
-            }}>
-              <ListItemIcon>
-               {index % 2 === 0? <DashboardIcon /> : <CalendarMonthIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-=======
         {["Dashbaord", "Model Farmer", "Schedule Tour", "Confirm Tour"].map(
           (text, index) => (
             <ListItem key={text} disablePadding>
@@ -74,7 +50,6 @@ function ResponsiveDrawer(props) {
             </ListItem>
           )
         )}
->>>>>>> Stashed changes
       </List>
     </div>
   );
@@ -167,9 +142,6 @@ function ResponsiveDrawer(props) {
         }}
       >
         <Toolbar />
-<<<<<<< Updated upstream
-        <Content/>
-=======
         <Card sx={{ maxWidth: 345 }}>
           <CardMedia
             sx={{ height: 140 }}
@@ -190,7 +162,6 @@ function ResponsiveDrawer(props) {
           </CardActions>
         </Card>
         <Typography paragraph></Typography>
->>>>>>> Stashed changes
       </Box>
     </Box>
   );
