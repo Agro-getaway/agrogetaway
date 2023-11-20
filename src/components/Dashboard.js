@@ -1,7 +1,7 @@
 import React from "react";
 import "react-animated-slider/build/horizontal.css";
 import { useNavigate } from "react-router-dom";
-import { FarmSection } from "./styles";
+import { FarmSection, SchoolSection } from "./styles";
 
 // const EventsSection = () => (
 //   <section style={eventsSectionStyle}>
@@ -16,6 +16,7 @@ function Dashboard() {
 
   return (
     <>
+      <SchoolSection />
       <FarmSection navigate={navigate} />
     </>
   );

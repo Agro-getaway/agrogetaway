@@ -1,19 +1,12 @@
+import { Container, Paper, Typography } from "@mui/material";
 import Slider from "react-animated-slider";
 import { slides } from "./data";
-
 export const farmSectionStyle = {
-  // Add styles for the farm
   fontSize: "30px",
   font: "Calibri",
-  padding: "50px",
+  padding: "10px",
   backgroundColor: "#dee5d9",
 };
-
-// const eventsSectionStyle = {
-//   // Add styles for the events section
-//   padding: "50px",
-//   backgroundColor: "#e5e5e5",
-// };
 
 export const sliderClasses = {
   slider: "slider",
@@ -44,8 +37,8 @@ export const titleStyle = {
   margin: "0 15px",
   color: "white",
   textAlign: "center",
-  position: "absolute", // Change this line
-  top: "50%", // Add this line
+  position: "absolute",
+  top: "50%",
   transform: "translateY(500%)",
   font: "italic",
 };
@@ -53,7 +46,7 @@ export const titleStyle = {
 export const FarmSection = ({ navigate }) => {
   return (
     <section style={farmSectionStyle}>
-      <h1 style={{ color: "white", padding: "15px" }}>Explore With Us </h1>
+      <h1 style={{ color: "white", padding: "15px" }}>Explore With Us</h1>
       <Slider classNames={sliderClasses} autoplay={3000} duration={1000}>
         {slides.map((slide, index) => (
           <div key={index} className="slide">
@@ -75,10 +68,31 @@ export const FarmSection = ({ navigate }) => {
               />
             )}
             <h2 style={titleStyle}>{slide.title}</h2>
-            {/* <div>{slide.description}</div> */}
           </div>
         ))}
       </Slider>
     </section>
+  );
+};
+
+export const SchoolSection = () => {
+  return (
+    <Container sx={{ mt: 8, mb: 12 }}>
+      <Paper elevation={3} sx={{ padding: 4, textAlign: "center" }}>
+        <Typography variant="h4" gutterBottom>
+          Empower Your Students with AgroGetaway
+        </Typography>
+        <Typography variant="body1" paragraph>
+          Discover the benefits of using the AgroGetaway app for your school.
+          Engage students in agriculture, promote sustainable practices, and
+          enhance the learning experience.
+        </Typography>
+        <Typography variant="body1" paragraph>
+          Our app provides educational resources, virtual farm tours,
+          interactive lessons, and much more. Join AgroGetaway and bring the
+          world of farming to your classroom.
+        </Typography>
+      </Paper>
+    </Container>
   );
 };

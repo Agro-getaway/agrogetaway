@@ -12,7 +12,7 @@ import Monoculture from "./components/Farms/Monoculture.js";
 import Organic from "./components/Farms/Organic.js";
 import Pomology from "./components/Farms/Pomology.js";
 import Poultry from "./components/Farms/Poultry.js";
-import Serenity from "./components/Farms/assets/flowers/serenity.js";
+import Serenity from "./components/Farms/assets/flowers/Serenity.js";
 import LandingPage from "./components/Home.js";
 import LogOut from "./components/LogOut.js";
 import SignIn from "./components/SignIn.js";
