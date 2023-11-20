@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -5,6 +6,15 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import PropTypes from "prop-types";
 import * as React from "react";
+=======
+import * as React from 'react';
+import PropTypes from 'prop-types';
+//import Card from '@mui/material/Card';
+//import CardActions from '@mui/material/CardActions';
+//import CardContent from '@mui/material/CardContent';
+//import CardMedia from '@mui/material/CardMedia';
+//import Button from '@mui/material/Button';
+>>>>>>> Stashed changes
 //import Typography from '@mui/material/Typography';
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -20,24 +30,41 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 //import MailIcon from '@mui/icons-material/Mail';
+<<<<<<< Updated upstream
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
+=======
+import MenuIcon from '@mui/icons-material/Menu';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+//import { Route, Routes } from "react-router-dom";
+//import Dashboard from '../Dashboard';
+//import { Label } from '@mui/icons-material';
+import ImgMediaCard from "./MainDashboard.js";
+>>>>>>> Stashed changes
 
 const drawerWidth = 240;
 
 function ResponsiveDrawer(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [currrentPage, setCurrentPage] = React.useState("Dashboard");
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
+  };
+  const handleItemClick = (text) => {
+    // Your onClick logic here, you can use the 'text' parameter to identify which item was clicked
+    setCurrentPage(text);
+    console.log(`Clicked on: ${text}`);
   };
 
   const drawer = (
     <div>
       <Toolbar />
       <List>
+<<<<<<< Updated upstream
         {["Dashbaord", "Model Farmer", "Schedule Tour", "Confirm Tour"].map(
           (text, index) => (
             <ListItem key={text} disablePadding>
@@ -50,6 +77,21 @@ function ResponsiveDrawer(props) {
             </ListItem>
           )
         )}
+=======
+        {['Dashboard', 
+        'Model Farmer', 
+        'Schedule Tour', 
+        'Confirm Tour'].map((text, index) => (
+          <ListItem key={text} disablePadding >
+            <ListItemButton onClick={() => handleItemClick(text)}> 
+              <ListItemIcon>
+               {index % 2 === 0? <DashboardIcon /> : <CalendarMonthIcon />}
+              </ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+>>>>>>> Stashed changes
       </List>
     </div>
   );
@@ -142,6 +184,7 @@ function ResponsiveDrawer(props) {
         }}
       >
         <Toolbar />
+<<<<<<< Updated upstream
         <Card sx={{ maxWidth: 345 }}>
           <CardMedia
             sx={{ height: 140 }}
@@ -162,21 +205,18 @@ function ResponsiveDrawer(props) {
           </CardActions>
         </Card>
         <Typography paragraph></Typography>
+=======
+        {currrentPage === 'Dashboard' && <ImgMediaCard/>}
+        {currrentPage === 'Model Farmer' && <p>This is a f</p>}
+        {currrentPage === 'Schedule Tour' && <p>This is a d t</p>}
+        {currrentPage === 'Confirm Tour' && <p>This is a Confirm Tour</p>}
+>>>>>>> Stashed changes
       </Box>
     </Box>
   );
 }
 
-function Content(){
-  return <div>
-    <Routes>
-      <Route path="/" element={<div>Dashbaord</div>}></Route>
-      <Route path="/modelFarmer" element={<div>Model Farmer</div>}></Route>
-      <Route path="/scheduleTour" element={<div>Schedule Tour</div>}></Route>
-      <Route path="/confirmTour" element={<div>Confirm Tour</div>}></Route>
-    </Routes>
-  </div>
-}
+
 
 ResponsiveDrawer.propTypes = {
   /**
