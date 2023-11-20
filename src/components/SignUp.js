@@ -161,6 +161,7 @@ export default function SignUp() {
                 control={<Checkbox value="remember" color="primary" />}
                 label="Remember me"
               />
+              <Link to="/users" style={{ textDecoration: "none" }}>
               <Button
                 type="submit"
                 fullWidth
@@ -169,6 +170,7 @@ export default function SignUp() {
               >
                 Sign Up
               </Button>
+              </Link>
               <Grid
                 item
                 sx={12}
