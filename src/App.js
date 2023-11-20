@@ -20,6 +20,7 @@ import SignUp from "./components/SignUp.js";
 import User from "./components/USerDashboard/User.js";
 import Navbar from "./components/navbar.js";
 import Payment from "./components/payment.js";
+import Schedule from "./components/scheduletour.js";
 function App() {
   // const [isLogged, setIsLogged] = React.useState(true);
 
@@ -27,6 +28,7 @@ function App() {
     <>
       <Navbar />
       <Routes>
+        <Route path="/schedule" element={<Schedule />} />
         <Route path="/" element={<LandingPage />}></Route>
         <Route path="/signin" element={<SignIn />}></Route>
         <Route path="/signup" element={<SignUp />}></Route>
