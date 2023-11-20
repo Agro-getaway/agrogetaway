@@ -6,27 +6,43 @@ import Farmers from "./components/Farmer.js";
 import Apiculture from "./components/Farms/Apiculture.js";
 import Aquaculture from "./components/Farms/Aquaculture.js";
 import Arable from "./components/Farms/Arable.js";
-import Floriculture from "./components/Farms/Floriculture.js";
-import Livestock from "./components/Farms/Livestock.js";
+import Floriculture from "./components/Farms/floriculture.js";
+import Livestock from "./components/Farms/livestock.js";
 import Monoculture from "./components/Farms/Monoculture.js";
 import Organic from "./components/Farms/Organic.js";
 import Pomology from "./components/Farms/Pomology.js";
+<<<<<<< HEAD
 import Poultry from "./components/Farms/Poultry.js";
 import Serenity from "./components/Farms/assets/flowers/Serenity.js";
+=======
+import Poultry from "./components/Farms/poultry.js";
+import Serenity from "./components/Farms/assets/flowers/serenity.js";
+>>>>>>> 911ceaa1c301462a574c7925c1e259236851f024
 import LandingPage from "./components/Home.js";
 import LogOut from "./components/LogOut.js";
 import SignIn from "./components/SignIn.js";
 import SignUp from "./components/SignUp.js";
 import User from "./components/USerDashboard/User.js";
+<<<<<<< HEAD
 import Navbar from "./components/navbar.js";
 import Payment from "./components/payment.js";
 import Schedule from "./components/scheduletour.js";
+=======
+// import Navbar from "./components/navbar.js";
+import Payment from "./components/payment.js";
+import Drawer from "./drawer.js";
+>>>>>>> 911ceaa1c301462a574c7925c1e259236851f024
 function App() {
   // const [isLogged, setIsLogged] = React.useState(true);
 
   return (
     <>
+<<<<<<< HEAD
       <Navbar />
+=======
+      <Drawer />
+      {/* <Navbar /> */}
+>>>>>>> 911ceaa1c301462a574c7925c1e259236851f024
       <Routes>
         <Route path="/schedule" element={<Schedule />} />
         <Route path="/" element={<LandingPage />}></Route>

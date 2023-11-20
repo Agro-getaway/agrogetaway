@@ -1,11 +1,35 @@
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+import Button from "@mui/material/Button";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import PropTypes from "prop-types";
+import * as React from "react";
+=======
+import * as React from 'react';
+import PropTypes from 'prop-types';
+//import Card from '@mui/material/Card';
+//import CardActions from '@mui/material/CardActions';
+//import CardContent from '@mui/material/CardContent';
+//import CardMedia from '@mui/material/CardMedia';
+//import Button from '@mui/material/Button';
+>>>>>>> Stashed changes
+//import Typography from '@mui/material/Typography';
+>>>>>>> 911ceaa1c301462a574c7925c1e259236851f024
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
+<<<<<<< HEAD
 import Typography from "@mui/material/Typography";
 import PropTypes from "prop-types";
 import * as React from "react";
+=======
+>>>>>>> 911ceaa1c301462a574c7925c1e259236851f024
 //import InboxIcon from '@mui/icons-material/MoveToInbox';
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import DashboardIcon from "@mui/icons-material/Dashboard";
@@ -15,28 +39,58 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 //import MailIcon from '@mui/icons-material/Mail';
+<<<<<<< HEAD
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import { Route, Routes } from "react-router-dom";
+=======
+<<<<<<< Updated upstream
+import MenuIcon from "@mui/icons-material/Menu";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+=======
+import MenuIcon from '@mui/icons-material/Menu';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+//import { Route, Routes } from "react-router-dom";
+//import Dashboard from '../Dashboard';
+//import { Label } from '@mui/icons-material';
+import ImgMediaCard from "./MainDashboard.js";
+>>>>>>> Stashed changes
+>>>>>>> 911ceaa1c301462a574c7925c1e259236851f024
 
 const drawerWidth = 240;
 
 function ResponsiveDrawer(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [currrentPage, setCurrentPage] = React.useState("Dashboard");
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
+  };
+  const handleItemClick = (text) => {
+    // Your onClick logic here, you can use the 'text' parameter to identify which item was clicked
+    setCurrentPage(text);
+    console.log(`Clicked on: ${text}`);
   };
 
   const drawer = (
     <div>
       <Toolbar />
       <List>
+<<<<<<< HEAD
         {["Dashbaord", "Model Farmer", "Schedule Tour", "Confirm Tour"].map(
           (text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton onClick={({ key }) => {}}>
+=======
+<<<<<<< Updated upstream
+        {["Dashbaord", "Model Farmer", "Schedule Tour", "Confirm Tour"].map(
+          (text, index) => (
+            <ListItem key={text} disablePadding>
+              <ListItemButton>
+>>>>>>> 911ceaa1c301462a574c7925c1e259236851f024
                 <ListItemIcon>
                   {index % 2 === 0 ? <DashboardIcon /> : <CalendarMonthIcon />}
                 </ListItemIcon>
@@ -45,6 +99,24 @@ function ResponsiveDrawer(props) {
             </ListItem>
           )
         )}
+<<<<<<< HEAD
+=======
+=======
+        {['Dashboard', 
+        'Model Farmer', 
+        'Schedule Tour', 
+        'Confirm Tour'].map((text, index) => (
+          <ListItem key={text} disablePadding >
+            <ListItemButton onClick={() => handleItemClick(text)}> 
+              <ListItemIcon>
+               {index % 2 === 0? <DashboardIcon /> : <CalendarMonthIcon />}
+              </ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+>>>>>>> Stashed changes
+>>>>>>> 911ceaa1c301462a574c7925c1e259236851f024
       </List>
     </div>
   );
@@ -137,12 +209,43 @@ function ResponsiveDrawer(props) {
         }}
       >
         <Toolbar />
+<<<<<<< HEAD
         <Content />
+=======
+<<<<<<< Updated upstream
+        <Card sx={{ maxWidth: 345 }}>
+          <CardMedia
+            sx={{ height: 140 }}
+            image="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.sudufarming.com%2Fbenefits-of-organic-farming%2F&psig=AOvVaw2zv35-RQBs-r4_2Xg9UCXs&ust=1700516485665000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLCavamL0YIDFQAAAAAdAAAAABAE"
+            title="green iguana"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              Organic Farming
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              Discover the top model farmer in Organic farming
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <Button size="small">Schedule a Tour</Button>
+            <Button size="small">See details..</Button>
+          </CardActions>
+        </Card>
+        <Typography paragraph></Typography>
+=======
+        {currrentPage === 'Dashboard' && <ImgMediaCard/>}
+        {currrentPage === 'Model Farmer' && <p>This is a f</p>}
+        {currrentPage === 'Schedule Tour' && <p>This is a d t</p>}
+        {currrentPage === 'Confirm Tour' && <p>This is a Confirm Tour</p>}
+>>>>>>> Stashed changes
+>>>>>>> 911ceaa1c301462a574c7925c1e259236851f024
       </Box>
     </Box>
   );
 }
 
+<<<<<<< HEAD
 function Content() {
   return (
     <div>
@@ -155,6 +258,9 @@ function Content() {
     </div>
   );
 }
+=======
+
+>>>>>>> 911ceaa1c301462a574c7925c1e259236851f024
 
 ResponsiveDrawer.propTypes = {
   /**
