@@ -64,7 +64,7 @@ function Navbar() {
 
   return (
     <AppBar
-      position="static"
+      position="fixed"
       sx={{ backgroundColor: "#216c2e", height: "64px" }}
     >
       <Toolbar>
@@ -117,6 +117,9 @@ function Navbar() {
             </Link>
             <Link to="/signup">
               <Button sx={{ color: "white", fontSize: "1vw" }}>Sign Up</Button>
+            </Link>
+            <Link to="/users">
+              <Button sx={{ color: "white", fontSize: "1vw" }}>User dashboard</Button>
             </Link>
           </>
         )}
