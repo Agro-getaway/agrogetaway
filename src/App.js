@@ -17,7 +17,7 @@ import LandingPage from "./components/Home.js";
 import LogOut from "./components/LogOut.js";
 import SignIn from "./components/SignIn.js";
 import SignUp from "./components/SignUp.js";
-import Navbar from "./components/navbar.js";
+// import Navbar from "./components/navbar.js";
 import Payment from "./components/payment.js";
 import User from "./components/USerDashboard/User.js";
 function App() {
@@ -25,7 +25,7 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<LandingPage />}></Route>
         <Route path="/signin" element={<SignIn />}></Route>

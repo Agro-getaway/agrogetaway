@@ -23,6 +23,9 @@ import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import { Route, Routes } from "react-router-dom";
+import Dashboard from '../Dashboard';
+import { Label } from '@mui/icons-material';
 
 const drawerWidth = 240;
 
@@ -40,7 +43,10 @@ function ResponsiveDrawer(props) {
       <List>
         {['Dashbaord', 'Model Farmer', 'Schedule Tour', 'Confirm Tour'].map((text, index) => (
           <ListItem key={text} disablePadding>
-            <ListItemButton>
+            <ListItemButton onClick={({key})=>{
+          
+
+            }}>
               <ListItemIcon>
                {index % 2 === 0? <DashboardIcon /> : <CalendarMonthIcon />}
               </ListItemIcon>
@@ -125,31 +131,21 @@ function ResponsiveDrawer(props) {
         sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
       >
         <Toolbar />
-        <Card sx={{ maxWidth: 345 }}>
-        <CardMedia
-          sx={{ height: 140 }}
-          image="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.sudufarming.com%2Fbenefits-of-organic-farming%2F&psig=AOvVaw2zv35-RQBs-r4_2Xg9UCXs&ust=1700516485665000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLCavamL0YIDFQAAAAAdAAAAABAE"
-          title="green iguana"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Organic Farming
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Discover the top model farmer in Organic farming
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <Button size="small">Schedule a Tour</Button>
-          <Button size="small">See details..</Button>
-        </CardActions>
-      </Card>
-        <Typography paragraph>
-          
-        </Typography>
+        <Content/>
       </Box>
     </Box>
   );
+}
+
+function Content(){
+  return <div>
+    <Routes>
+      <Route path="/" element={<div>Dashbaord</div>}></Route>
+      <Route path="/modelFarmer" element={<div>Model Farmer</div>}></Route>
+      <Route path="/scheduleTour" element={<div>Schedule Tour</div>}></Route>
+      <Route path="/confirmTour" element={<div>Confirm Tour</div>}></Route>
+    </Routes>
+  </div>
 }
 
 ResponsiveDrawer.propTypes = {
