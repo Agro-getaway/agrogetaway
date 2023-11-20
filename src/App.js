@@ -17,14 +17,24 @@ import LandingPage from "./components/Home.js";
 import LogOut from "./components/LogOut.js";
 import SignIn from "./components/SignIn.js";
 import SignUp from "./components/SignUp.js";
+<<<<<<< Updated upstream
 // import Navbar from "./components/navbar.js";
 import Payment from "./components/payment.js";
+=======
+>>>>>>> Stashed changes
 import User from "./components/USerDashboard/User.js";
+// import Navbar from "./components/navbar.js";
+import Payment from "./components/payment.js";
+import Drawer from "./drawer.js";
 function App() {
   // const [isLogged, setIsLogged] = React.useState(true);
 
   return (
     <>
+<<<<<<< Updated upstream
+=======
+      <Drawer />
+>>>>>>> Stashed changes
       {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<LandingPage />}></Route>
@@ -46,7 +56,7 @@ function App() {
         <Route path="/payment" element={<Payment />}></Route>
         <Route path="/logout" element={<LogOut />}></Route>
         <Route path="/farmers" element={<Farmers />}></Route>
-        <Route path="/users" element={<User/>}></Route>
+        <Route path="/users" element={<User />}></Route>
       </Routes>
     </>
   );
