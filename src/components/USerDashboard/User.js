@@ -17,8 +17,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import MainDashboard from "./MainDashboard.js";
-import ModelFarmer from "./ModelFarmer.js";
-import ScheduleTour from "./SheduleTour.js";
+import ModelFarm from "./ModelFarmer.js";
+//import ScheduleTour from "./SheduleTour.js";
+//import ConfirmTour from "./ConfirmTour.js";
 
 const drawerWidth = 240;
 
@@ -42,7 +43,7 @@ function ResponsiveDrawer(props) {
       <Toolbar />
       <Divider />
       <List>
-        {['Dashboard', 'Model Farmer', 'Schedule Tour', 'Confirm Tour'].map((text, index) => (
+        {['Dashboard', 'Model Farm', 'Schedule Tour', 'Confirm Tour'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton onClick={() => handleItemClick(text)}>
               <ListItemIcon>
@@ -138,10 +139,10 @@ function ResponsiveDrawer(props) {
       >
         <Toolbar />
         <Typography paragraph>
-        {currentPage === 'Dashboard' && <MainDashboard/>}
-          {currentPage === 'Model Farmer' && <ModelFarmer/>}
-          {currentPage === 'Schedule Tour' && <ScheduleTour/>}
-          {currentPage === 'Confirm Tour' && <p>Confirm Tour content goes here</p>}
+        {currentPage === 'Dashboard' && <MainDashboard handleItemClick={handleItemClick}/>}
+          {currentPage === 'Model Farm' && <ModelFarm/>}
+          {currentPage === 'Schedule Tour' && <p> Content for Schedule tour</p>}
+          {currentPage === 'Confirm Tour' && <p>Content for Confirm Tour</p>}
         </Typography>
       </Box>
     </Box>

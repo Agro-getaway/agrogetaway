@@ -6,9 +6,9 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Typography';
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
-export default function ImgMediaCard() {
+export default function ImgMediaCard({handleItemClick}) {
 
   return (
    <Grid
@@ -36,7 +36,7 @@ export default function ImgMediaCard() {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">More Details..</Button>
+        <Button size="small" onClick={()=> handleItemClick('Model Farm')}>More Details..</Button>
       </CardActions>  
     </Card>
    </Grid>
@@ -58,7 +58,7 @@ export default function ImgMediaCard() {
             </Typography>
           </CardContent>
           <CardActions>
-            <Button size="small">More Details..</Button>
+            <Button size="small" onClick={()=> handleItemClick('Model Farm')}>More Details..</Button>
           </CardActions>
         </Card>
       </Grid>
@@ -76,13 +76,13 @@ export default function ImgMediaCard() {
              Cocoa Growing 
             </Typography>
             <Typography variant="body2" color="text.secondary">
-            Step into the world of modern agriculture and Learning cocoa farming Uganda's top cocoa farmers
+            Step into the world of modern agriculture and Learning cocoa from farming Uganda's top cocoa farmers
             </Typography>
           </CardContent>
           <CardActions>
-            <Link to="./User/ModelFarmer">
-            <Button size="small">More Details..</Button>
-            </Link>
+            {/* <Link to="./User/ModelFarmer"> */}
+            <Button size="small" onClick={()=> handleItemClick('Model Farm')}>More Details..</Button>
+            {/* </Link> */}
           </CardActions>
         </Card>
       </Grid>
