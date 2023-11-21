@@ -4,29 +4,46 @@ import { Link } from "react-router-dom";
 
 const images = [
   "https://source.unsplash.com/random?fields",
-  "https://source.unsplash.com/random?farm",
+  "https://source.unsplash.com/random?farms",
   "https://source.unsplash.com/random?crops",
   // "https://unsplash.com/photos/green-plant-on-brown-soil-DUPFowqI6oI",
   // "https://unsplash.com/photos/a-green-tractor-is-driving-through-a-field-eS6rqvLx7o0",
   // "https://unsplash.com/photos/green-leafed-plants-during-daytime-2oYMwuFgnTg",
 ];
 
+// ... (previous imports and code)
+
 const LandingPage = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [welcomeMessages] = useState([
+    "WELCOME TO AGROGETAWAY",
+    "EXPLORE THE WORLD OF FARMING",
+    "JOIN US TO REDEFINE AGRICULTURE",
+  ]);
+  const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
 
   // Function to move to the next image
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const nextImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
-  // Function to automatically transition to the next image
+  // Function to move to the next welcome message
+  const nextWelcomeMessage = useCallback(() => {
+    setCurrentMessageIndex(
+      (prevIndex) => (prevIndex + 1) % welcomeMessages.length
+    );
+  }, [welcomeMessages]);
+
+  // Function to automatically transition to the next image and welcome message
   const autoTransition = useCallback(() => {
     nextImage();
-  }, []);
+    nextWelcomeMessage();
+  }, [nextImage, nextWelcomeMessage]);
 
   // Use useEffect to set up the interval for automatic transitions
   useEffect(() => {
-    const intervalId = setInterval(autoTransition, 15000); // 10 seconds (10,000 milliseconds)
+    const intervalId = setInterval(autoTransition, 10000); // 10 seconds (10,000 milliseconds)
 
     // Clean up the interval when the component unmounts
     return () => {
@@ -41,7 +58,6 @@ const LandingPage = () => {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         height: "100vh",
-        backgroundColor: "#a7f5a7",
         position: "relative", // Ensure relative positioning for the overlay
       }}
     >
@@ -58,17 +74,22 @@ const LandingPage = () => {
       />
       <Grid
         container
-        alignItems="left"
+        alignItems="center"
         justifyContent="center"
-        style={{
-          height: "100vh",
-        }}
+        style={{ height: "100%" }}
       >
-        <Container
-          style={{
-            margin: "auto",
-          }}
-        >
+        <Container>
+          <div
+            style={{ position: "absolute", top: 0, left: 0, margin: "10px" }}
+          >
+            {/* Logo goes here */}
+            <img
+              src="logo.jpg"
+              alt="Logo"
+              style={{ width: "100px", height: "auto" }}
+            />
+          </div>
+
           <Typography
             variant="h1"
             style={{
@@ -76,10 +97,10 @@ const LandingPage = () => {
               textAlign: "left",
               fontSize: "3vw", // Responsive font size
               position: "relative",
-              fontFamily: "Italics",
+              fontFamily: "Times New Roman",
             }}
           >
-            WELCOME TO AGROGETAWAY
+            {welcomeMessages[currentMessageIndex]}
           </Typography>
 
           <Typography
@@ -90,31 +111,33 @@ const LandingPage = () => {
               padding: "8px 0",
               fontSize: "2.0vw", // Responsive font size
               position: "relative",
+              fontFamily: "italics",
             }}
           >
-            We identify top-ranked Farms and Farmers and give You the
-            opportunity to reach, learn, and experience the beauty of farming
+            Explore, learn, and experience the beauty of farming. Join farmers,
+            schools, and organizations on a journey to redefine the future of
+            agriculture.
           </Typography>
 
           <Typography
             style={{
               variant: "h3",
               textAlign: "left",
-              fontSize: "2.5vw", // Responsive font size
+              fontSize: "2.5vw",
               color: "white",
               position: "relative",
+              // Responsive font size
             }}
           >
             FARMING REDEFINED
           </Typography>
 
-          <Link to="/dashboard" style={{ textDecoration: "none" }}>
+          <Link to="/signup" style={{ textDecoration: "none" }}>
             <Button
               variant="contained"
-              // color="primary"
+              color="primary"
               size="large"
               style={{
-                backgroundColor: "#216c2e",
                 display: "block",
                 margin: "0 auto",
                 marginTop: "20px",
