@@ -7,12 +7,12 @@ import Checkbox from "@mui/material/Checkbox";
 import CssBaseline from "@mui/material/CssBaseline";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Grid from "@mui/material/Grid";
-import axios from 'axios';
 import Link from "@mui/material/Link";
 import Paper from "@mui/material/Paper";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
+import axios from "axios";
 import * as React from "react";
 
 function Copyright(props) {
@@ -38,23 +38,23 @@ function Copyright(props) {
 const defaultTheme = createTheme();
 
 export default function SignUp() {
-  const adduser = async (member) =>{
-    try{
-      const response =await axios.post("https://agrogetawy.onrender.com/user/", member)
+  const adduser = async (member) => {
+    try {
+      const response = await axios.post(
+        "https://agrogetawy.onrender.com/user/",
+        member
+      );
       // const response =await axios.post("{{URL}}/user", member)
-      console.log(response)
-      if(response.status===201){
-        alert("Account created sucessfully")
-        
+      console.log(response);
+      if (response.status === 201) {
+        alert("Account created sucessfully");
+      } else {
+        alert("Error in creating the account");
       }
-      else{
-        alert("Error in creating the account")
-      }
+    } catch (error) {
+      console.error(error);
     }
-    catch(error){
-      console.error(error)
-    }
-  }
+  };
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -67,12 +67,11 @@ export default function SignUp() {
     const member = {
       username: data.get("Name"),
       email: data.get("email"),
-      password: data.get("password")
-    }
-    console.log(member)
+      password: data.get("password"),
+    };
+    console.log(member);
     adduser(member);
   };
-
 
   return (
     <ThemeProvider theme={defaultTheme}>
@@ -125,18 +124,9 @@ export default function SignUp() {
                 margin="normal"
                 required
                 fullWidth
-                id="FirstName"
-                label="First Name"
-                name="FirstName"
-                autoComplete="family-name"
-              />
-              <TextField
-                margin="normal"
-                required
-                fullWidth
-                id="lastName"
-                label="Last Name"
-                name="lastName"
+                id="Name"
+                label="Name"
+                name="Name"
                 autoComplete="family-name"
               />
 
