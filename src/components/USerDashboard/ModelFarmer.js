@@ -29,14 +29,14 @@ export default function ImgMediaCard() {
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-        Organic Farming 
+        Kaynera Farm
         </Typography>
         <Typography variant="body2" color="text.secondary">
-        Embracing organic methods like crop rotation, composting, and natural pest control, they're transforming communities
+        Our passion for organic farming blends tradition and innovation, cultivating sustainable, nutrient-rich produce.
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">More Details..</Button>
+        <Button size="small">Book Tour</Button>
       </CardActions>  
     </Card>
    </Grid>
@@ -58,7 +58,7 @@ export default function ImgMediaCard() {
             </Typography>
           </CardContent>
           <CardActions>
-            <Button size="small">More Details..</Button>
+            <Button size="small">Book Tour</Button>
           </CardActions>
         </Card>
       </Grid>
@@ -81,7 +81,7 @@ export default function ImgMediaCard() {
           </CardContent>
           <CardActions>
             <Link to="./User/ModelFarmer">
-            <Button size="small">More Details..</Button>
+            <Button size="small">Book Tour</Button>
             </Link>
           </CardActions>
         </Card>

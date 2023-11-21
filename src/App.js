@@ -6,6 +6,9 @@ import SignIn from "./components/SignIn.js";
 import SignUp from "./components/SignUp.js";
 import Navbar from "./components/navbar.js";
 import Dashboard from "./components/Dashboard.js";
+import User from "./components/USerDashboard/User.js";
+
+
 function App() {
   // const [isLogged, setIsLogged] = React.useState(true);
 
@@ -19,6 +22,7 @@ function App() {
         {/* {isLogged &&  */}
         <Route path="/dashboard" element={<Dashboard />}></Route>
         <Route path="/logout" element={<LogOut />}></Route>
+        <Route path="/users" element={<User />}></Route>
       </Routes>
     </>
   );
