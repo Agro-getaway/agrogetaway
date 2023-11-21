@@ -44,7 +44,12 @@ function ResponsiveDrawer(props) {
       <Divider />
       <List>
         {['Dashboard', 'Model Farm', 'Schedule Tour', 'Confirm Tour'].map((text, index) => (
-          <ListItem key={text} disablePadding>
+          <ListItem key={text} disablePadding sx={{
+            backgroundColor: text === currentPage ? "cyan" : "white",
+            text: text === currentPage ? "white" : "black",
+            borderRadius: text === currentPage ? "10%" : "0",
+            // marginX: "10px"
+          }}>
             <ListItemButton onClick={() => handleItemClick(text)}>
               <ListItemIcon>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
@@ -71,7 +76,8 @@ function ResponsiveDrawer(props) {
           backgroundColor: "#fff7d1", 
         }}
       >
-        <Toolbar>
+        <Toolbar
+        >
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -141,7 +147,7 @@ function ResponsiveDrawer(props) {
         <Typography paragraph>
         {currentPage === 'Dashboard' && <MainDashboard handleItemClick={handleItemClick}/>}
           {currentPage === 'Model Farm' && <ModelFarm/>}
-          {currentPage === 'Schedule Tour' && <p> Content for Schedule tour</p>}
+          {currentPage === 'Schedule Tour' && <p>Content for Confirm Tour</p> }
           {currentPage === 'Confirm Tour' && <p>Content for Confirm Tour</p>}
         </Typography>
       </Box>
