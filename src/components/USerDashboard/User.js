@@ -1,21 +1,21 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
-import Divider from '@mui/material/Divider';
-import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import MailIcon from '@mui/icons-material/Mail';
-import MenuIcon from '@mui/icons-material/Menu';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
+import MailIcon from "@mui/icons-material/Mail";
+import MenuIcon from "@mui/icons-material/Menu";
+import InboxIcon from "@mui/icons-material/MoveToInbox";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import CssBaseline from "@mui/material/CssBaseline";
+import Divider from "@mui/material/Divider";
+import Drawer from "@mui/material/Drawer";
+import IconButton from "@mui/material/IconButton";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import PropTypes from "prop-types";
+import * as React from "react";
 import MainDashboard from "./MainDashboard.js";
 import ModelFarmer from "./ModelFarmer.js";
 import ScheduleTour from "./SheduleTour.js";
@@ -25,7 +25,7 @@ const drawerWidth = 240;
 function ResponsiveDrawer(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const [currentPage, setCurrentPage] = React.useState('Dashboard');
+  const [currentPage, setCurrentPage] = React.useState("Dashboard");
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -36,38 +36,39 @@ function ResponsiveDrawer(props) {
     setMobileOpen(false);
   };
   const drawer = (
-    <div
-    sx={{ backgroundColor: 'red'}}
-    >
+    <div sx={{ backgroundColor: "red" }}>
       <Toolbar />
       <Divider />
       <List>
-        {['Dashboard', 'Model Farmer', 'Schedule Tour', 'Confirm Tour'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton onClick={() => handleItemClick(text)}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
+        {["Dashboard", "Model Farmer", "Schedule Tour", "Confirm Tour"].map(
+          (text, index) => (
+            <ListItem key={text} disablePadding>
+              <ListItemButton onClick={() => handleItemClick(text)}>
+                <ListItemIcon>
+                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </ListItem>
+          )
+        )}
       </List>
     </div>
   );
 
   // Remove this const when copying and pasting into your project.
-  const container = window !== undefined ? () => window().document.body : undefined;
+  const container =
+    window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex', }}>
+    <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar
         position="fixed"
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
-          backgroundColor: "#fff7d1", 
+          backgroundColor: "#fff7d1",
         }}
       >
         <Toolbar>
@@ -76,24 +77,28 @@ function ResponsiveDrawer(props) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={{ mr: 2, display: { sm: "none" } }}
           >
             <MenuIcon />
           </IconButton>
           <div className="logo">
-          <img
-            src="agrogetaway-high-resolution-logo-removebg-preview (1).png"
-            alt="Logo"
-            style={{ maxHeight: "50px", maxWidth: "50px", marginRight: "15px" }}
-          />
-        </div>
-          <Typography 
-          variant="h6"
-          fontSize="2vw"
-          fontFamily="italics"
-          component="div"
-          sx={{ flexGrow: 1 }}
-          style={{ color: "Black", marginLeft: "700px"  }}
+            <img
+              src="agrogetaway-high-resolution-logo-removebg-preview (1).png"
+              alt="Logo"
+              style={{
+                maxHeight: "50px",
+                maxWidth: "50px",
+                marginRight: "15px",
+              }}
+            />
+          </div>
+          <Typography
+            variant="h6"
+            fontSize="2vw"
+            fontFamily="italics"
+            component="div"
+            sx={{ flexGrow: 1 }}
+            style={{ color: "Black", marginLeft: "700px" }}
           >
             Farming Redefined
           </Typography>
@@ -114,18 +119,23 @@ function ResponsiveDrawer(props) {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            display: { xs: "block", sm: "none" },
+            "& .MuiDrawer-paper": {
+              boxSizing: "border-box",
+              width: drawerWidth,
+            },
           }}
         >
           {drawer}
         </Drawer>
         <Drawer
-          
           variant="permanent"
           sx={{
-            display: { xs: 'none', sm: 'block' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            display: { xs: "none", sm: "block" },
+            "& .MuiDrawer-paper": {
+              boxSizing: "border-box",
+              width: drawerWidth,
+            },
           }}
           open
         >
@@ -134,14 +144,20 @@ function ResponsiveDrawer(props) {
       </Box>
       <Box
         component="main"
-        sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
+        sx={{
+          flexGrow: 1,
+          p: 3,
+          width: { sm: `calc(100% - ${drawerWidth}px)` },
+        }}
       >
         <Toolbar />
         <Typography paragraph>
-        {currentPage === 'Dashboard' && <MainDashboard/>}
-          {currentPage === 'Model Farmer' && <ModelFarmer/>}
-          {currentPage === 'Schedule Tour' && <ScheduleTour/>}
-          {currentPage === 'Confirm Tour' && <p>Confirm Tour content goes here</p>}
+          {currentPage === "Dashboard" && <MainDashboard />}
+          {currentPage === "Model Farmer" && <ModelFarmer />}
+          {currentPage === "Schedule Tour" && <ScheduleTour />}
+          {currentPage === "Confirm Tour" && (
+            <p>Confirm Tour content goes here</p>
+          )}
         </Typography>
       </Box>
     </Box>
