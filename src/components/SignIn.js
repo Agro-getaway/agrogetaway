@@ -1,7 +1,7 @@
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import { Avatar } from "@mui/material";
 import Box from "@mui/material/Box";
-// import axios from 'axios';
+import axios from "axios";
 import Button from "@mui/material/Button";
 import Checkbox from "@mui/material/Checkbox";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -34,13 +34,37 @@ function Copyright(props) {
 const defaultTheme = createTheme();
 
 export default function SignIn() {
+  // Function to handle sign-in
+  const signIn = async (credentials) => {
+    try {
+      const response = await axios.post(
+        "https://agrogetawy.onrender.com/signin",
+        credentials
+      );
+      console.log(response);
+      if (response.status === 200) {
+        alert("Sign-in successful");
+        // You can handle further actions after successful sign-in
+      } else {
+        alert("Error in sign-in");
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
+    // console.log({
+    //   email: data.get("email"),
+    //   password: data.get("password"),
+    // });
+    const credentials = {
       email: data.get("email"),
       password: data.get("password"),
-    });
+    };
+    signIn(credentials);
   };
 
   return (
