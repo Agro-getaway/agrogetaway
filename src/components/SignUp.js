@@ -7,6 +7,7 @@ import Checkbox from "@mui/material/Checkbox";
 import CssBaseline from "@mui/material/CssBaseline";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Grid from "@mui/material/Grid";
+import axios from 'axios';
 import Link from "@mui/material/Link";
 import Paper from "@mui/material/Paper";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -37,16 +38,41 @@ function Copyright(props) {
 const defaultTheme = createTheme();
 
 export default function SignUp() {
+  const adduser = async (member) =>{
+    try{
+      const response =await axios.post("https://agrogetawy.onrender.com/user/", member)
+      // const response =await axios.post("{{URL}}/user", member)
+      console.log(response)
+      if(response.status===201){
+        alert("Account created sucessfully")
+        
+      }
+      else{
+        alert("Error in creating the account")
+      }
+    }
+    catch(error){
+      console.error(error)
+    }
+  }
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
-      firstName: data.get("firstName"),
-      lastName: data.get("lastName"),
+    // console.log({
+    //   username: data.get("Name"),
+    //   email: data.get("email"),
+    //   password: data.get("password")
+    // });
+
+    const member = {
+      username: data.get("Name"),
       email: data.get("email"),
-      password: data.get("password"),
-    });
+      password: data.get("password")
+    }
+    console.log(member)
+    adduser(member);
   };
+
 
   return (
     <ThemeProvider theme={defaultTheme}>
