@@ -80,14 +80,73 @@ const LandingPage = () => {
       >
         <Container>
           <div
-            style={{ position: "absolute", top: 0, left: 0, margin: "10px" }}
+            style={{
+              position: "fixed",
+              top: 0,
+              right: 0,
+              padding: "10px",
+              zIndex: 999,
+            }}
           >
-            {/* Logo goes here */}
-            <img
-              src="logo.jpg"
-              alt="Logo"
-              style={{ width: "100px", height: "auto" }}
-            />
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+              }}
+            >
+              {/* Logo on the left */}
+              <img
+                src="logo.jpg"
+                alt="Logo"
+                style={{
+                  width: "100px",
+                  height: "auto",
+                  marginRight: "1100px",
+                }}
+              />
+
+              {/* Sign In and Sign Up buttons on the right */}
+              <div
+                style={{ display: "flex", alignItems: "center", gap: "20px" }}
+              >
+                <Link
+                  to="/signup"
+                  style={{ textDecoration: "none", backgroundColor: "#216c2e" }}
+                >
+                  <Button
+                    variant="outlined"
+                    color="primary"
+                    size="large"
+                    style={{
+                      display: "block",
+                      color: "white",
+                      border: "#216c2e",
+                    }}
+                  >
+                    Sign Up
+                  </Button>
+                </Link>
+
+                <Link
+                  to="/signin"
+                  style={{ textDecoration: "none", backgroundColor: "#216c2e" }}
+                >
+                  <Button
+                    variant="outlined"
+                    color="primary"
+                    size="large"
+                    style={{
+                      display: "block",
+                      color: "white",
+                      border: "#216c2e",
+                    }}
+                  >
+                    Sign In
+                  </Button>
+                </Link>
+              </div>
+            </div>
           </div>
 
           <Typography
@@ -132,15 +191,15 @@ const LandingPage = () => {
             FARMING REDEFINED
           </Typography>
 
-          <Link to="/signup" style={{ textDecoration: "none" }}>
+          <Link to="dashboard" style={{ textDecoration: "none" }}>
             <Button
               variant="contained"
-              color="primary"
               size="large"
               style={{
                 display: "block",
                 margin: "0 auto",
                 marginTop: "20px",
+                backgroundColor: "#216c2e", // Set the background color to green
               }}
             >
               Get Started
