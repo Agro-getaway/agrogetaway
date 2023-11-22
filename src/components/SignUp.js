@@ -25,8 +25,8 @@ function Copyright(props) {
       {...props}
     >
       {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
+      <Link color="inherit" href="https://agrogetaway1.vercel.app/">
+        Agrogetaway
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
@@ -81,7 +81,7 @@ export default function SignUp() {
       <Grid
         container
         component="main"
-        sx={{ bottom: 0, position: "absolute", top: "64px" }}
+        sx={{ position: "fixed", bottom: "0", top: "0" }}
       >
         <CssBaseline />
         <Grid
@@ -90,7 +90,8 @@ export default function SignUp() {
           sm={4}
           md={7}
           sx={{
-            backgroundImage: "url(https://source.unsplash.com/random?crops)",
+            backgroundImage:
+              "url(https://media.istockphoto.com/id/1401722160/photo/sunny-plantation-with-growing-soya.webp?b=1&s=170667a&w=0&k=20&c=evvmxmpiRM6sbnk59z876swwplz8mQN_ZxQWIO2eKA8=)",
             backgroundRepeat: "no-repeat",
             backgroundColor: (t) =>
               t.palette.mode === "light"
