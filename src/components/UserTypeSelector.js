@@ -18,11 +18,17 @@ const UserTypeSelector = () => {
   };
 
   const containerStyle = {
-    maxWidth: '600px',
-    margin: 'auto',
-    padding: '200px',
+    maxWidth: '400px',
+    marginTop: '90px',
+    marginleft:'10px',
+    marginRight:'10px',
+    marginBottom:'10px',
+    position:'relative',
+    padding: '100px',
     border: '1px solid #ccc',
-    borderRadius: '90px',
+    borderRadius: '60px',
+    alignItems:'center',
+    justifyContent: 'center',
     textAlign: 'center',
     // backgroundColor: '#f4f4f4',
     backgroundColor: '#f5f5dc'
@@ -30,7 +36,7 @@ const UserTypeSelector = () => {
   };
 
   const radioStyle = {
-    margin: '40px',
+    margin: '20px',
   };
   
 
