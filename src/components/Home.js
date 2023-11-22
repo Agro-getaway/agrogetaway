@@ -191,7 +191,7 @@ const LandingPage = () => {
             FARMING REDEFINED
           </Typography>
 
-          <Link to="dashboard" style={{ textDecoration: "none" }}>
+          <Link to="explore" style={{ textDecoration: "none" }}>
             <Button
               variant="contained"
               size="large"
@@ -202,7 +202,7 @@ const LandingPage = () => {
                 backgroundColor: "#216c2e", // Set the background color to green
               }}
             >
-              Get Started
+              Explore
             </Button>
           </Link>
         </Container>
