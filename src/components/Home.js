@@ -72,20 +72,16 @@ const LandingPage = () => {
           backgroundColor: "rgba(0, 0, 0, 0.5)", // Change the color and opacity as needed
         }}
       />
+
       <Grid
-        container
-        alignItems="center"
+        alignItems="flex-start"
         justifyContent="center"
-        style={{ height: "100%" }}
+        style={{ height: "15%" }}
       >
         <Container>
           <div
             style={{
-              position: "fixed",
-              top: 0,
-              right: 0,
-              padding: "10px",
-              zIndex: 999,
+              position: "relative",
             }}
           >
             <div
@@ -95,58 +91,76 @@ const LandingPage = () => {
                 justifyContent: "space-between",
               }}
             >
+              <div>
+                <img
+                  src="official.png"
+                  alt="Logo"
+                  style={{
+                    display: "flex",
+
+                    width: "200px",
+                    height: "auto",
+
+                    // Adjusted margin for better spacing
+                  }}
+                />
+              </div>
+
               {/* Logo on the left */}
-              <img
-                src="official.png"
-                alt="Logo"
-                style={{
-                  width: "100px",
-                  height: "auto",
-                  marginRight: "1100px",
-                }}
-              />
-
-              {/* Sign In and Sign Up buttons on the right */}
               <div
-                style={{ display: "flex", alignItems: "center", gap: "20px" }}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  padding: "10px",
+                }}
               >
-                <Link
-                  to="/signup"
-                  style={{ textDecoration: "none", backgroundColor: "#216c2e" }}
+                {/* Sign In and Sign Up buttons on the left */}
+                <div
+                  style={{ display: "flex", alignItems: "center", gap: "20px" }}
                 >
-                  <Button
-                    variant="outlined"
-                    color="primary"
-                    size="large"
+                  <Link
+                    to="/signup"
                     style={{
-                      display: "block",
-                      margin: "0 auto",
-                      color: "white",
-                      border: "#216c2e",
+                      textDecoration: "none",
+                      backgroundColor: "#216c2e",
                     }}
                   >
-                    <strong>Sign Up</strong>
-                  </Button>
-                </Link>
+                    <Button
+                      variant="outlined"
+                      color="primary"
+                      size="large"
+                      style={{
+                        color: "white",
+                        border: "#216c2e",
+                      }}
+                    >
+                      <strong>Sign Up</strong>
+                    </Button>
+                  </Link>
 
-                <Link
-                  to="/signin"
-                  style={{ textDecoration: "none", backgroundColor: "#216c2e" }}
-                >
-                  <Button
-                    variant="outlined"
-                    color="primary"
-                    size="large"
+                  <Link
+                    to="/signin"
                     style={{
-                      display: "block",
-                      margin: "0 auto",
-                      color: "white",
-                      border: "#216c2e",
+                      textDecoration: "none",
+                      backgroundColor: "#216c2e",
                     }}
                   >
-                    <strong>Sign In</strong>
-                  </Button>
-                </Link>
+                    <Button
+                      variant="outlined"
+                      color="primary"
+                      size="large"
+                      style={{
+                        color: "white",
+                        border: "#216c2e",
+                      }}
+                    >
+                      <strong>Sign In</strong>
+                    </Button>
+                  </Link>
+                </div>
+
+                {/* Logo on the right */}
               </div>
             </div>
           </div>
@@ -159,6 +173,7 @@ const LandingPage = () => {
               fontSize: "3vw", // Responsive font size
               position: "relative",
               fontFamily: "helvetica",
+              marginTop: "100px",
             }}
           >
             {welcomeMessages[currentMessageIndex]}

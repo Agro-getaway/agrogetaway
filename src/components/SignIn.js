@@ -1,7 +1,6 @@
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import { Avatar } from "@mui/material";
 import Box from "@mui/material/Box";
-import axios from "axios";
 import Button from "@mui/material/Button";
 import Checkbox from "@mui/material/Checkbox";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -12,6 +11,7 @@ import Paper from "@mui/material/Paper";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
+import axios from "axios";
 import * as React from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -35,7 +35,7 @@ function Copyright(props) {
 const defaultTheme = createTheme();
 
 export default function SignIn() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   // Function to handle sign-in
   const signIn = async (credentials) => {
     try {
@@ -47,7 +47,7 @@ export default function SignIn() {
       // console.log(response);
       if (response.status === 200) {
         alert("Sign-in successful");
-        navigate("/selector")
+        navigate("/selector");
         // You can handle further actions after successful sign-in
       } else {
         alert("Error in sign-in");
@@ -59,7 +59,7 @@ export default function SignIn() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget); 
+    const data = new FormData(event.currentTarget);
     // console.log({
     //   email: data.get("email"),
     //   password: data.get("password"),
@@ -97,6 +97,7 @@ export default function SignIn() {
             sx={{
               my: 8,
               mx: 4,
+              position: "relative",
               display: "flex",
               flexDirection: "column",
               alignItems: "center",

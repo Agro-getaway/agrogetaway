@@ -78,7 +78,7 @@ export default function SignUp() {
       <Grid
         container
         component="main"
-        sx={{ bottom: 0, position: "absolute", top: "64px" }}
+        sx={{ position: "fixed", bottom: "0", top: "0" }}
       >
         <CssBaseline />
         <Grid
