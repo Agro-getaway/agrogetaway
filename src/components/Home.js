@@ -97,7 +97,7 @@ const LandingPage = () => {
             >
               {/* Logo on the left */}
               <img
-                src="logo.jpg"
+                src="official.png"
                 alt="Logo"
                 style={{
                   width: "100px",
@@ -156,7 +156,7 @@ const LandingPage = () => {
               textAlign: "left",
               fontSize: "3vw", // Responsive font size
               position: "relative",
-              fontFamily: "Times New Roman",
+              fontFamily: "helvetica",
             }}
           >
             {welcomeMessages[currentMessageIndex]}
@@ -170,7 +170,7 @@ const LandingPage = () => {
               padding: "8px 0",
               fontSize: "2.0vw", // Responsive font size
               position: "relative",
-              fontFamily: "italics",
+              fontFamily: "helvetica",
             }}
           >
             Explore, learn, and experience the beauty of farming. Join farmers,
@@ -185,6 +185,7 @@ const LandingPage = () => {
               fontSize: "2.5vw",
               color: "white",
               position: "relative",
+              fontFamily: "helvetica",
               // Responsive font size
             }}
           >

@@ -30,9 +30,9 @@ const farmsData = [
 
 const exploreData = [
   {
-    name: "",
+    name: "Alexus Dairy Farm",
     rank: 3,
-    location: "Rukunjiri",
+    location: "Luweero",
     imageUrl:
       "https://images.unsplash.com/photo-1597432480301-a3b64410d898?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
@@ -46,7 +46,7 @@ const exploreData = [
   {
     name: "Eden Fruit Farm",
     rank: 4,
-    location: "Jinja",
+    location: "Mbale",
     imageUrl:
       "https://i.pinimg.com/736x/e9/4c/d0/e94cd0bee910879ce5274ef155e954b5.jpg",
   },
@@ -103,6 +103,10 @@ const Explore = () => {
                       />
                       &nbsp; {farm.name}
                     </Typography>
+                    <Typography variant="subtitle1">
+                      &nbsp; {farm.location}
+                    </Typography>
+
                     <Typography variant="caption">
                       <Rating
                         name={`farm-${farm.rank}`}
@@ -143,6 +147,9 @@ const Explore = () => {
                         style={{ verticalAlign: "middle" }}
                       />
                       &nbsp; {farm.name}
+                    </Typography>
+                    <Typography variant="subtitle1">
+                      &nbsp; {farm.location}
                     </Typography>
                     <Typography variant="caption">
                       <Rating
@@ -185,6 +192,9 @@ const Explore = () => {
                         style={{ verticalAlign: "middle" }}
                       />
                       &nbsp; {farm.name}
+                    </Typography>
+                    <Typography variant="subtitle1">
+                      &nbsp; {farm.location}
                     </Typography>
                     <Typography variant="caption">
                       <Rating
