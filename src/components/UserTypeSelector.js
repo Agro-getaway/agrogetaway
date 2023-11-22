@@ -35,9 +35,7 @@ const UserTypeSelector = () => {
   const radioStyle = {
     margin: '20px',
   };
-
-  display: 'flex',
-    height: '100vh',
+  
   
 
   return (
