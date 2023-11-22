@@ -12,18 +12,15 @@ const UserTypeSelector = () => {
 
   const handleSelect = (selectedType) => {
     setUserType(selectedType);
-    navigate("/dashboard")
+    // navigate("/dashboard")
+    navigate("/users")
   
 
   };
 
   const containerStyle = {
     maxWidth: '400px',
-    marginTop: '90px',
-    marginleft:'10px',
-    marginRight:'10px',
-    marginBottom:'10px',
-    position:'relative',
+    margin: 'auto',
     padding: '100px',
     border: '1px solid #ccc',
     borderRadius: '60px',
