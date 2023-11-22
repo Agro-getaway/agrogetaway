@@ -6,9 +6,10 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Typography';
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
-export default function ImgMediaCard() {
+export default function ImgMediaCard({handleItemClick}) {
+   
 
   return (
    <Grid
@@ -25,18 +26,19 @@ export default function ImgMediaCard() {
         component="img"
         alt="green iguana"
         height="140"
-        image="Organic-Farming.jpg"
+        image="OrgFarm.jpg"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
         Kaynera Farm
         </Typography>
         <Typography variant="body2" color="text.secondary">
-        Our passion for organic farming blends tradition and innovation, cultivating sustainable, nutrient-rich produce.
+        Our passion for organic farming blends tradition and innovation, cultivating sustainable, nutrient-rich produce. 
+        Visit and Learn organic Farming from our Farm.
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Book Tour</Button>
+        <Button size="small" >Visit Farm</Button>
       </CardActions>  
     </Card>
    </Grid>
@@ -47,18 +49,19 @@ export default function ImgMediaCard() {
             component="img"
             alt="second card"
             height="140"
-            image="vegetable.jpg"
+            image="VegFarm.jpg"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Modern Vegetables
+              Highway Vegetable Farm
             </Typography>
             <Typography variant="body2" color="text.secondary">
-            Explore the vibrant world of modern vegetable farming pioneered by our country's visionary farmers.
+            Gain invaluable insights into sustainable farming practices while enjoying the freshness of our vibrant produce.
+            Book your tour now for an immersive Learning experience.
             </Typography>
           </CardContent>
           <CardActions>
-            <Button size="small">Book Tour</Button>
+            <Button size="small" >Visit Farm</Button>
           </CardActions>
         </Card>
       </Grid>
@@ -69,20 +72,21 @@ export default function ImgMediaCard() {
             component="img"
             alt="second card"
             height="140"
-            image="cocoa.jpg"
+            image="CocoaFarm.jpg"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-             Cocoa Growing 
+             Cocoa Farm 
             </Typography>
             <Typography variant="body2" color="text.secondary">
-            Step into the world of modern agriculture and Learning cocoa farming Uganda's top cocoa farmers
+            Discover the art of cultivating fine cocoa beans and learn the secrets behind our rich, velvety chocolates.
+            Book your tour today and step into the flavorful world of SweetBloom Farm.
             </Typography>
           </CardContent>
           <CardActions>
-            <Link to="./User/ModelFarmer">
-            <Button size="small">Book Tour</Button>
-            </Link>
+            
+            <Button size="small" >Visit Farm</Button>
+    
           </CardActions>
         </Card>
       </Grid>
