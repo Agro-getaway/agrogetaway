@@ -14,6 +14,7 @@ import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import axios from "axios";
 import * as React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Copyright(props) {
   return (
@@ -38,6 +39,7 @@ function Copyright(props) {
 const defaultTheme = createTheme();
 
 export default function SignUp() {
+  const navigate = useNavigate()
   const adduser = async (member) => {
     try {
       const response = await axios.post(
@@ -48,6 +50,7 @@ export default function SignUp() {
       console.log(response);
       if (response.status === 201) {
         alert("Account created sucessfully");
+        navigate("/signin")
       } else {
         alert("Error in creating the account");
       }

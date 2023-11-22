@@ -36,6 +36,7 @@ const UserTypeSelector = () => {
     margin: '20px',
   };
   
+  
 
   return (
     <div style={containerStyle}>
