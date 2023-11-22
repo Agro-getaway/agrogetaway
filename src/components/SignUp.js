@@ -14,6 +14,7 @@ import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import axios from "axios";
 import * as React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Copyright(props) {
   return (
@@ -24,8 +25,8 @@ function Copyright(props) {
       {...props}
     >
       {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
+      <Link color="inherit" href="https://agrogetaway1.vercel.app/">
+        Agrogetaway1
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
@@ -38,6 +39,7 @@ function Copyright(props) {
 const defaultTheme = createTheme();
 
 export default function SignUp() {
+  const navigate = useNavigate()
   const adduser = async (member) => {
     try {
       const response = await axios.post(
@@ -48,6 +50,7 @@ export default function SignUp() {
       console.log(response);
       if (response.status === 201) {
         alert("Account created sucessfully");
+        navigate("/signin")
       } else {
         alert("Error in creating the account");
       }
@@ -78,7 +81,7 @@ export default function SignUp() {
       <Grid
         container
         component="main"
-        sx={{ bottom: 0, position: "absolute", top: "64px" }}
+        sx={{ position: "fixed", bottom: "0", top: "0" }}
       >
         <CssBaseline />
         <Grid
@@ -87,7 +90,8 @@ export default function SignUp() {
           sm={4}
           md={7}
           sx={{
-            backgroundImage: "url(https://source.unsplash.com/random?crops)",
+            backgroundImage:
+              "url(https://images.unsplash.com/photo-1486328228599-85db4443971f?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
             backgroundRepeat: "no-repeat",
             backgroundColor: (t) =>
               t.palette.mode === "light"

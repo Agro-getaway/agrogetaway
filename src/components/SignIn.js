@@ -1,7 +1,6 @@
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import { Avatar } from "@mui/material";
 import Box from "@mui/material/Box";
-import axios from "axios";
 import Button from "@mui/material/Button";
 import Checkbox from "@mui/material/Checkbox";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -12,6 +11,7 @@ import Paper from "@mui/material/Paper";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
+import axios from "axios";
 import * as React from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -24,6 +24,9 @@ function Copyright(props) {
       {...props}
     >
       {"Copyright © "}
+      <Link color="inherit" href="https://agrogetaway1.vercel.app/">
+        Agrogetaway1
+      </Link>{" "}
       {new Date().getFullYear()}
       {"."}
     </Typography>
@@ -35,7 +38,7 @@ function Copyright(props) {
 const defaultTheme = createTheme();
 
 export default function SignIn() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   // Function to handle sign-in
   const signIn = async (credentials) => {
     try {
@@ -47,7 +50,7 @@ export default function SignIn() {
       // console.log(response);
       if (response.status === 200) {
         alert("Sign-in successful");
-        navigate("/selector")
+        navigate("/selector");
         // You can handle further actions after successful sign-in
       } else {
         alert("Error in sign-in");
@@ -59,7 +62,7 @@ export default function SignIn() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget); 
+    const data = new FormData(event.currentTarget);
     // console.log({
     //   email: data.get("email"),
     //   password: data.get("password"),
@@ -82,7 +85,8 @@ export default function SignIn() {
           sm={4}
           md={7}
           sx={{
-            backgroundImage: "url(https://source.unsplash.com/random?farms)",
+            backgroundImage:
+              "url(https://images.unsplash.com/photo-1518994603110-1912b3272afd?q=80&w=1624&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
             backgroundRepeat: "no-repeat",
             backgroundColor: (t) =>
               t.palette.mode === "light"
