@@ -120,6 +120,7 @@ const LandingPage = () => {
                     size="large"
                     style={{
                       display: "block",
+                      margin: "0 auto",
                       color: "white",
                       border: "#216c2e",
                     }}
@@ -185,11 +186,12 @@ const LandingPage = () => {
               fontSize: "2.5vw",
               color: "white",
               position: "relative",
-              fontFamily: "helvetica",
+              // fontFamily: "blackadder itc",
+              fontFamily: "brush script mt",
               // Responsive font size
             }}
           >
-            FARMING REDEFINED
+            Farming Redefined
           </Typography>
 
           <Link to="explore" style={{ textDecoration: "none" }}>
@@ -200,10 +202,12 @@ const LandingPage = () => {
                 display: "block",
                 margin: "0 auto",
                 marginTop: "20px",
-                backgroundColor: "#216c2e", // Set the background color to green
+                backgroundColor: "#216c2e",
+                fontFamily: "helvetica",
+                // Set the background color to green
               }}
             >
-              Explore
+              <strong>Explore</strong>
             </Button>
           </Link>
         </Container>
