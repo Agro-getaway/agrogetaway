@@ -38,7 +38,7 @@ export default function ImgMediaCard({handleItemClick}) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" >Visit Farm</Button>
+        <Button size="small" >See Profile</Button>
       </CardActions>  
     </Card>
    </Grid>
@@ -61,7 +61,7 @@ export default function ImgMediaCard({handleItemClick}) {
             </Typography>
           </CardContent>
           <CardActions>
-            <Button size="small" >Visit Farm</Button>
+            <Button size="small" >See Profile</Button>
           </CardActions>
         </Card>
       </Grid>
@@ -85,7 +85,7 @@ export default function ImgMediaCard({handleItemClick}) {
           </CardContent>
           <CardActions>
             
-            <Button size="small" >Visit Farm</Button>
+            <Button size="small" >See Profile</Button>
     
           </CardActions>
         </Card>
