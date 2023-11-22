@@ -97,7 +97,7 @@ const LandingPage = () => {
             >
               {/* Logo on the left */}
               <img
-                src="logo.jpg"
+                src="official.png"
                 alt="Logo"
                 style={{
                   width: "100px",
@@ -120,11 +120,12 @@ const LandingPage = () => {
                     size="large"
                     style={{
                       display: "block",
+                      margin: "0 auto",
                       color: "white",
                       border: "#216c2e",
                     }}
                   >
-                    Sign Up
+                    <strong>Sign Up</strong>
                   </Button>
                 </Link>
 
@@ -138,11 +139,12 @@ const LandingPage = () => {
                     size="large"
                     style={{
                       display: "block",
+                      margin: "0 auto",
                       color: "white",
                       border: "#216c2e",
                     }}
                   >
-                    Sign In
+                    <strong>Sign In</strong>
                   </Button>
                 </Link>
               </div>
@@ -156,7 +158,7 @@ const LandingPage = () => {
               textAlign: "left",
               fontSize: "3vw", // Responsive font size
               position: "relative",
-              fontFamily: "Times New Roman",
+              fontFamily: "helvetica",
             }}
           >
             {welcomeMessages[currentMessageIndex]}
@@ -170,7 +172,7 @@ const LandingPage = () => {
               padding: "8px 0",
               fontSize: "2.0vw", // Responsive font size
               position: "relative",
-              fontFamily: "italics",
+              fontFamily: "helvetica",
             }}
           >
             Explore, learn, and experience the beauty of farming. Join farmers,
@@ -185,13 +187,15 @@ const LandingPage = () => {
               fontSize: "2.5vw",
               color: "white",
               position: "relative",
+              // fontFamily: "blackadder itc",
+              fontFamily: "brush script mt",
               // Responsive font size
             }}
           >
-            FARMING REDEFINED
+            Farming Redefined
           </Typography>
 
-          <Link to="dashboard" style={{ textDecoration: "none" }}>
+          <Link to="explore" style={{ textDecoration: "none" }}>
             <Button
               variant="contained"
               size="large"
@@ -199,10 +203,12 @@ const LandingPage = () => {
                 display: "block",
                 margin: "0 auto",
                 marginTop: "20px",
-                backgroundColor: "#216c2e", // Set the background color to green
+                backgroundColor: "#216c2e",
+                fontFamily: "helvetica",
+                // Set the background color to green
               }}
             >
-              Get Started
+              <strong>Explore</strong>
             </Button>
           </Link>
         </Container>
