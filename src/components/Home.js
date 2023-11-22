@@ -125,7 +125,7 @@ const LandingPage = () => {
                       border: "#216c2e",
                     }}
                   >
-                    Sign Up
+                    <strong>Sign Up</strong>
                   </Button>
                 </Link>
 
@@ -139,11 +139,12 @@ const LandingPage = () => {
                     size="large"
                     style={{
                       display: "block",
+                      margin: "0 auto",
                       color: "white",
                       border: "#216c2e",
                     }}
                   >
-                    Sign In
+                    <strong>Sign In</strong>
                   </Button>
                 </Link>
               </div>
