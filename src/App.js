@@ -5,14 +5,8 @@ import LandingPage from "./components/Home.js";
 import LogOut from "./components/LogOut.js";
 import SignIn from "./components/SignIn.js";
 import SignUp from "./components/SignUp.js";
-<<<<<<< Updated upstream
-import Selector from "./components/UserTypeSelector.js";
-
-import Dashboard from "./components/Dashboard.js";
-=======
->>>>>>> Stashed changes
 import User from "./components/USerDashboard/User.js";
-
+import Selector from "./components/UserTypeSelector.js";
 function App() {
   // const [isLogged, setIsLogged] = React.useState(true);
 
