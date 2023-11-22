@@ -13,6 +13,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Copyright(props) {
   return (
@@ -34,16 +35,19 @@ function Copyright(props) {
 const defaultTheme = createTheme();
 
 export default function SignIn() {
+  const navigate = useNavigate()
   // Function to handle sign-in
   const signIn = async (credentials) => {
     try {
       const response = await axios.post(
-        "https://agrogetawy.onrender.com/signin",
+        "https://agrogetawy.onrender.com/user/api/auth/signin/",
+        // "http://localhost:3011/user/api/auth/signin/",
         credentials
       );
-      console.log(response);
+      // console.log(response);
       if (response.status === 200) {
         alert("Sign-in successful");
+        navigate("/selector")
         // You can handle further actions after successful sign-in
       } else {
         alert("Error in sign-in");
@@ -64,6 +68,7 @@ export default function SignIn() {
       email: data.get("email"),
       password: data.get("password"),
     };
+    // console.log("sent data", credentials)
     signIn(credentials);
   };
 

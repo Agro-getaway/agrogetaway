@@ -4,6 +4,7 @@ import LandingPage from "./components/Home.js";
 import LogOut from "./components/LogOut.js";
 import SignIn from "./components/SignIn.js";
 import SignUp from "./components/SignUp.js";
+import Selector from "./components/UserTypeSelector.js";
 
 import Dashboard from "./components/Dashboard.js";
 import User from "./components/USerDashboard/User.js";
@@ -21,6 +22,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />}></Route>
         <Route path="/logout" element={<LogOut />}></Route>
         <Route path="/users" element={<User />}></Route>
+        <Route path="/selector" element={<Selector />}></Route>
       </Routes>
     </>
   );
