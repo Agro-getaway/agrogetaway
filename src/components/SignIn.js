@@ -24,6 +24,9 @@ function Copyright(props) {
       {...props}
     >
       {"Copyright © "}
+      <Link color="inherit" href="https://agrogetaway1.vercel.app/">
+        Agrogetaway1
+      </Link>{" "}
       {new Date().getFullYear()}
       {"."}
     </Typography>
@@ -82,7 +85,8 @@ export default function SignIn() {
           sm={4}
           md={7}
           sx={{
-            backgroundImage: "url(https://source.unsplash.com/random?farms)",
+            backgroundImage:
+              "url(https://images.unsplash.com/photo-1518994603110-1912b3272afd?q=80&w=1624&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
             backgroundRepeat: "no-repeat",
             backgroundColor: (t) =>
               t.palette.mode === "light"
@@ -97,7 +101,6 @@ export default function SignIn() {
             sx={{
               my: 8,
               mx: 4,
-              position: "relative",
               display: "flex",
               flexDirection: "column",
               alignItems: "center",

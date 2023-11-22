@@ -25,7 +25,7 @@ function Copyright(props) {
     >
       {"Copyright © "}
       <Link color="inherit" href="https://agrogetaway1.vercel.app/">
-        Agrogetaway
+        Agrogetaway1
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
@@ -88,7 +88,7 @@ export default function SignUp() {
           md={7}
           sx={{
             backgroundImage:
-              "url(https://media.istockphoto.com/id/1401722160/photo/sunny-plantation-with-growing-soya.webp?b=1&s=170667a&w=0&k=20&c=evvmxmpiRM6sbnk59z876swwplz8mQN_ZxQWIO2eKA8=)",
+              "url(https://images.unsplash.com/photo-1486328228599-85db4443971f?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
             backgroundRepeat: "no-repeat",
             backgroundColor: (t) =>
               t.palette.mode === "light"
