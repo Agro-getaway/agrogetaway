@@ -50,6 +50,7 @@ const Profile = () => {
     width: "100%",
     height: "100%",
     objectFit: "cover",
+    padding: "20px",
   };
 
   return (

@@ -91,16 +91,33 @@ export default function SignUp() {
           md={7}
           sx={{
             backgroundImage:
-              "url(https://images.unsplash.com/photo-1486328228599-85db4443971f?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
+              "url(https://img.freepik.com/free-photo/medium-shot-kid-working-cornfield_23-2149142840.jpg?w=900&t=st=1700771726~exp=1700772326~hmac=ef63127e315136f220658a3bf857d3e94644c5f367f336bab1762ad4676f02cc)",
+
             backgroundRepeat: "no-repeat",
-            backgroundColor: (t) =>
-              t.palette.mode === "light"
-                ? t.palette.grey[50]
-                : t.palette.grey[900],
+            backgroundColor: "rgba(0, 0, 0, 1)",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         />
+
+        <Typography
+          variant="h4"
+          sx={{
+            position: "absolute",
+            bottom: "5%",
+            Top: "95%",
+            left: "35%",
+            transform: "translateX(-60%)",
+            justifyContent: "center",
+
+            color: "#ffffff",
+            textAlign: "left",
+            textShadow: "2px 2px 10px #000000",
+          }}
+        >
+          Redefining Agriculture With Agrogetaway
+          <p sx={{}}>Learn,explore And Experience the Beauty of Farming</p>
+        </Typography>
         <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
           <Box
             sx={{
