@@ -1,6 +1,15 @@
 // src/Explore.js
 import StarIcon from "@mui/icons-material/Star";
-import { Container, Grid, Paper, Rating, Typography } from "@mui/material";
+import {
+  Button,
+  Container,
+  Grid,
+  Paper,
+  Rating,
+  Typography,
+} from "@mui/material";
+import { Link } from "react-router-dom";
+
 import React from "react";
 
 const farmsData = [
@@ -114,6 +123,13 @@ const Explore = () => {
                         readOnly
                       />
                     </Typography>
+
+                    <div>
+                      {/* Other content */}
+                      <Link to="/signup">
+                        <Button>Visit</Button>
+                      </Link>
+                    </div>
                     <img
                       src={farm.imageUrl}
                       alt={farm.name}
@@ -158,6 +174,12 @@ const Explore = () => {
                         readOnly
                       />
                     </Typography>
+                    <div>
+                      {/* Other content */}
+                      <Link to="/signup">
+                        <Button>Visit</Button>
+                      </Link>
+                    </div>
                     <img
                       src={farm.imageUrl}
                       alt={farm.name}
@@ -203,6 +225,12 @@ const Explore = () => {
                         readOnly
                       />
                     </Typography>
+                    <div>
+                      {/* Other content */}
+                      <Link to="/signup">
+                        <Button>Visit</Button>
+                      </Link>
+                    </div>
                     <img
                       src={farm.imageUrl}
                       alt={farm.name}
