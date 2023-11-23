@@ -92,7 +92,9 @@ export default function ImgMediaCard({ handleItemClick }) {
             </Typography>
           </CardContent>
           <CardActions>
-            <Button size="small">See Profile</Button>
+            <Link to="/profile">
+              <Button size="small">See Profile</Button>
+            </Link>
           </CardActions>
         </Card>
       </Grid>

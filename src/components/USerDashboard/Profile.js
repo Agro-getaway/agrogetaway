@@ -15,8 +15,8 @@ const Profile = () => {
     farmingDescription:
       "Organic vegetable farming refers to a method of growing vegetables without the use of synthetic pesticides, herbicides, fertilizers, genetically modified organisms (GMOs), or other artificial additives. Instead, organic farmers rely on natural and sustainable agricultural practices to cultivate crops.",
     farmerInfo: {
-      name: "John Doe",
-      experience: "20 years",
+      name: "Mukasa John",
+      experience: "60 years",
       background:
         "Raised on a farm, John has a deep-rooted passion for agriculture. He has pursued various courses in sustainable farming and is committed to providing fresh, organic produce to the local community.",
       photo:
