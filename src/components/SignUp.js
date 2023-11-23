@@ -39,7 +39,7 @@ function Copyright(props) {
 const defaultTheme = createTheme();
 
 export default function SignUp() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const adduser = async (member) => {
     try {
       const response = await axios.post(
@@ -50,7 +50,7 @@ export default function SignUp() {
       console.log(response);
       if (response.status === 201) {
         alert("Account created sucessfully");
-        navigate("/signin")
+        navigate("/selector");
       } else {
         alert("Error in creating the account");
       }

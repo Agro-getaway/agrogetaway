@@ -50,7 +50,7 @@ export default function SignIn() {
       // console.log(response);
       if (response.status === 200) {
         alert("Sign-in successful");
-        navigate("/dashboard");
+        navigate("/users");
         // You can handle further actions after successful sign-in
       } else {
         alert("Error in sign-in");
@@ -149,7 +149,12 @@ export default function SignIn() {
                 variant="contained"
                 sx={{ mt: 3, mb: 2, backgroundColor: "#216c2e" }}
               >
-                Sign In
+                <Link
+                  to="/users"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  <strong>Sign In</strong>
+                </Link>
               </Button>
               <Grid container>
                 <Grid
