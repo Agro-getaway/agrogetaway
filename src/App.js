@@ -21,7 +21,6 @@ function App() {
         <Route path="/logout" element={<LogOut />}></Route>
         <Route path="/users" element={<User />}></Route>
         <Route path="/selector" element={<Selector />}></Route>
-        
       </Routes>
     </>
   );
