@@ -94,9 +94,15 @@ export default function SignUp() {
               "url(https://img.freepik.com/free-photo/medium-shot-kid-working-cornfield_23-2149142840.jpg?w=900&t=st=1700771726~exp=1700772326~hmac=ef63127e315136f220658a3bf857d3e94644c5f367f336bab1762ad4676f02cc)",
 
             backgroundRepeat: "no-repeat",
-            backgroundColor: "rgba(0, 0, 0, 1)",
+
             backgroundSize: "cover",
             backgroundPosition: "center",
+
+            top: "0",
+            left: "0",
+            width: "100%",
+            height: "100%",
+            backgroundColor: "rgba(0, 0, 0, 0.5)",
           }}
         />
 
@@ -104,15 +110,15 @@ export default function SignUp() {
           variant="h4"
           sx={{
             position: "absolute",
-            bottom: "5%",
-            Top: "95%",
+            bottom: "0%",
+            Top: "100%",
             left: "35%",
             transform: "translateX(-60%)",
             justifyContent: "center",
 
             color: "#ffffff",
             textAlign: "left",
-            textShadow: "2px 2px 10px #000000",
+            textShadow: "5px 5px 10px #000000",
           }}
         >
           Redefining Agriculture With Agrogetaway
