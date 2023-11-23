@@ -1,42 +1,39 @@
 // UserTypeSelector.js
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 /* styles.css */
 
+const Selector = () => {
+  const navigate = useNavigate();
 
-const UserTypeSelector = () => {
-    const navigate = useNavigate()
-
-  const [userType, setUserType] = useState('');
+  const [userType, setUserType] = useState("");
 
   const handleSelect = (selectedType) => {
     setUserType(selectedType);
     // navigate("/dashboard")
-    navigate("/users")
-  
-
+    navigate("/users");
   };
 
   const containerStyle = {
-    maxWidth: '400px',
-    margin: 'auto',
-    padding: '100px',
-    border: '1px solid #ccc',
-    borderRadius: '60px',
-    alignItems:'center',
-    justifyContent: 'center',
-    textAlign: 'center',
+    Top: "80%",
+    Bottom: "20%",
+    Right: "50%",
+    Left: "50%",
+
+    padding: "200px",
+    border: "1px solid #ccc",
+    borderRadius: "30px",
+    alignItems: "center",
+    justifyContent: "center",
+    textAlign: "center",
     // backgroundColor: '#f4f4f4',
-    backgroundColor: '#f5f5dc'
-    
+    backgroundColor: "#f5f5dc",
   };
 
   const radioStyle = {
-    margin: '20px',
+    margin: "20px",
   };
-  
-  
 
   return (
     <div style={containerStyle}>
@@ -46,8 +43,8 @@ const UserTypeSelector = () => {
           <input
             type="radio"
             value="organization"
-            checked={userType === 'organization'}
-            onChange={() => handleSelect('organization')}
+            checked={userType === "organization"}
+            onChange={() => handleSelect("organization")}
           />
           Organization
         </label>
@@ -57,10 +54,8 @@ const UserTypeSelector = () => {
           <input
             type="radio"
             value="individual"
-            checked={userType === 'individual'}
-            onChange={() => handleSelect('individual')
-            
-        }
+            checked={userType === "individual"}
+            onChange={() => handleSelect("individual")}
           />
           Individual
         </label>
@@ -69,13 +64,11 @@ const UserTypeSelector = () => {
       {userType && (
         <div>
           {/* <p style={{ marginTop: '15px' }}>You selected: {userType}</p> */}
-          {/* Additional content or logic based on the selected user type */
-          
-          }
+          {/* Additional content or logic based on the selected user type */}
         </div>
       )}
     </div>
   );
 };
 
-export default UserTypeSelector;
+export default Selector;
