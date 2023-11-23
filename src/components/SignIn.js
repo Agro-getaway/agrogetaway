@@ -96,6 +96,24 @@ export default function SignIn() {
             backgroundPosition: "center",
           }}
         />
+        <Typography
+          variant="h4"
+          sx={{
+            position: "absolute",
+            bottom: "0%",
+            Top: "100%",
+            left: "35%",
+            transform: "translateX(-60%)",
+            justifyContent: "center",
+
+            color: "#ffffff",
+            textAlign: "left",
+            textShadow: "5px 5px 10px #000000",
+          }}
+        >
+          Redefining Agriculture With Agrogetaway
+          <p sx={{}}>Learn,explore And Experience the Beauty of Farming</p>
+        </Typography>
         <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
           <Box
             sx={{
