@@ -5,7 +5,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import Grid from '@mui/material/Grid';
 
-const products = [
+const farm = [
   {
     name: 'Product 1',
     desc: 'A nice thing',
@@ -26,13 +26,12 @@ const products = [
     desc: 'Best thing of all',
     price: '$14.11',
   },
-  { name: 'Shipping', desc: '', price: 'Free' },
 ];
 
 const addresses = ['1 MUI Drive', 'Reactville', 'Anytown', '99999', 'USA'];
 const payments = [
   { name: 'Card type', detail: 'Visa' },
-  { name: 'Card holder', detail: 'Mr John Smith' },
+  { name: 'Card holder', detail: 'john doe' },
   { name: 'Card number', detail: 'xxxx-xxxx-xxxx-1234' },
   { name: 'Expiry date', detail: '04/2024' },
 ];
@@ -41,13 +40,13 @@ export default function Review() {
   return (
     <React.Fragment>
       <Typography variant="h6" gutterBottom>
-        Order summary
+        Booking summary
       </Typography>
       <List disablePadding>
-        {products.map((product) => (
-          <ListItem key={product.name} sx={{ py: 1, px: 0 }}>
-            <ListItemText primary={product.name} secondary={product.desc} />
-            <Typography variant="body2">{product.price}</Typography>
+        {farm.map((farm) => (
+          <ListItem key={farm.name} sx={{ py: 1, px: 0 }}>
+            <ListItemText primary={farm.name} secondary={farm.desc} />
+            <Typography variant="body2">{farm.price}</Typography>
           </ListItem>
         ))}
         <ListItem sx={{ py: 1, px: 0 }}>
