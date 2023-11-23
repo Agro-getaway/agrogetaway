@@ -72,11 +72,7 @@ const LandingPage = () => {
         }}
       />
 
-      <Grid
-        alignItems="flex-start"
-        justifyContent="center"
-        style={{ height: "15%" }}
-      >
+      <Grid alignItems="flex-start" style={{ height: "15%", width: "100%" }}>
         <Container>
           <div
             style={{
@@ -98,7 +94,7 @@ const LandingPage = () => {
                     display: "flex",
 
                     width: "200px",
-                    height: "auto",
+                    marginRight: "70%",
 
                     // Adjusted margin for better spacing
                   }}

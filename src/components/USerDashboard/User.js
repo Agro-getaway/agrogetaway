@@ -16,10 +16,10 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import PropTypes from "prop-types";
 import * as React from "react";
+import ConfirmTour from "./ConfirmTour.js";
 import MainDashboard from "./MainDashboard.js";
 import ModelFarm from "./ModelFarmer.js";
 import ScheduleTour from "./SheduleTour.js";
-import ConfirmTour from "./ConfirmTour.js";
 
 const drawerWidth = 240;
 
@@ -41,22 +41,28 @@ function ResponsiveDrawer(props) {
       <Toolbar />
       <Divider />
       <List>
-        {['Dashboard', 'Model Farm', 'Schedule Tour', 'Confirm Tour'].map((text, index) => (
-          <ListItem key={text} disablePadding sx={{
-            backgroundColor: text === currentPage ? "cyan" : "white",
-            text: text === currentPage ? "white" : "black",
-            borderRadius: text === currentPage ? "15%" : "0",
-            //marginX: "5px",
-            marginRight: "15px"
-          }}>
-            <ListItemButton onClick={() => handleItemClick(text)}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
+        {["Dashboard", "Model Farm", "Schedule Tour", "Confirm Tour"].map(
+          (text, index) => (
+            <ListItem
+              key={text}
+              disablePadding
+              sx={{
+                backgroundColor: text === currentPage ? "cyan" : "white",
+                text: text === currentPage ? "white" : "black",
+                borderRadius: text === currentPage ? "15%" : "0",
+                //marginX: "5px",
+                marginRight: "15px",
+              }}
+            >
+              <ListItemButton onClick={() => handleItemClick(text)}>
+                <ListItemIcon>
+                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </ListItem>
+          )
+        )}
       </List>
     </div>
   );
@@ -76,8 +82,7 @@ function ResponsiveDrawer(props) {
           backgroundColor: "#fff7d1",
         }}
       >
-        <Toolbar
-        >
+        <Toolbar>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -89,7 +94,7 @@ function ResponsiveDrawer(props) {
           </IconButton>
           <div className="logo">
             <img
-              src="agrogetaway-high-resolution-logo-removebg-preview (1).png"
+              src="official.png"
               alt="Logo"
               style={{
                 maxHeight: "50px",
@@ -103,8 +108,9 @@ function ResponsiveDrawer(props) {
             fontSize="2vw"
             fontFamily="italics"
             component="div"
+            textAlign="center"
             sx={{ flexGrow: 1 }}
-            style={{ color: "Black", marginLeft: "700px" }}
+            style={{ color: "Black" }}
           >
             Farming Redefined
           </Typography>
@@ -158,10 +164,12 @@ function ResponsiveDrawer(props) {
       >
         <Toolbar />
         <Typography paragraph>
-        {currentPage === 'Dashboard' && <MainDashboard handleItemClick={handleItemClick}/>}
-          {currentPage === 'Model Farm' && <ModelFarm/>}
-          {currentPage === 'Schedule Tour' && <ScheduleTour/>}
-          {currentPage === 'Confirm Tour' && <ConfirmTour/>}
+          {currentPage === "Dashboard" && (
+            <MainDashboard handleItemClick={handleItemClick} />
+          )}
+          {currentPage === "Model Farm" && <ModelFarm />}
+          {currentPage === "Schedule Tour" && <ScheduleTour />}
+          {currentPage === "Confirm Tour" && <ConfirmTour />}
         </Typography>
       </Box>
     </Box>
