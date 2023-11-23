@@ -50,7 +50,7 @@ export default function SignIn() {
       // console.log(response);
       if (response.status === 200) {
         alert("Sign-in successful");
-        navigate("/selector");
+        navigate("/dashboard");
         // You can handle further actions after successful sign-in
       } else {
         alert("Error in sign-in");
