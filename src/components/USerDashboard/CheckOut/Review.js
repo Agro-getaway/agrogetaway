@@ -7,23 +7,14 @@ import * as React from "react";
 
 const farm = [
   {
-    name: "Service 1",
-    desc: "Food",
-    price: "UGX10000",
-  },
-  {
-    name: "Service 2",
-    desc: "Farm Experience",
-    price: "UGX15000",
-  },
-  {
-    name: "Service 3",
-    desc: "Other Services",
-    price: "UGX10000",
+    name: 'Highway Vegetation',
+    desc: 'planting vegetables on a small scale',
+    Activities: 'On-Farm Cooking',
+    Location: 'Mukono',
   },
 ];
 
-const addresses = ["Kampala", "Kireka", "Banda"];
+const addresses = ['', 'Reactville', 'Anytown', '99999', 'USA'];
 const payments = [
   { name: "Card type", detail: "Visa" },
   { name: "Card holder", detail: "Balikowa Jane" },
@@ -41,24 +32,24 @@ export default function Review() {
         {farm.map((farm) => (
           <ListItem key={farm.name} sx={{ py: 1, px: 0 }}>
             <ListItemText primary={farm.name} secondary={farm.desc} />
-            <Typography variant="body2">{farm.price}</Typography>
+            <Typography variant="body2">{farm.Location}</Typography>
           </ListItem>
         ))}
         <ListItem sx={{ py: 1, px: 0 }}>
           <ListItemText primary="Total" />
           <Typography variant="subtitle1" sx={{ fontWeight: 700 }}>
-            UGX45000
+            Sh......
           </Typography>
         </ListItem>
       </List>
       <Grid container spacing={2}>
-        <Grid item xs={12} sm={6}>
+        {/* <Grid item xs={12} sm={6}>
           <Typography variant="h6" gutterBottom sx={{ mt: 2 }}>
             Details
           </Typography>
-          <Typography gutterBottom>Balikowa Jane</Typography>
-          <Typography gutterBottom>{addresses.join(", ")}</Typography>
-        </Grid>
+          <Typography gutterBottom>John Smith</Typography>
+          <Typography gutterBottom>{addresses.join(', ')}</Typography>
+        </Grid> */}
         <Grid item container direction="column" xs={12} sm={6}>
           <Typography variant="h6" gutterBottom sx={{ mt: 2 }}>
             Payment details

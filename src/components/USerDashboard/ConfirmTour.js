@@ -2,7 +2,7 @@ import Checkout from "./CheckOut/Checkout.js"; // Update the path based on the f
 
 const Confirm =()=>{
     return (
-        <div className='AddressForm'>
+        <div className='AddressForm' >
         <Checkout />
         {/* <PaymentForm /> */}
 

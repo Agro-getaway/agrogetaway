@@ -1,6 +1,6 @@
-import MailIcon from "@mui/icons-material/Mail";
+//import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
+//import InboxIcon from "@mui/icons-material/MoveToInbox";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -10,16 +10,17 @@ import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
+//import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import PropTypes from "prop-types";
 import * as React from "react";
-import ConfirmTour from "./ConfirmTour.js";
 import MainDashboard from "./MainDashboard.js";
 import ModelFarm from "./ModelFarmer.js";
 import ScheduleTour from "./SheduleTour.js";
+import ConfirmTour from "./ConfirmTour.js";
+import  { useCallback, useEffect, useState } from "react";
 
 const drawerWidth = 240;
 
@@ -37,41 +38,63 @@ function ResponsiveDrawer(props) {
     setMobileOpen(false);
   };
   const drawer = (
-    <div sx={{ backgroundColor: "red" }}>
+    <div >
       <Toolbar />
       <Divider />
-      <List>
-        {["Dashboard", "Model Farm", "Schedule Tour", "Confirm Tour"].map(
-          (text, index) => (
-            <ListItem
-              key={text}
-              disablePadding
-              sx={{
-                backgroundColor: text === currentPage ? "cyan" : "white",
-                text: text === currentPage ? "white" : "black",
-                borderRadius: text === currentPage ? "15%" : "0",
-                //marginX: "5px",
-                marginRight: "15px",
-              }}
-            >
-              <ListItemButton onClick={() => handleItemClick(text)}>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          )
-        )}
+      <List sx={{ backgroundColor: "#fefae0" }}>
+        {['Dashboard', 'Model Farm', 'Farmer Profile', 'Book Tour'].map((text, index) => (
+          <ListItem key={text} disablePadding sx={{
+            backgroundColor: text === currentPage ? "#fefae0" : "#fefae0",
+            text: text === currentPage ? "#fefae0" : "#283618",
+            borderRadius: text === currentPage ? "15%" : "0",
+            //marginX: "5px",
+            marginRight: "15px"
+          }}>
+            <ListItemButton onClick={() => handleItemClick(text)}>
+              {/* <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon> */}
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
       </List>
     </div>
   );
+
+  // const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [welcomeMessages] = useState([
+    'Discover the world of organic farming!',
+    'Explore the vibrant world of modern vegetable farming.',
+    'Step into the world of cocoa growing.'
+  ]);
+  const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
+
+  const nextWelcomeMessage = useCallback(() => {
+    setCurrentMessageIndex(
+      (prevIndex) => (prevIndex + 1) % welcomeMessages.length
+    );
+  }, [welcomeMessages]);
+
+  const autoTransition = useCallback(() => {
+    nextWelcomeMessage();
+  }, [ nextWelcomeMessage]);
+
+  useEffect(() => {
+    const intervalId = setInterval(autoTransition, 10000); // 10 seconds (10,000 milliseconds)
+
+    // Clean up the interval when the component unmounts
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [autoTransition]);
 
   // Remove this const when copying and pasting into your project.
   const container =
     window !== undefined ? () => window().document.body : undefined;
 
   return (
+    <div style={{ backgroundColor: '#dda15e'}}>
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar
@@ -79,10 +102,11 @@ function ResponsiveDrawer(props) {
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
-          backgroundColor: "#fff7d1",
+          backgroundColor: "#fefae0",
         }}
       >
-        <Toolbar>
+        <Toolbar
+        >
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -92,9 +116,9 @@ function ResponsiveDrawer(props) {
           >
             <MenuIcon />
           </IconButton>
-          <div className="logo">
+          {/* <div className="logo">
             <img
-              src="official.png"
+              src="agrogetaway-high-resolution-logo-removebg-preview (1).png"
               alt="Logo"
               style={{
                 maxHeight: "50px",
@@ -102,15 +126,14 @@ function ResponsiveDrawer(props) {
                 marginRight: "15px",
               }}
             />
-          </div>
+          </div> */}
           <Typography
             variant="h6"
-            fontSize="2vw"
+            fontSize="3vw"
             fontFamily="italics"
             component="div"
-            textAlign="center"
             sx={{ flexGrow: 1 }}
-            style={{ color: "Black" }}
+            style={{ color: "#283618" }}
           >
             Farming Redefined
           </Typography>
@@ -164,15 +187,33 @@ function ResponsiveDrawer(props) {
       >
         <Toolbar />
         <Typography paragraph>
-          {currentPage === "Dashboard" && (
-            <MainDashboard handleItemClick={handleItemClick} />
-          )}
-          {currentPage === "Model Farm" && <ModelFarm />}
-          {currentPage === "Schedule Tour" && <ScheduleTour />}
-          {currentPage === "Confirm Tour" && <ConfirmTour />}
+        {currentPage === 'Dashboard' && <MainDashboard handleItemClick={handleItemClick}/>}
+          {currentPage === 'Model Farm' && <ModelFarm/>}
+          {currentPage === 'Farmer Profile' && <ScheduleTour/>}
+          {currentPage === 'Book Tour' && <ConfirmTour/>}
         </Typography>
       </Box>
+      
     </Box>
+    <Box>
+      <Typography
+            variant="h1"
+            style={{
+              color: "white",
+              textAlign: "left",
+              fontSize: "3vw", // Responsive font size
+              // position: "relative",
+              fontFamily: "helvetica",
+              marginTop: "10%",
+              marginLeft: "30%"
+              
+             
+            }}
+          >
+            {welcomeMessages[currentMessageIndex]}
+          </Typography>
+          </Box>
+    </div>
   );
 }
 

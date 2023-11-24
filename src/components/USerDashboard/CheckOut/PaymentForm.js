@@ -8,11 +8,11 @@ import Checkbox from '@mui/material/Checkbox';
 export default function PaymentForm() {
   return (
     <React.Fragment>
-      <Typography variant="h6" gutterBottom>
+      <Typography variant="h6" gutterBottom color={'#283618'}>
         Payment method
       </Typography>
       <Grid container spacing={3}>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6} color={'#283618'}>
           <TextField
             required
             id="cardName"
@@ -22,7 +22,7 @@ export default function PaymentForm() {
             variant="standard"
           />
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6} color={'#283618'}>
           <TextField
             required
             id="cardNumber"
@@ -32,7 +32,7 @@ export default function PaymentForm() {
             variant="standard"
           />
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6} color={'#283618'}>
           <TextField
             required
             id="expDate"
@@ -42,7 +42,7 @@ export default function PaymentForm() {
             variant="standard"
           />
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6}color={'#283618'}>
           <TextField
             required
             id="cvv"

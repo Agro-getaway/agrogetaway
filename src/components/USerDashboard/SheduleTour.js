@@ -1,124 +1,70 @@
-import { Grid, Paper } from "@mui/material";
-import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick-theme.css";
-import "slick-carousel/slick/slick.css";
+import React from 'react';
+import { Typography, Button, Grid, Divider, List, ListItem, ListItemText, Paper, Card } from '@mui/material';
 
-// ... (your imports and other code)
-
-const Profile = () => {
-  const farmDetails = {
-    location: "Green Valley, Countryside",
-    about:
-      "Welcome to Green Acres Farm! We are a family-owned and operated farm dedicated to sustainable and organic farming practices. Our mission is to provide the community with fresh, healthy, and locally grown produce.",
-    typeOfFarming: "Organic Vegetable Farming",
-    farmingDescription:
-      "Organic vegetable farming refers to a method of growing vegetables without the use of synthetic pesticides, herbicides, fertilizers, genetically modified organisms (GMOs), or other artificial additives. Instead, organic farmers rely on natural and sustainable agricultural practices to cultivate crops.",
-    farmerInfo: {
-      name: "Mukasa John",
-      experience: "60 years",
-      background:
-        "Raised on a farm, John has a deep-rooted passion for agriculture. He has pursued various courses in sustainable farming and is committed to providing fresh, organic produce to the local community.",
-      photo:
-        "https://img.freepik.com/free-photo/one-farmer-harvesting-fresh-organic-vegetables-outdoors-generated-by-ai_188544-44273.jpg?size=626&ext=jpg",
-    },
-    farmPictures: [
-      "https://images.unsplash.com/photo-1529313780224-1a12b68bed16?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "https://images.unsplash.com/photo-1628444756989-ea3f47c0ebb4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTU5fHxmYXJtaW5nfGVufDB8fDB8fHww",
-      "https://images.unsplash.com/photo-1599138900450-3d06e89ad309?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      // Add more picture URLs as needed
-    ],
+function FarmerProfile() {
+  const farmerDetails = {
+    name: ' Nalwanga Sarah',
+    location: ' Lives in Takajjunge Mukono',
+    farmingCategory: ' Mainly does Organic Vegetable Farming',
+    description: '  A passionate farmer dedicated to sustainable and organic farming methods.Nalwanga Sarah is a farmer in Mukono who grows vegetables without chemicals. She takes care of the land and plants in a way thats good for nature. When people visit her farm, they can learn how she grows veggies and help with things like making compost and picking crops. Come join Sarah at her farm to see how she does things naturally and enjoy the beauty of farming!' ,
+    imageUrl: 'Organic-Farming.jpg',
+    // image:'VegFarm.jpg', // Replace with the URL to the farmer's image
+    farmActivities: [
+      'Crop Rotation',
+      'Composting',
+      'Natural Pest Control',
+      'Harvesting Workshops',
+      'Soil Conservation Programs',
+    ], // List of farm activities
+  
   };
 
-  const sliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true, // Enable autoplay
-    autoplaySpeed: 5000,
-  };
-
-  const pictureStyle = {
-    width: "50%",
-    height: "100%",
-  };
-
-  const imgStyle = {
-    width: "100%",
-    height: "100%",
-
-    padding: "20px",
+  const handleBookTour = () => {
+    // Logic to handle booking a farm tour
+    console.log('Farm tour booked!');
+    // You can implement the booking functionality here
   };
 
   return (
-    <div className="farm-profile-container">
-      <Grid container spacing={2}>
-        <Grid item xs={12} md={6} style={pictureStyle}>
-          <div className="section">
-            <h2>Farm Pictures</h2>
-            <Slider {...sliderSettings}>
-              {farmDetails.farmPictures.map((picture, index) => (
-                <Paper key={index} elevation={3} style={pictureStyle}>
-                  <img
-                    src={picture}
-                    alt={`Farm ${index + 1}`}
-                    style={imgStyle}
-                  />
-                </Paper>
-              ))}
-            </Slider>
-          </div>
-        </Grid>
-        <Grid item xs={12} md={6} style={{ marginLeft: "50%" }}>
-          <div className="section">
-            <h1>{farmDetails.location}</h1>
-            <p className="farm-description">{farmDetails.about}</p>
-
-            <h2>About Our Farming</h2>
-            <p>{farmDetails.typeOfFarming}</p>
-            <p>{farmDetails.farmingDescription}</p>
-
-            <h2>About the Farmer</h2>
-            <img
-              src={farmDetails.farmerInfo.photo}
-              alt={farmDetails.farmerInfo.name}
-              style={{
-                width: "100%",
-                borderRadius: "8px",
-                marginBottom: "10px",
-              }}
-            />
-            <p>
-              <strong>Name:</strong> {farmDetails.farmerInfo.name}
-            </p>
-            <p>
-              <strong>Experience:</strong> {farmDetails.farmerInfo.experience}
-            </p>
-            <p>
-              <strong>Background:</strong> {farmDetails.farmerInfo.background}
-            </p>
-
-            <button
-              onClick={() => (window.location.href = "your-book-page-url")}
-              style={{
-                padding: "10px",
-                backgroundColor: "#4CAF50",
-                color: "white",
-                border: "none",
-                borderRadius: "4px",
-                cursor: "pointer",
-                marginTop: "20px",
-              }}
-            >
-              Book Now
-            </button>
-          </div>
-        </Grid>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', color: "#283618" }}>
+     <Card style={{ padding: '20px', width: '80%', minHeight: '80vh', justifyContent: 'center', backgroundColor: '#fefae0'}}>
+    {/* <Paper style={{ padding: '20px', margin: '20px', alignItems: 'center', minHeight: '80vh', backgroundColor: '#fefae0'}}> */}
+    <Grid container direction="column" spacing={3} style={{ color: "#283618" }}>
+      <Grid item xs={12} marginLeft={'25%'} marginTop={'300px'}>
+      <Typography variant="h5">Meet your Model Farmer</Typography>
+        <img src={farmerDetails.imageUrl} alt="Farmer" style={{ width: '100%', maxWidth: '400px' }} />
+        <Typography variant="h4">{farmerDetails.name}</Typography>
+        <Typography variant="subtitle1">{farmerDetails.location}</Typography>
+        <Typography variant="subtitle2">{farmerDetails.farmingCategory}</Typography>
+        <Typography variant="body1" style={{ color: "#283618", fontSize:"1vw" }}>{farmerDetails.description}</Typography>
       </Grid>
+      <Divider />
+      <Grid item xs={12} marginLeft={'25%'}>
+        <Typography variant="h5" style={{ color: "#283618", fontSize:"3vw" }}>Offered Farm Activities</Typography>
+        <List style={{ color: "#283618", fontSize:"2vw" }}>
+          {farmerDetails.farmActivities.map((activity, index) => (
+            <ListItem key={index}>
+              <ListItemText primary={activity} />
+            </ListItem>
+          ))}
+        </List>
+      </Grid>
+      <Divider />
+      <Grid item xs={12}>
+        <Button variant="contained" color="primary" onClick={handleBookTour}>
+          Book Farm Tour
+        </Button>
+      </Grid>
+      <Grid item xs={12} style={{ marginTop: 'auto' }}>
+        <Paper style={{ padding: '20px', textAlign: 'center', backgroundColor: '#f0f0f0' }}>
+          <Typography variant="body2">agrogetaway - Your gateway to sustainable farming experiences</Typography>
+        </Paper>
+      </Grid>
+    </Grid>
+    {/* </Paper> */}
+    </Card>
     </div>
   );
-};
+}
 
-export default Profile;
+export default FarmerProfile;
