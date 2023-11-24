@@ -49,8 +49,8 @@ export default function SignIn() {
       );
       // console.log(response);
       if (response.status === 200) {
-        alert("Sign-in successful");
-        navigate("/selector");
+        // alert("Sign-in successful");
+        navigate("/users");
         // You can handle further actions after successful sign-in
       } else {
         alert("Error in sign-in");
@@ -86,7 +86,7 @@ export default function SignIn() {
           md={7}
           sx={{
             backgroundImage:
-              "url(https://images.unsplash.com/photo-1518994603110-1912b3272afd?q=80&w=1624&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
+              "url(https://img.freepik.com/free-photo/medium-shot-kid-working-cornfield_23-2149142840.jpg?w=900&t=st=1700771726~exp=1700772326~hmac=ef63127e315136f220658a3bf857d3e94644c5f367f336bab1762ad4676f02cc)",
             backgroundRepeat: "no-repeat",
             backgroundColor: (t) =>
               t.palette.mode === "light"
@@ -96,6 +96,24 @@ export default function SignIn() {
             backgroundPosition: "center",
           }}
         />
+        {/* <Typography
+          variant="h4"
+          sx={{
+            position: "absolute",
+            bottom: "0%",
+            Top: "100%",
+            left: "35%",
+            transform: "translateX(-60%)",
+            justifyContent: "center",
+
+            color: "#ffffff",
+            textAlign: "left",
+            textShadow: "5px 5px 10px #000000",
+          }}
+        >
+          Redefining Agriculture With Agrogetaway
+          <p sx={{}}>Learn,explore And Experience the Beauty of Farming</p>
+        </Typography> */}
         <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
           <Box
             sx={{
@@ -149,7 +167,12 @@ export default function SignIn() {
                 variant="contained"
                 sx={{ mt: 3, mb: 2, backgroundColor: "#216c2e" }}
               >
-                Sign In
+                <Link
+                  to="/users"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  <strong>Sign In</strong>
+                </Link>
               </Button>
               <Grid container>
                 <Grid

@@ -1,9 +1,9 @@
-import * as React from 'react';
-import Typography from '@mui/material/Typography';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
-import Grid from '@mui/material/Grid';
+import Grid from "@mui/material/Grid";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemText from "@mui/material/ListItemText";
+import Typography from "@mui/material/Typography";
+import * as React from "react";
 
 const farm = [
   {
@@ -16,10 +16,10 @@ const farm = [
 
 const addresses = ['', 'Reactville', 'Anytown', '99999', 'USA'];
 const payments = [
-  { name: 'Card type', detail: 'Visa' },
-  { name: 'Card holder', detail: 'john doe' },
-  { name: 'Card number', detail: 'xxxx-xxxx-xxxx-1234' },
-  { name: 'Expiry date', detail: '04/2024' },
+  { name: "Card type", detail: "Visa" },
+  { name: "Card holder", detail: "Balikowa Jane" },
+  { name: "Card number", detail: "xxxx-xxxx-xxxx-1234" },
+  { name: "Expiry date", detail: "04/2024" },
 ];
 
 export default function Review() {
@@ -45,7 +45,7 @@ export default function Review() {
       <Grid container spacing={2}>
         {/* <Grid item xs={12} sm={6}>
           <Typography variant="h6" gutterBottom sx={{ mt: 2 }}>
-            Shipping
+            Details
           </Typography>
           <Typography gutterBottom>John Smith</Typography>
           <Typography gutterBottom>{addresses.join(', ')}</Typography>

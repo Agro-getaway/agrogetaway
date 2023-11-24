@@ -1,81 +1,89 @@
-// UserTypeSelector.js
+// Profile.js
 
-import React, { useState } from 'react';
-import { useNavigate } from "react-router-dom";
-/* styles.css */
+import { Button, Grid, Paper } from "@mui/material";
+import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 
-
-const UserTypeSelector = () => {
-    const navigate = useNavigate()
-
-  const [userType, setUserType] = useState('');
-
-  const handleSelect = (selectedType) => {
-    setUserType(selectedType);
-    // navigate("/dashboard")
-    navigate("/users")
-  
-
+const Profile = () => {
+  const farmDetails = {
+    // ... (your farmDetails object)
   };
 
-  const containerStyle = {
-    maxWidth: '400px',
-    margin: 'auto',
-    padding: '100px',
-    border: '1px solid #ccc',
-    borderRadius: '60px',
-    alignItems:'center',
-    justifyContent: 'center',
-    textAlign: 'center',
-    // backgroundColor: '#f4f4f4',
-    backgroundColor: '#f5f5dc'
-    
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
   };
 
-  const radioStyle = {
-    margin: '20px',
+  const imgStyle = {
+    width: "100%",
+    borderRadius: "8px",
+    marginBottom: "10px",
   };
-  
-  
 
   return (
-    <div style={containerStyle}>
-      <h2>Are you an Organization or an Individual?</h2>
-      <div>
-        <label style={radioStyle}>
-          <input
-            type="radio"
-            value="organization"
-            checked={userType === 'organization'}
-            onChange={() => handleSelect('organization')}
-          />
-          Organization
-        </label>
-      </div>
-      <div>
-        <label style={radioStyle}>
-          <input
-            type="radio"
-            value="individual"
-            checked={userType === 'individual'}
-            onChange={() => handleSelect('individual')
-            
-        }
-          />
-          Individual
-        </label>
-      </div>
+    <div className="farm-profile-container">
+      <Grid container spacing={2}>
+        <Grid item xs={12}>
+          <div className="section">
+            <h1>{farmDetails.location}</h1>
+            <p className="farm-description">{farmDetails.about}</p>
 
-      {userType && (
-        <div>
-          {/* <p style={{ marginTop: '15px' }}>You selected: {userType}</p> */}
-          {/* Additional content or logic based on the selected user type */
-          
-          }
-        </div>
-      )}
+            <h2>Farm Pictures</h2>
+            <Slider {...sliderSettings}>
+              {farmDetails.farmPictures.map((picture, index) => (
+                <Paper key={index} elevation={3}>
+                  <img
+                    src={picture}
+                    alt={`Farm ${index + 1}`}
+                    style={imgStyle}
+                  />
+                </Paper>
+              ))}
+            </Slider>
+
+            <h2>About Our Farming</h2>
+            <p>{farmDetails.typeOfFarming}</p>
+            <p>{farmDetails.farmingDescription}</p>
+
+            <h2>About the Farmer</h2>
+            <img
+              src={farmDetails.farmerInfo.photo}
+              alt={farmDetails.farmerInfo.name}
+              style={imgStyle}
+            />
+            <p>
+              <strong>Name:</strong> {farmDetails.farmerInfo.name}
+            </p>
+            <p>
+              <strong>Experience:</strong> {farmDetails.farmerInfo.experience}
+            </p>
+            <p>
+              <strong>Background:</strong> {farmDetails.farmerInfo.background}
+            </p>
+
+            <Button
+              variant="contained"
+              style={{
+                backgroundColor: "#4CAF50",
+                color: "white",
+                borderRadius: "4px",
+                marginTop: "20px",
+              }}
+            >
+              Book Now
+            </Button>
+          </div>
+        </Grid>
+      </Grid>
     </div>
   );
 };
 
-export default UserTypeSelector;
+export default Profile;

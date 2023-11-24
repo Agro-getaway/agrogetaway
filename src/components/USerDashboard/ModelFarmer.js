@@ -1,16 +1,17 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Typography';
+import Button from "@mui/material/Button";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import {
+  default as Grid,
+  default as Typography,
+} from "@mui/material/Typography";
+import * as React from "react";
+import { Link } from "react-router-dom";
 //import { Link } from "react-router-dom";
 
-export default function ImgMediaCard({handleItemClick}) {
-   
-
+export default function ImgMediaCard({ handleItemClick }) {
   return (
    <Grid
    container
@@ -76,7 +77,7 @@ export default function ImgMediaCard({handleItemClick}) {
           />
           <CardContent style={{ color: "#283618", fontSize:"5vw" }}>
             <Typography gutterBottom variant="h5" component="div">
-             Cocoa Farm 
+              Cocoa Farm
             </Typography>
             <Typography variant="body2" >
             Discover the art of cultivating fine cocoa beans and learn the secrets behind our rich, velvety chocolates.
@@ -90,6 +91,6 @@ export default function ImgMediaCard({handleItemClick}) {
           </CardActions>
         </Card>
       </Grid>
-  </Grid>  
+    </Grid>
   );
 }

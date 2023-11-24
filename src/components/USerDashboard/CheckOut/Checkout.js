@@ -72,12 +72,12 @@ export default function Checkout() {
           </Typography>
         </Toolbar>
       </AppBar> */}
-      <Container component="main" maxWidth="sm" sx={{ mb: 4 }} >
-        <Paper variant="outlined" sx={{ my: { xs: 3, md: 6 }, p: { xs: 2, md: 3 } }} >
+      <Container component="main" maxWidth="sm" sx={{ mb: 4 }} style={{ color: "#283618" }}>
+        <Paper variant="outlined" sx={{ my: { xs: 3, md: 6 }, p: { xs: 2, md: 3 } }} style={{ color: "#283618" }}>
           <Typography component="h1" variant="h4" align="center">
             Booking
           </Typography>
-          <Stepper activeStep={activeStep} sx={{ pt: 3, pb: 5 }} >
+          <Stepper activeStep={activeStep} sx={{ pt: 3, pb: 5 }} color={'#283618'}>
             {steps.map((label) => (
               <Step key={label}>
                 <StepLabel>{label}</StepLabel>
@@ -99,7 +99,7 @@ export default function Checkout() {
               {getStepContent(activeStep)}
               <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
                 {activeStep !== 0 && (
-                  <Button onClick={handleBack} sx={{ mt: 3, ml: 1 }} >
+                  <Button onClick={handleBack} sx={{ mt: 3, ml: 1 }} color={'#283618'}>
                     Back
                   </Button>
                 )}
@@ -108,7 +108,7 @@ export default function Checkout() {
                   variant="contained"
                   onClick={handleNext}
                   sx={{ mt: 2, ml: 1 }}
-                  color={'#283618'}
+                  
                 >
                   {activeStep === steps.length - 1 ? 'Confirm Booking' : 'Next'}
                 </Button>
