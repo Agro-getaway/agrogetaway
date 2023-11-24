@@ -61,11 +61,11 @@ export default function SignUp() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
-      username: data.get("Name"),
-      email: data.get("email"),
-      password: data.get("password")
-    });
+    // console.log({
+    //   username: data.get("Name"),
+    //   email: data.get("email"),
+    //   password: data.get("password")
+    // });
 
     const member = {
       username: data.get("Name"),
