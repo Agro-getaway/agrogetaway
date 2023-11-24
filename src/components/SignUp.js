@@ -106,7 +106,7 @@ export default function SignUp() {
           }}
         />
 
-        <Typography
+        {/* <Typography
           variant="h4"
           sx={{
             position: "absolute",
@@ -123,7 +123,7 @@ export default function SignUp() {
         >
           Redefining Agriculture With Agrogetaway
           <p sx={{}}>Learn,explore And Experience the Beauty of Farming</p>
-        </Typography>
+        </Typography> */}
         <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
           <Box
             sx={{
