@@ -49,7 +49,7 @@ export default function SignUp() {
       // const response =await axios.post("{{URL}}/user", member)
       console.log(response);
       if (response.status === 201) {
-        // alert("Account created sucessfully");
+        alert("Account created sucessfully");
         navigate("/selector");
       } else {
         alert("Error in creating the account");
