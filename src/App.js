@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import Types from "./components/Dash.js";
 import Explore from "./components/Dashboard.js";
 import LandingPage from "./components/Home.js";
 import LogOut from "./components/LogOut.js";
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<LandingPage />}></Route>
         <Route path="/signin" element={<SignIn />}></Route>
         <Route path="/signup" element={<SignUp />}></Route>
+        <Route path="/dashboard" element={<Types />}></Route>
         {/* {isLogged &&  */}
         <Route path="/explore" element={<Explore />}></Route>
         <Route path="/logout" element={<LogOut />}></Route>
