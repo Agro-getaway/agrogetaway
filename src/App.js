@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Types from "./components/Dash.js";
 import Explore from "./components/Dashboard.js";
+import Farms from "./components/Farms.js";
 import LandingPage from "./components/Home.js";
 import LogOut from "./components/LogOut.js";
 import SignIn from "./components/SignIn.js";
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" element={<LandingPage />}></Route>
         <Route path="/signin" element={<SignIn />}></Route>
         <Route path="/signup" element={<SignUp />}></Route>
+        <Route path="/farms" element={<Farms />}></Route>
         <Route path="/dashboard" element={<Types />}></Route>
         {/* {isLogged &&  */}
         <Route path="/explore" element={<Explore />}></Route>

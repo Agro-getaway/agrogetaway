@@ -7,6 +7,7 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import * as React from "react";
+import { Link } from "react-router-dom";
 
 export default function Types({ handleItemClick }) {
   const cardData = [
@@ -41,7 +42,7 @@ export default function Types({ handleItemClick }) {
           key={index}
           item
           xs={4}
-          style={{ marginRight: "auto", marginLeft: "auto", Top: "10px" }}
+          style={{ marginRight: "auto", marginLeft: "auto" }}
         >
           <Card sx={{ maxWidth: 345 }}>
             <CardMedia
@@ -68,12 +69,9 @@ export default function Types({ handleItemClick }) {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button
-                size="small"
-                onClick={() => handleItemClick("Model Farm")}
-              >
-                More Details..
-              </Button>
+              <Link to="/farms">
+                <Button size="small">More Details..</Button>
+              </Link>
             </CardActions>
           </Card>
         </Grid>
