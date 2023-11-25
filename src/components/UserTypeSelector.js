@@ -1,4 +1,4 @@
-Profile.js
+// Profile.js
 
 import { Button, Grid, Paper } from "@mui/material";
 import React from "react";
