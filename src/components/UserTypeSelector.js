@@ -1,11 +1,8 @@
-// UserTypeSelector.js
-
 import {
   Container,
   FormControlLabel,
   Radio,
   RadioGroup,
-  Tooltip,
   Typography,
 } from "@mui/material";
 import React, { useState } from "react";
@@ -42,20 +39,16 @@ const Selector = () => {
         value={userType}
         onChange={(event) => handleSelect(event.target.value)}
       >
-        <Tooltip title="Select as an Organization" arrow>
-          <FormControlLabel
-            value="organization"
-            control={<Radio />}
-            label="Organization"
-          />
-        </Tooltip>
-        <Tooltip title="Select as an Individual" arrow>
-          <FormControlLabel
-            value="individual"
-            control={<Radio />}
-            label="Individual"
-          />
-        </Tooltip>
+        <FormControlLabel
+          value="organization"
+          control={<Radio />}
+          label="Organization"
+        />
+        <FormControlLabel
+          value="individual"
+          control={<Radio />}
+          label="Individual"
+        />
       </RadioGroup>
 
       {userType && (
