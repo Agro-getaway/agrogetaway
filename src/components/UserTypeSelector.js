@@ -1,15 +1,10 @@
-import {
-  Container,
-  FormControlLabel,
-  Radio,
-  RadioGroup,
-  Typography,
-} from "@mui/material";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+/* styles.css */
 
 const Selector = () => {
   const navigate = useNavigate();
+
   const [userType, setUserType] = useState("");
 
   const handleSelect = (selectedType) => {
@@ -18,45 +13,56 @@ const Selector = () => {
     navigate("/users");
   };
 
-  return (
-    <Container
-      maxWidth="sm"
-      style={{
-        padding: "20px",
-        border: "1px solid #ccc",
-        borderRadius: "15px",
-        backgroundColor: "#f5f5dc",
-      }}
-    >
-      <Typography variant="h5" align="center" gutterBottom>
-        Are you an Organization or an Individual?
-      </Typography>
+  const containerStyle = {
+    maxWidth: "400px",
+    margin: "auto",
+    padding: "100px",
+    border: "1px solid #ccc",
+    borderRadius: "60px",
+    alignItems: "center",
+    justifyContent: "center",
+    textAlign: "center",
+    // backgroundColor: '#f4f4f4',
+    backgroundColor: "#f5f5dc",
+  };
 
-      <RadioGroup
-        row
-        aria-label="userType"
-        name="userType"
-        value={userType}
-        onChange={(event) => handleSelect(event.target.value)}
-      >
-        <FormControlLabel
-          value="organization"
-          control={<Radio />}
-          label="Organization"
-        />
-        <FormControlLabel
-          value="individual"
-          control={<Radio />}
-          label="Individual"
-        />
-      </RadioGroup>
+  const radioStyle = {
+    margin: "20px",
+  };
+
+  return (
+    <div style={containerStyle}>
+      <h2>Are you an Organization or an Individual?</h2>
+      <div>
+        <label style={radioStyle}>
+          <input
+            type="radio"
+            value="organization"
+            checked={userType === "organization"}
+            onChange={() => handleSelect("organization")}
+          />
+          Organization
+        </label>
+      </div>
+      <div>
+        <label style={radioStyle}>
+          <input
+            type="radio"
+            value="individual"
+            checked={userType === "individual"}
+            onChange={() => handleSelect("individual")}
+          />
+          Individual
+        </label>
+      </div>
 
       {userType && (
         <div>
+          {/* <p style={{ marginTop: '15px' }}>You selected: {userType}</p> */}
           {/* Additional content or logic based on the selected user type */}
         </div>
       )}
-    </Container>
+    </div>
   );
 };
 
