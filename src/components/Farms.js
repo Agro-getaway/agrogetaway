@@ -1,16 +1,18 @@
 // src/Explore.js
+import SearchIcon from "@mui/icons-material/Search"; // Import the search icon
 import StarIcon from "@mui/icons-material/Star";
 import {
   Button,
   Container,
   Grid,
+  IconButton,
+  InputBase,
   Paper,
   Rating,
   Typography,
 } from "@mui/material";
+import React, { useState } from "react"; // Import useState
 import { Link } from "react-router-dom";
-
-import React from "react";
 
 const farmsData = [
   {
@@ -35,9 +37,7 @@ const farmsData = [
       "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   // Add more farm data as needed
-];
 
-const exploreData = [
   {
     name: "Alexus Dairy Farm",
     rank: 3,
@@ -60,9 +60,7 @@ const exploreData = [
       "https://i.pinimg.com/736x/e9/4c/d0/e94cd0bee910879ce5274ef155e954b5.jpg",
   },
   // Add more explore data as needed
-];
 
-const experienceData = [
   {
     name: "Berry Bliss Farm",
     rank: 5,
@@ -87,166 +85,74 @@ const experienceData = [
 ];
 
 const Explore = () => {
+  const [searchTerm, setSearchTerm] = useState(""); // State for search term
+
+  // Filter farms based on search term
+  const filteredFarms = farmsData.filter((farm) =>
+    farm.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <Container>
       <Typography variant="h2" align="center" gutterBottom>
         Learn, Explore, and Experience the Beauty Of Farming
       </Typography>
 
-      <Grid container spacing={3}>
-        {/* Learn Section */}
-        <Grid item xs={12}>
-          <Paper elevation={3} style={{ padding: "20px", textAlign: "left" }}>
-            <Typography variant="h5" gutterBottom>
-              Explore top-ranked farms for engaging and captivating learning
-              experiences.
-            </Typography>
-            <Grid container spacing={2}>
-              {farmsData.map((farm) => (
-                <Grid item xs={4} key={farm.rank}>
-                  <div style={{ marginBottom: "15px" }}>
-                    <Typography variant="subtitle1">
-                      <StarIcon
-                        fontSize="small"
-                        style={{ verticalAlign: "middle" }}
-                      />
-                      &nbsp; {farm.name}
-                    </Typography>
-                    <Typography variant="subtitle1">
-                      &nbsp; {farm.location}
-                    </Typography>
+      {/* Add the search bar */}
+      <Paper
+        elevation={3}
+        style={{ padding: "20px", textAlign: "left", marginBottom: "20px" }}
+      >
+        <InputBase
+          placeholder="Search Farms..."
+          fullWidth
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          startAdornment={
+            <IconButton type="submit" aria-label="search">
+              <SearchIcon />
+            </IconButton>
+          }
+        />
+      </Paper>
 
-                    <Typography variant="caption">
-                      <Rating
-                        name={`farm-${farm.rank}`}
-                        value={farm.rank}
-                        readOnly
-                      />
-                    </Typography>
-
-                    <div>
-                      {/* Other content */}
-                      <Link to="/signup">
-                        <Button>Visit</Button>
-                      </Link>
-                    </div>
-                    <img
-                      src={farm.imageUrl}
-                      alt={farm.name}
-                      style={{
-                        width: "100%",
-                        height: "250px",
-                        objectFit: "cover",
-                        marginTop: "10px",
-                      }}
-                    />
-                  </div>
-                </Grid>
-              ))}
-            </Grid>
-          </Paper>
-        </Grid>
-
-        {/* Explore Section */}
-        <Grid item xs={12}>
-          <Paper elevation={3} style={{ padding: "20px", textAlign: "left" }}>
-            <Typography variant="h5" gutterBottom>
-              Explore top-ranked farms for an enriching exploration experience.
-            </Typography>
-            <Grid container spacing={2}>
-              {exploreData.map((farm) => (
-                <Grid item xs={4} key={farm.rank}>
-                  <div style={{ marginBottom: "15px" }}>
-                    <Typography variant="subtitle1">
-                      <StarIcon
-                        fontSize="small"
-                        style={{ verticalAlign: "middle" }}
-                      />
-                      &nbsp; {farm.name}
-                    </Typography>
-                    <Typography variant="subtitle1">
-                      &nbsp; {farm.location}
-                    </Typography>
-                    <Typography variant="caption">
-                      <Rating
-                        name={`farm-${farm.rank}`}
-                        value={farm.rank}
-                        readOnly
-                      />
-                    </Typography>
-                    <div>
-                      {/* Other content */}
-                      <Link to="/signup">
-                        <Button>Visit</Button>
-                      </Link>
-                    </div>
-                    <img
-                      src={farm.imageUrl}
-                      alt={farm.name}
-                      style={{
-                        width: "100%",
-                        height: "250px",
-                        objectFit: "cover",
-                        marginTop: "10px",
-                      }}
-                    />
-                  </div>
-                </Grid>
-              ))}
-            </Grid>
-          </Paper>
-        </Grid>
-
-        {/* Experience Section */}
-        <Grid item xs={12}>
-          <Paper elevation={3} style={{ padding: "20px", textAlign: "left" }}>
-            <Typography variant="h5" gutterBottom>
-              Discover top-ranked farms for experiencing the beauty of
-              agriculture.
-            </Typography>
-            <Grid container spacing={2}>
-              {experienceData.map((farm) => (
-                <Grid item xs={4} key={farm.rank}>
-                  <div style={{ marginBottom: "15px" }}>
-                    <Typography variant="subtitle1">
-                      <StarIcon
-                        fontSize="small"
-                        style={{ verticalAlign: "middle" }}
-                      />
-                      &nbsp; {farm.name}
-                    </Typography>
-                    <Typography variant="subtitle1">
-                      &nbsp; {farm.location}
-                    </Typography>
-                    <Typography variant="caption">
-                      <Rating
-                        name={`farm-${farm.rank}`}
-                        value={farm.rank}
-                        readOnly
-                      />
-                    </Typography>
-                    <div>
-                      {/* Other content */}
-                      <Link to="/signup">
-                        <Button>Visit</Button>
-                      </Link>
-                    </div>
-                    <img
-                      src={farm.imageUrl}
-                      alt={farm.name}
-                      style={{
-                        width: "100%",
-                        height: "250px",
-                        objectFit: "cover",
-                        marginTop: "10px",
-                      }}
-                    />
-                  </div>
-                </Grid>
-              ))}
-            </Grid>
-          </Paper>
-        </Grid>
+      {/* Experience Section */}
+      <Grid container spacing={2}>
+        {filteredFarms.map((farm) => (
+          <Grid item xs={4} key={farm.rank}>
+            <div style={{ marginBottom: "15px" }}>
+              <Typography variant="subtitle1">
+                <StarIcon
+                  fontSize="small"
+                  style={{ verticalAlign: "middle" }}
+                />
+                &nbsp; {farm.name}
+              </Typography>
+              <Typography variant="subtitle1">
+                &nbsp; {farm.location}
+              </Typography>
+              <Typography variant="caption">
+                <Rating name={`farm-${farm.rank}`} value={farm.rank} readOnly />
+              </Typography>
+              <div>
+                {/* Other content */}
+                <Link to="/signup">
+                  <Button>More Details</Button>
+                </Link>
+              </div>
+              <img
+                src={farm.imageUrl}
+                alt={farm.name}
+                style={{
+                  width: "100%",
+                  height: "250px",
+                  objectFit: "cover",
+                  marginTop: "10px",
+                }}
+              />
+            </div>
+          </Grid>
+        ))}
       </Grid>
     </Container>
   );
