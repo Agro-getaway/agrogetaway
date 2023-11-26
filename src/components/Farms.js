@@ -1,103 +1,255 @@
-import Button from "@mui/material/Button";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
+// src/Explore.js
+import StarIcon from "@mui/icons-material/Star";
 import {
-  default as Grid,
-  default as Typography,
-} from "@mui/material/Typography";
-import * as React from "react";
+  Button,
+  Container,
+  Grid,
+  Paper,
+  Rating,
+  Typography,
+} from "@mui/material";
 import { Link } from "react-router-dom";
-//import { Link } from "react-router-dom";
 
-export default function ImgMediaCard({ handleItemClick }) {
+import React from "react";
+
+const farmsData = [
+  {
+    name: "Balikowa Mixed Farm",
+    rank: 5,
+    location: "Masaka",
+    imageUrl:
+      "https://images.unsplash.com/photo-1516906561371-53f48df1254d?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    name: "Barcleys Wheat Farm",
+    rank: 4,
+    location: "Jinja",
+    imageUrl:
+      "https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?q=80&w=1674&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    name: "Uganda Corn Fields",
+    rank: 3,
+    location: "Iganga",
+    imageUrl:
+      "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  // Add more farm data as needed
+];
+
+const exploreData = [
+  {
+    name: "Alexus Dairy Farm",
+    rank: 3,
+    location: "Luweero",
+    imageUrl:
+      "https://images.unsplash.com/photo-1597432480301-a3b64410d898?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    name: "Cocoa Haven Plantations",
+    rank: 5,
+    location: "Jinja",
+    imageUrl:
+      "https://images.unsplash.com/photo-1507576164121-220762647800?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    name: "Eden Fruit Farm",
+    rank: 4,
+    location: "Mbale",
+    imageUrl:
+      "https://i.pinimg.com/736x/e9/4c/d0/e94cd0bee910879ce5274ef155e954b5.jpg",
+  },
+  // Add more explore data as needed
+];
+
+const experienceData = [
+  {
+    name: "Berry Bliss Farm",
+    rank: 5,
+    location: "Luzira",
+    imageUrl:
+      "https://images.unsplash.com/photo-1602083158217-c608d17c44e5?q=80&w=1635&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    name: "Kwagalakwe Rooster Ranch",
+    rank: 6,
+    location: "Kampala",
+    imageUrl:
+      "https://www.shutterstock.com/image-photo/hen-lays-eggs-chicken-coop-600nw-2189634629.jpg",
+  },
+  {
+    name: "Cabbage Crest Gardens",
+    rank: 4,
+    location: "Mukono",
+    imageUrl:
+      "https://images.unsplash.com/photo-1486328228599-85db4443971f?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+];
+
+const Explore = () => {
   return (
-    <Grid
-      container
-      spacing={2}
-      //direction="row"
-      //justifyContent="space-between"
-      //alignItems="flex"
-      display={"flex"}
-    >
-      <Grid item xs={4} style={{ marginRight: "auto", marginLeft: "auto" }}>
-        <Card sx={{ maxWidth: 345 }}>
-          <CardMedia
-            component="img"
-            alt="green iguana"
-            height="140"
-            image="OrgFarm.jpg"
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              Kaynera Farm
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Our passion for organic farming blends tradition and innovation,
-              cultivating sustainable, nutrient-rich produce. Visit and Learn
-              organic Farming from our Farm.
-            </Typography>
-          </CardContent>
-          <CardActions>
-            <Link to="/profile">
-              <Button size="large">See Profile</Button>
-            </Link>
-          </CardActions>
-        </Card>
-      </Grid>
+    <Container>
+      <Typography variant="h2" align="center" gutterBottom>
+        Learn, Explore, and Experience the Beauty Of Farming
+      </Typography>
 
-      <Grid item xs={4} style={{ marginRight: "auto", marginLeft: "auto" }}>
-        <Card sx={{ maxWidth: 345 }}>
-          <CardMedia
-            component="img"
-            alt="second card"
-            height="140"
-            image="VegFarm.jpg"
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              Highway Vegetable Farm
+      <Grid container spacing={3}>
+        {/* Learn Section */}
+        <Grid item xs={12}>
+          <Paper elevation={3} style={{ padding: "20px", textAlign: "left" }}>
+            <Typography variant="h5" gutterBottom>
+              Explore top-ranked farms for engaging and captivating learning
+              experiences.
             </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Gain invaluable insights into sustainable farming practices while
-              enjoying the freshness of our vibrant produce. Book your tour now
-              for an immersive Learning experience.
-            </Typography>
-          </CardContent>
-          <CardActions>
-            <Link to="/profile">
-              <Button size="small">See Profile</Button>
-            </Link>
-          </CardActions>
-        </Card>
-      </Grid>
+            <Grid container spacing={2}>
+              {farmsData.map((farm) => (
+                <Grid item xs={4} key={farm.rank}>
+                  <div style={{ marginBottom: "15px" }}>
+                    <Typography variant="subtitle1">
+                      <StarIcon
+                        fontSize="small"
+                        style={{ verticalAlign: "middle" }}
+                      />
+                      &nbsp; {farm.name}
+                    </Typography>
+                    <Typography variant="subtitle1">
+                      &nbsp; {farm.location}
+                    </Typography>
 
-      <Grid item xs={4} style={{ marginRight: "auto", marginLeft: "auto" }}>
-        <Card sx={{ maxWidth: 345 }}>
-          <CardMedia
-            component="img"
-            alt="second card"
-            height="140"
-            image="CocoaFarm.jpg"
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              Cocoa Farm
+                    <Typography variant="caption">
+                      <Rating
+                        name={`farm-${farm.rank}`}
+                        value={farm.rank}
+                        readOnly
+                      />
+                    </Typography>
+
+                    <div>
+                      {/* Other content */}
+                      <Link to="/signup">
+                        <Button>Visit</Button>
+                      </Link>
+                    </div>
+                    <img
+                      src={farm.imageUrl}
+                      alt={farm.name}
+                      style={{
+                        width: "100%",
+                        height: "250px",
+                        objectFit: "cover",
+                        marginTop: "10px",
+                      }}
+                    />
+                  </div>
+                </Grid>
+              ))}
+            </Grid>
+          </Paper>
+        </Grid>
+
+        {/* Explore Section */}
+        <Grid item xs={12}>
+          <Paper elevation={3} style={{ padding: "20px", textAlign: "left" }}>
+            <Typography variant="h5" gutterBottom>
+              Explore top-ranked farms for an enriching exploration experience.
             </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Discover the art of cultivating fine cocoa beans and learn the
-              secrets behind our rich, velvety chocolates. Book your tour today
-              and step into the flavorful world of SweetBloom Farm.
+            <Grid container spacing={2}>
+              {exploreData.map((farm) => (
+                <Grid item xs={4} key={farm.rank}>
+                  <div style={{ marginBottom: "15px" }}>
+                    <Typography variant="subtitle1">
+                      <StarIcon
+                        fontSize="small"
+                        style={{ verticalAlign: "middle" }}
+                      />
+                      &nbsp; {farm.name}
+                    </Typography>
+                    <Typography variant="subtitle1">
+                      &nbsp; {farm.location}
+                    </Typography>
+                    <Typography variant="caption">
+                      <Rating
+                        name={`farm-${farm.rank}`}
+                        value={farm.rank}
+                        readOnly
+                      />
+                    </Typography>
+                    <div>
+                      {/* Other content */}
+                      <Link to="/signup">
+                        <Button>Visit</Button>
+                      </Link>
+                    </div>
+                    <img
+                      src={farm.imageUrl}
+                      alt={farm.name}
+                      style={{
+                        width: "100%",
+                        height: "250px",
+                        objectFit: "cover",
+                        marginTop: "10px",
+                      }}
+                    />
+                  </div>
+                </Grid>
+              ))}
+            </Grid>
+          </Paper>
+        </Grid>
+
+        {/* Experience Section */}
+        <Grid item xs={12}>
+          <Paper elevation={3} style={{ padding: "20px", textAlign: "left" }}>
+            <Typography variant="h5" gutterBottom>
+              Discover top-ranked farms for experiencing the beauty of
+              agriculture.
             </Typography>
-          </CardContent>
-          <CardActions>
-            <Link to="/profile">
-              <Button size="small">See Profile</Button>
-            </Link>
-          </CardActions>
-        </Card>
+            <Grid container spacing={2}>
+              {experienceData.map((farm) => (
+                <Grid item xs={4} key={farm.rank}>
+                  <div style={{ marginBottom: "15px" }}>
+                    <Typography variant="subtitle1">
+                      <StarIcon
+                        fontSize="small"
+                        style={{ verticalAlign: "middle" }}
+                      />
+                      &nbsp; {farm.name}
+                    </Typography>
+                    <Typography variant="subtitle1">
+                      &nbsp; {farm.location}
+                    </Typography>
+                    <Typography variant="caption">
+                      <Rating
+                        name={`farm-${farm.rank}`}
+                        value={farm.rank}
+                        readOnly
+                      />
+                    </Typography>
+                    <div>
+                      {/* Other content */}
+                      <Link to="/signup">
+                        <Button>Visit</Button>
+                      </Link>
+                    </div>
+                    <img
+                      src={farm.imageUrl}
+                      alt={farm.name}
+                      style={{
+                        width: "100%",
+                        height: "250px",
+                        objectFit: "cover",
+                        marginTop: "10px",
+                      }}
+                    />
+                  </div>
+                </Grid>
+              ))}
+            </Grid>
+          </Paper>
+        </Grid>
       </Grid>
-    </Grid>
+    </Container>
   );
-}
+};
+
+export default Explore;
