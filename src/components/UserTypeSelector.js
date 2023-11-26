@@ -9,7 +9,7 @@ import "slick-carousel/slick/slick.css";
 const Profile = () => {
 
   const farmDetails = {
-    ... (your farmDetails object)
+    // ... (your farmDetails object)
     
   };
 
