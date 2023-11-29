@@ -84,6 +84,8 @@ const farmsData = [
   },
 ];
 
+// Import necessary components and styles
+
 const Explore = () => {
   const [searchTerm, setSearchTerm] = useState(""); // State for search term
 
@@ -119,7 +121,7 @@ const Explore = () => {
       {/* Experience Section */}
       <Grid container spacing={2}>
         {filteredFarms.map((farm) => (
-          <Grid item xs={4} key={farm.rank}>
+          <Grid item xs={12} sm={6} md={4} key={farm.rank}>
             <div style={{ marginBottom: "15px" }}>
               <Typography variant="subtitle1">
                 <StarIcon
