@@ -1,5 +1,5 @@
 import { Button, Container, Grid, Paper, Typography } from "@mui/material";
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const images = [
@@ -10,8 +10,6 @@ const images = [
   // "https://unsplash.com/photos/green-leafed-plants-during-daytime-2oYMwuFgnTg",
 ];
 
-// ... (previous imports and code)
-
 const LandingPage = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [welcomeMessages] = useState([
@@ -19,36 +17,36 @@ const LandingPage = () => {
     "EXPLORE THE WORLD OF FARMING",
     "JOIN US TO REDEFINE AGRICULTURE",
   ]);
+
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
 
   // Function to move to the next image
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   const nextImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
   // Function to move to the next welcome message
-  const nextWelcomeMessage = useCallback(() => {
+  const nextWelcomeMessage = () => {
     setCurrentMessageIndex(
       (prevIndex) => (prevIndex + 1) % welcomeMessages.length
     );
-  }, [welcomeMessages]);
+  };
 
   // Function to automatically transition to the next image and welcome message
-  const autoTransition = useCallback(() => {
+  const autoTransition = () => {
     nextImage();
     nextWelcomeMessage();
-  }, [nextImage, nextWelcomeMessage]);
+  };
 
   // Use useEffect to set up the interval for automatic transitions
   useEffect(() => {
-    const intervalId = setInterval(autoTransition, 10000); // 10 seconds (10,000 milliseconds)
+    const intervalId = setInterval(autoTransition, 10000); // 10 seconds
 
     // Clean up the interval when the component unmounts
     return () => {
       clearInterval(intervalId);
     };
-  }, [autoTransition]);
+  });
 
   return (
     <Paper
@@ -57,10 +55,9 @@ const LandingPage = () => {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         height: "100vh",
-        position: "relative", // Ensure relative positioning for the overlay
+        position: "relative",
       }}
     >
-      {/* Add a semi-transparent overlay */}
       <div
         style={{
           position: "absolute",
@@ -68,7 +65,7 @@ const LandingPage = () => {
           left: 0,
           width: "100%",
           height: "100%",
-          backgroundColor: "rgba(0, 0, 0, 0.5)", // Change the color and opacity as needed
+          backgroundColor: "rgba(0, 0, 0, 0.5)",
         }}
       />
 
@@ -92,16 +89,12 @@ const LandingPage = () => {
                   alt="Logo"
                   style={{
                     display: "flex",
-
                     width: "200px",
                     marginRight: "70%",
-
-                    // Adjusted margin for better spacing
                   }}
                 />
               </div>
 
-              {/* Logo on the left */}
               <div
                 style={{
                   display: "flex",
@@ -110,7 +103,6 @@ const LandingPage = () => {
                   padding: "10px",
                 }}
               >
-                {/* Sign In and Sign Up buttons on the left */}
                 <div
                   style={{ display: "flex", alignItems: "center", gap: "20px" }}
                 >
@@ -128,6 +120,7 @@ const LandingPage = () => {
                       style={{
                         color: "white",
                         border: "#216c2e",
+                        fontFamily: "helvetica",
                       }}
                     >
                       <strong>Sign Up</strong>
@@ -148,14 +141,13 @@ const LandingPage = () => {
                       style={{
                         color: "white",
                         border: "#216c2e",
+                        fontFamily: "helvetica",
                       }}
                     >
                       <strong>Sign In</strong>
                     </Button>
                   </Link>
                 </div>
-
-                {/* Logo on the right */}
               </div>
             </div>
           </div>
@@ -165,7 +157,7 @@ const LandingPage = () => {
             style={{
               color: "white",
               textAlign: "left",
-              fontSize: "3vw", // Responsive font size
+              fontSize: "4vw", // Responsive font size
               position: "relative",
               fontFamily: "helvetica",
               marginTop: "100px",
@@ -180,7 +172,7 @@ const LandingPage = () => {
             style={{
               textAlign: "justify",
               padding: "8px 0",
-              fontSize: "2.0vw", // Responsive font size
+              fontSize: "2.5vw", // Responsive font size
               position: "relative",
               fontFamily: "helvetica",
             }}
@@ -194,12 +186,10 @@ const LandingPage = () => {
             style={{
               variant: "h3",
               textAlign: "left",
-              fontSize: "2.5vw",
+              fontSize: "2vw", // Responsive font size
               color: "white",
               position: "relative",
-              // fontFamily: "blackadder itc",
               fontFamily: "brush script mt",
-              // Responsive font size
             }}
           >
             Farming Redefined
@@ -215,7 +205,6 @@ const LandingPage = () => {
                 marginTop: "20px",
                 backgroundColor: "#216c2e",
                 fontFamily: "helvetica",
-                // Set the background color to green
               }}
             >
               <strong>Explore</strong>
