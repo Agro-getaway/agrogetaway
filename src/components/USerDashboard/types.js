@@ -34,7 +34,7 @@ const useStyles = styled((theme) => ({
     marginBottom: theme.spacing(1),
   },
 }));
-const FarmTypes = () => {
+const Types = () => {
   const classes = useStyles();
 
   const farmData = [
@@ -151,4 +151,4 @@ const FarmTypes = () => {
   );
 };
 
-export default FarmTypes;
+export default Types;
