@@ -30,6 +30,7 @@ const farmsData = [
   {
     name: "Uganda Corn Fields",
     location: "Iganga",
+    method: "Monoculture",
     imageUrl:
       "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
@@ -37,18 +38,21 @@ const farmsData = [
   {
     name: "Alexus Dairy Farm",
     location: "Luweero",
+    method: "Livestock Farming",
     imageUrl:
       "https://images.unsplash.com/photo-1597432480301-a3b64410d898?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     name: "Cocoa Haven Plantations",
     location: "Jinja",
+    method: "Agroforestry",
     imageUrl:
       "https://images.unsplash.com/photo-1507576164121-220762647800?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     name: "Eden Fruit Farm",
     location: "Mbale",
+    method: "Fruit Farming",
     imageUrl:
       "https://i.pinimg.com/736x/e9/4c/d0/e94cd0bee910879ce5274ef155e954b5.jpg",
   },
@@ -56,18 +60,21 @@ const farmsData = [
   {
     name: "Berry Bliss Farm",
     location: "Luzira",
+    method: "Fruit Farming",
     imageUrl:
       "https://images.unsplash.com/photo-1602083158217-c608d17c44e5?q=80&w=1635&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     name: "Kwagalakwe Rooster Ranch",
     location: "Kampala",
+    method: "Poultry Farming",
     imageUrl:
       "https://www.shutterstock.com/image-photo/hen-lays-eggs-chicken-coop-600nw-2189634629.jpg",
   },
   {
     name: "Cabbage Crest Gardens",
     location: "Mukono",
+    method: "Organic Farming",
     imageUrl:
       "https://images.unsplash.com/photo-1486328228599-85db4443971f?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
@@ -84,7 +91,8 @@ const Explore = () => {
     const filteredFarmData = farmsData.filter(
       (farm) =>
         farm.location.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        farm.name.toLowerCase().includes(searchTerm.toLowerCase())
+        farm.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        farm.method.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
     // Update the state with the filtered data
@@ -134,6 +142,7 @@ const Explore = () => {
               <Typography variant="subtitle1">
                 &nbsp; {farm.location}
               </Typography>
+              <Typography variant="subtitle1">&nbsp; {farm.method}</Typography>
               <div>
                 <Link to="/signup">
                   <Button>More Details</Button>
