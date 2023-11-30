@@ -47,7 +47,7 @@ export default function SignIn() {
       );
 
       if (response.status === 200) {
-        navigate("/users");
+        navigate("/types");
       } else {
         alert("Error in sign-in");
       }
