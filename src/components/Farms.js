@@ -16,12 +16,14 @@ const farmsData = [
   {
     name: "Balikowa Mixed Farm",
     location: "Masaka",
+    method: "Mixed Farming",
     imageUrl:
       "https://images.unsplash.com/photo-1516906561371-53f48df1254d?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     name: "Barcleys Wheat Farm",
     location: "Jinja",
+    method: "Crop Farming",
     imageUrl:
       "https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?q=80&w=1674&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
@@ -90,7 +92,7 @@ const Explore = () => {
   };
 
   return (
-    <Container>
+    <Container style={{ backgroundColor: "#F2E4CF" }}>
       <Typography variant="h2" align="center" gutterBottom>
         Learn, Explore, and Experience the Beauty Of Farming
       </Typography>
@@ -117,6 +119,16 @@ const Explore = () => {
       <Grid container spacing={2}>
         {filteredFarms.map((farm) => (
           <Grid item xs={12} sm={6} md={4} key={farm.name}>
+            <img
+              src={farm.imageUrl}
+              alt={farm.name}
+              style={{
+                width: "100%",
+                height: "250px",
+                objectFit: "cover",
+                marginTop: "10px",
+              }}
+            />
             <div style={{ marginBottom: "15px" }}>
               <Typography variant="subtitle1">&nbsp; {farm.name}</Typography>
               <Typography variant="subtitle1">
@@ -127,16 +139,6 @@ const Explore = () => {
                   <Button>More Details</Button>
                 </Link>
               </div>
-              <img
-                src={farm.imageUrl}
-                alt={farm.name}
-                style={{
-                  width: "100%",
-                  height: "250px",
-                  objectFit: "cover",
-                  marginTop: "10px",
-                }}
-              />
             </div>
           </Grid>
         ))}
