@@ -28,6 +28,7 @@ function App() {
         {/* {isLogged &&  */}
         <Route path="/explore" element={<Explore />}></Route>
         <Route path="/logout" element={<LogOut />}></Route>
+      
         <Route path="/book" element={<Book />}></Route>
         <Route path="/types" element={<FarmTypes />}></Route>
         <Route path="/profile" element={<Profile />}></Route>
