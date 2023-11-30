@@ -1,5 +1,4 @@
 // src/Explore.js
-import StarIcon from "@mui/icons-material/Star";
 import {
   Button,
   Container,
@@ -98,36 +97,26 @@ const Explore = () => {
         <Grid item xs={12}>
           <Paper elevation={3} style={{ padding: "20px", textAlign: "left" }}>
             <Typography variant="h5" gutterBottom>
-              Explore top-ranked farms for engaging and captivating learning
-              experiences.
+              <strong>
+                Explore top-ranked farms for engaging and captivating learning
+                experiences.
+              </strong>
             </Typography>
             <Grid container spacing={2}>
               {farmsData.map((farm) => (
-                <Grid item xs={4} key={farm.rank}>
+                <Grid item xs={12} sm={6} md={4} key={farm.rank}>
                   <div style={{ marginBottom: "15px" }}>
-                    <Typography variant="subtitle1">
-                      <StarIcon
-                        fontSize="small"
-                        style={{ verticalAlign: "middle" }}
-                      />
-                      &nbsp; {farm.name}
-                    </Typography>
-                    <Typography variant="subtitle1">
-                      &nbsp; {farm.location}
-                    </Typography>
-
-                    <Typography variant="caption">
-                      <Rating
-                        name={`farm-${farm.rank}`}
-                        value={farm.rank}
-                        readOnly
-                      />
-                    </Typography>
-
+                    <Typography variant="h6">&nbsp; {farm.name}</Typography>
+                    <Typography variant="h6">&nbsp; {farm.location}</Typography>
+                    <Typography variant="caption"></Typography>
                     <div>
                       {/* Other content */}
                       <Link to="/signup">
-                        <Button>Visit</Button>
+                        <Button
+                          style={{ backgroundColor: "#216c2e", color: "white" }}
+                        >
+                          Visit
+                        </Button>
                       </Link>
                     </div>
                     <img
@@ -155,15 +144,9 @@ const Explore = () => {
             </Typography>
             <Grid container spacing={2}>
               {exploreData.map((farm) => (
-                <Grid item xs={4} key={farm.rank}>
+                <Grid item xs={12} sm={6} md={4} key={farm.rank}>
                   <div style={{ marginBottom: "15px" }}>
-                    <Typography variant="subtitle1">
-                      <StarIcon
-                        fontSize="small"
-                        style={{ verticalAlign: "middle" }}
-                      />
-                      &nbsp; {farm.name}
-                    </Typography>
+                    <Typography variant="h5">&nbsp; {farm.name}</Typography>
                     <Typography variant="subtitle1">
                       &nbsp; {farm.location}
                     </Typography>
@@ -175,9 +158,12 @@ const Explore = () => {
                       />
                     </Typography>
                     <div>
-                      {/* Other content */}
                       <Link to="/signup">
-                        <Button>Visit</Button>
+                        <Button
+                          style={{ backgroundColor: "#216c2e", color: "white" }}
+                        >
+                          Visit
+                        </Button>
                       </Link>
                     </div>
                     <img
@@ -206,15 +192,9 @@ const Explore = () => {
             </Typography>
             <Grid container spacing={2}>
               {experienceData.map((farm) => (
-                <Grid item xs={4} key={farm.rank}>
+                <Grid item xs={12} sm={6} md={4} key={farm.rank}>
                   <div style={{ marginBottom: "15px" }}>
-                    <Typography variant="subtitle1">
-                      <StarIcon
-                        fontSize="small"
-                        style={{ verticalAlign: "middle" }}
-                      />
-                      &nbsp; {farm.name}
-                    </Typography>
+                    <Typography variant="h5">&nbsp; {farm.name}</Typography>
                     <Typography variant="subtitle1">
                       &nbsp; {farm.location}
                     </Typography>
@@ -226,9 +206,12 @@ const Explore = () => {
                       />
                     </Typography>
                     <div>
-                      {/* Other content */}
                       <Link to="/signup">
-                        <Button>Visit</Button>
+                        <Button
+                          style={{ backgroundColor: "#216c2e", color: "white" }}
+                        >
+                          Visit
+                        </Button>
                       </Link>
                     </div>
                     <img

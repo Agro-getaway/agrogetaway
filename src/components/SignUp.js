@@ -1,5 +1,4 @@
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
-
 import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -34,22 +33,19 @@ function Copyright(props) {
   );
 }
 
-// TODO remove, this demo shouldn't need to reset the theme.
-
 const defaultTheme = createTheme();
 
 export default function SignUp() {
   const navigate = useNavigate();
+
   const adduser = async (member) => {
     try {
       const response = await axios.post(
         "https://agrogetawy.onrender.com/user/",
         member
       );
-      // const response =await axios.post("{{URL}}/user", member)
-      console.log(response);
       if (response.status === 201) {
-        alert("Account created sucessfully");
+        alert("Account created successfully");
         navigate("/selector");
       } else {
         alert("Error in creating the account");
@@ -58,31 +54,21 @@ export default function SignUp() {
       console.error(error);
     }
   };
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    // console.log({
-    //   username: data.get("Name"),
-    //   email: data.get("email"),
-    //   password: data.get("password")
-    // });
-
     const member = {
       username: data.get("Name"),
       email: data.get("email"),
       password: data.get("password"),
     };
-    console.log(member);
     adduser(member);
   };
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <Grid
-        container
-        component="main"
-        sx={{ position: "fixed", bottom: "0", top: "0" }}
-      >
+      <Grid container component="main" sx={{ height: "100vh" }}>
         <CssBaseline />
         <Grid
           item
@@ -92,12 +78,9 @@ export default function SignUp() {
           sx={{
             backgroundImage:
               "url(https://img.freepik.com/free-photo/medium-shot-kid-working-cornfield_23-2149142840.jpg?w=900&t=st=1700771726~exp=1700772326~hmac=ef63127e315136f220658a3bf857d3e94644c5f367f336bab1762ad4676f02cc)",
-
             backgroundRepeat: "no-repeat",
-
             backgroundSize: "cover",
             backgroundPosition: "center",
-
             top: "0",
             left: "0",
             width: "100%",
@@ -106,24 +89,6 @@ export default function SignUp() {
           }}
         />
 
-        {/* <Typography
-          variant="h4"
-          sx={{
-            position: "absolute",
-            bottom: "0%",
-            Top: "100%",
-            left: "35%",
-            transform: "translateX(-60%)",
-            justifyContent: "center",
-
-            color: "#ffffff",
-            textAlign: "left",
-            textShadow: "5px 5px 10px #000000",
-          }}
-        >
-          Redefining Agriculture With Agrogetaway
-          <p sx={{}}>Learn,explore And Experience the Beauty of Farming</p>
-        </Typography> */}
         <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
           <Box
             sx={{
@@ -132,7 +97,6 @@ export default function SignUp() {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              // color: "#dee5d9",
             }}
           >
             <Avatar sx={{ m: 1, bgcolor: "#00390f" }}>
@@ -183,19 +147,17 @@ export default function SignUp() {
                 control={<Checkbox value="remember" color="primary" />}
                 label="Remember me"
               />
-              <Link to="/selector" style={{ textDecoration: "none" }}>
-                <Button
-                  type="submit"
-                  fullWidth
-                  variant="contained"
-                  sx={{ mt: 3, mb: 2, background: "#216c2e" }}
-                >
-                  Sign Up
-                </Button>
-              </Link>
+              <Button
+                type="submit"
+                fullWidth
+                variant="contained"
+                sx={{ mt: 3, mb: 2, background: "#216c2e" }}
+              >
+                Sign Up
+              </Button>
               <Grid
                 item
-                sx={12}
+                xs={12}
                 sm={12}
                 md={12}
                 alignItems={"center"}
@@ -204,7 +166,7 @@ export default function SignUp() {
                 color={"#216c2e"}
               >
                 <Link href="/signin" variant="body2" sx={12}>
-                  Already Have account? Sign In
+                  Already Have an account? Sign In
                 </Link>
               </Grid>
 

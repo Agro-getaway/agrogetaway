@@ -33,25 +33,21 @@ function Copyright(props) {
   );
 }
 
-// TODO remove, this demo shouldn't need to reset the theme.
-
 const defaultTheme = createTheme();
 
 export default function SignIn() {
   const navigate = useNavigate();
+
   // Function to handle sign-in
   const signIn = async (credentials) => {
     try {
       const response = await axios.post(
         "https://agrogetawy.onrender.com/user/api/auth/signin/",
-        // "http://localhost:3011/user/api/auth/signin/",
         credentials
       );
-      // console.log(response);
+
       if (response.status === 200) {
-        // alert("Sign-in successful");
-        navigate("/users");
-        // You can handle further actions after successful sign-in
+        navigate("/types");
       } else {
         alert("Error in sign-in");
       }
@@ -63,15 +59,10 @@ export default function SignIn() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    // console.log({
-    //   email: data.get("email"),
-    //   password: data.get("password"),
-    // });
     const credentials = {
       email: data.get("email"),
       password: data.get("password"),
     };
-    // console.log("sent data", credentials)
     signIn(credentials);
   };
 
@@ -96,24 +87,7 @@ export default function SignIn() {
             backgroundPosition: "center",
           }}
         />
-        {/* <Typography
-          variant="h4"
-          sx={{
-            position: "absolute",
-            bottom: "0%",
-            Top: "100%",
-            left: "35%",
-            transform: "translateX(-60%)",
-            justifyContent: "center",
 
-            color: "#ffffff",
-            textAlign: "left",
-            textShadow: "5px 5px 10px #000000",
-          }}
-        >
-          Redefining Agriculture With Agrogetaway
-          <p sx={{}}>Learn,explore And Experience the Beauty of Farming</p>
-        </Typography> */}
         <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
           <Box
             sx={{
@@ -167,38 +141,20 @@ export default function SignIn() {
                 variant="contained"
                 sx={{ mt: 3, mb: 2, backgroundColor: "#216c2e" }}
               >
-                <Link
-                  to="/users"
-                  style={{ textDecoration: "none", color: "white" }}
-                >
-                  <strong>Sign In</strong>
-                </Link>
+                <strong>Sign In</strong>
               </Button>
-              <Grid container>
-                <Grid
-                  item
-                  sx={12}
-                  sm={12}
-                  md={12}
-                  alignItems={"center"}
-                  justifyContent={"center"}
-                  display={"flex"}
-                >
-                  <Link href="#" variant="body2" sx={12}>
+              <Grid container spacing={2}>
+                <Grid item xs={12} sm={6}>
+                  <Link href="#" variant="body2">
                     Forgot password?
                   </Link>
                 </Grid>
-
-                <Grid
-                  item
-                  sx={12}
-                  sm={12}
-                  md={12}
-                  alignItems={"center"}
-                  justifyContent={"center"}
-                  display={"flex"}
-                >
-                  <Link href="/signup" variant="body2" sx={12}>
+                <Grid item xs={12} sm={6}>
+                  <Link
+                    to="/signup"
+                    variant="body2"
+                    style={{ textDecoration: "none" }}
+                  >
                     Don't have an account? Sign Up
                   </Link>
                 </Grid>
