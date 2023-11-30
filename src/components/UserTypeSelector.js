@@ -16,7 +16,7 @@ const Selector = () => {
   const containerStyle = {
     maxWidth: "400px",
     margin: "auto",
-    padding: "200px",
+    padding: "100px",
     border: "1px solid #ccc",
     borderRadius: "60px",
     alignItems: "center",
