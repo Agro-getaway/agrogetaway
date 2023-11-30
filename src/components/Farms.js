@@ -14,6 +14,13 @@ import { Link } from "react-router-dom";
 
 const farmsData = [
   {
+    name: "Florence Floriculture Farm",
+    location: "Kampala",
+    method: "Floriculture",
+    imageUrl:
+      "https://img.freepik.com/free-photo/flowers-production-cultivation-many-chrysanthemum-flowers-greenhouse-chrysanthemum-plantation_158595-6963.jpg?w=900&t=st=1701365575~exp=1701366175~hmac=ee348ef10c7bdc89c3959cc8980d2d1a9200b08d0f1e493a08d8bea53a6de86c",
+  },
+  {
     name: "Balikowa Mixed Farm",
     location: "Masaka",
     method: "Mixed Farming",
@@ -23,9 +30,16 @@ const farmsData = [
   {
     name: "Barcleys Wheat Farm",
     location: "Jinja",
-    method: "Crop Farming",
+    method: "Commercial Farming",
     imageUrl:
       "https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?q=80&w=1674&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    name: "Kanbinga Vegetable Farm",
+    location: "Mbale",
+    method: "Hydroponics",
+    imageUrl:
+      "https://img.freepik.com/free-photo/closeup-african-american-worker-cultivating-organic-lettuce-checking-pests-hydroponic-enviroment-greenhouse-selective-focus-woman-hands-inspecting-plants-doing-quality-control_482257-50585.jpg?w=996&t=st=1701364379~exp=1701364979~hmac=ade2317b3ab819f125245b92929eeaec73344de1ec672ec00e267cc27e5dbd56",
   },
   {
     name: "Uganda Corn Fields",
@@ -41,6 +55,13 @@ const farmsData = [
     method: "Livestock Farming",
     imageUrl:
       "https://images.unsplash.com/photo-1597432480301-a3b64410d898?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    name: "Aqua Link Farm",
+    location: "Entebbe",
+    method: "Aquaculture",
+    imageUrl:
+      "https://ogden_images.s3.amazonaws.com/www.motherearthnews.com/images/2022/01/05185440/backyard-fish-farming.jpg",
   },
   {
     name: "Cocoa Haven Plantations",
@@ -100,7 +121,7 @@ const Explore = () => {
   };
 
   return (
-    <Container style={{ backgroundColor: "#F2E4CF" }}>
+    <Container style={{ backgroundColor: "#F2E4CF", fontFamily: "helvetica" }}>
       <Typography variant="h2" align="center" gutterBottom>
         Learn, Explore, and Experience the Beauty Of Farming
       </Typography>
@@ -126,7 +147,7 @@ const Explore = () => {
       {/* Experience Section */}
       <Grid container spacing={2}>
         {filteredFarms.map((farm) => (
-          <Grid item xs={12} sm={6} md={4} key={farm.name}>
+          <Grid item xs={12} sm={6} md={4} lg={3} key={farm.name}>
             <img
               src={farm.imageUrl}
               alt={farm.name}
