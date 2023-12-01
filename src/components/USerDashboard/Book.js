@@ -1,4 +1,4 @@
-import Typography from "@mui/material";
+import { Link, Typography } from "@mui/material";
 import React, { useState } from "react";
 
 const BookingPage = () => {

@@ -1,4 +1,5 @@
 import {
+  Button,
   Card,
   CardContent,
   CardMedia,
@@ -216,8 +217,8 @@ const Types = () => {
                     <strong>Conditions for Growth:</strong> {farm.conditions}
                   </Typography>
                   <Typography>
-                    <Link To="/farms">
-                      <Button>Farms</Button>
+                    <Link to="/farms" style={{ textDecoration: "none" }}>
+                      <Button variant="contained">Farms</Button>
                     </Link>
                   </Typography>
                 </CardContent>
