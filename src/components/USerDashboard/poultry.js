@@ -35,7 +35,7 @@ const Poultry = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 3000,
   };
 
   const pictureStyle = {
@@ -44,9 +44,11 @@ const Poultry = () => {
     position: "fixed",
   };
 
+  const fixedImageHeight = "800px"; // You can adjust this value as needed
+
   const imgStyle = {
     width: "100%",
-    height: "100%",
+    height: fixedImageHeight,
     objectFit: "cover",
     padding: "20px",
   };
