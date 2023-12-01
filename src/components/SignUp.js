@@ -46,7 +46,7 @@ export default function SignUp() {
       );
       if (response.status === 201) {
         alert("Account created successfully");
-        navigate("/selector");
+        navigate("/book");
       } else {
         alert("Error in creating the account");
       }

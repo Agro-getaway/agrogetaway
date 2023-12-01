@@ -102,7 +102,7 @@ const Profile = () => {
             </p>
 
             <button
-              onClick={() => (window.location.href = "/book")}
+              onClick={() => (window.location.href = "/signup")}
               style={{
                 padding: "10px",
                 backgroundColor: "#4CAF50",

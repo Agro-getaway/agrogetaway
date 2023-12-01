@@ -225,7 +225,7 @@ const Types = () => {
                           color: "#FFFFFF", // Set to the desired text color
                         }}
                       >
-                        Farms
+                        View Farms
                       </Button>
                     </Link>
                   </Typography>
