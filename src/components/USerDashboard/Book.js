@@ -1,6 +1,6 @@
-import { Link, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
 const BookingPage = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -194,7 +194,7 @@ const BookingPage = () => {
         >
           <h2>Thank you for booking!</h2>
           <h3>You will receive an email Shortly</h3>
-          <Link To="/types">
+          <Link to="/farms">
             <button
               style={{
                 backgroundColor: "#283618",
@@ -204,6 +204,8 @@ const BookingPage = () => {
                 borderRadius: "5px",
                 cursor: "pointer",
                 marginTop: "10px",
+                textDecoration: "none", // Add this to remove default link styling
+                display: "inline-block", // Add this to ensure proper button styling
               }}
             >
               Back to Dashboard
