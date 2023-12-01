@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Typography from '@mui/material/Typography';
+import Typography from '@mui/material';
 
 const BookingPage = () => {
   const [formData, setFormData] = useState({

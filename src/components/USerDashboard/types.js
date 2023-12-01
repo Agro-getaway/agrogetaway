@@ -8,6 +8,7 @@ import {
 } from "@mui/material";
 import { styled } from "@mui/system";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const FarmContainer = styled("div")({
   marginBottom: (theme) => theme.spacing(2),
@@ -213,6 +214,11 @@ const Types = () => {
                   </Typography>
                   <Typography>
                     <strong>Conditions for Growth:</strong> {farm.conditions}
+                  </Typography>
+                  <Typography>
+                    <Link To="/explore">
+                    <button>Farms</button>
+                    </Link>
                   </Typography>
                 </CardContent>
               </Card>
