@@ -10,7 +10,7 @@ const Selector = () => {
   const handleSelect = (selectedType) => {
     setUserType(selectedType);
     // navigate("/dashboard")
-    navigate("/users");
+    navigate("/types");
   };
 
   const containerStyle = {
