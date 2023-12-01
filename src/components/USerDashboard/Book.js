@@ -192,21 +192,23 @@ const BookingPage = () => {
             borderRadius: "10px",
           }}
         >
-          <h2>Thank you for booking a farm tour with Agrogetaway!</h2>
-          <button
-            onClick={closeModal}
-            style={{
-              backgroundColor: "#283618",
-              color: "#F2E4CF",
-              padding: "10px 20px",
-              border: "none",
-              borderRadius: "5px",
-              cursor: "pointer",
-              marginTop: "10px",
-            }}
-          >
-            Back to Dashboard
-          </button>
+          <h2>Thank you for booking!</h2>
+          <h3>You will receive an email Shortly</h3>
+          <Link To="/types">
+            <button
+              style={{
+                backgroundColor: "#283618",
+                color: "#F2E4CF",
+                padding: "10px 20px",
+                border: "none",
+                borderRadius: "5px",
+                cursor: "pointer",
+                marginTop: "10px",
+              }}
+            >
+              Back to Dashboard
+            </button>
+          </Link>
         </div>
       )}
     </div>
