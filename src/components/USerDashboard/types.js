@@ -216,7 +216,7 @@ const Types = () => {
                     <strong>Conditions for Growth:</strong> {farm.conditions}
                   </Typography>
                   <Typography>
-                    <Link To="/explore">
+                    <Link To="/farms">
                       <Button>Farms</Button>
                     </Link>
                   </Typography>
