@@ -29,7 +29,7 @@ function App() {
         <Route path="/explore" element={<Explore />}></Route>
         <Route path="/logout" element={<LogOut />}></Route>
       
-        <Route path="/book" element={<Book />}></Route>
+        <Route path="/book" element={<Book />}></Route> 
         <Route path="/types" element={<FarmTypes />}></Route>
         <Route path="/profile" element={<Profile />}></Route>
         <Route path="/selector" element={<Selector />}></Route>
