@@ -165,7 +165,7 @@ const Explore = () => {
               </Typography>
               <Typography variant="subtitle1">&nbsp; {farm.method}</Typography>
               <div>
-                <Link to="/signup">
+                <Link to="/farms">
                   <Button>More Details</Button>
                 </Link>
               </div>
