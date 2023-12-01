@@ -158,7 +158,7 @@ const Explore = () => {
                       />
                     </Typography>
                     <div>
-                      <Link to="/signup">
+                      <Link to="/types">
                         <Button
                           style={{ backgroundColor: "#216c2e", color: "white" }}
                         >
@@ -206,7 +206,7 @@ const Explore = () => {
                       />
                     </Typography>
                     <div>
-                      <Link to="/signup">
+                      <Link to="/types">
                         <Button
                           style={{ backgroundColor: "#216c2e", color: "white" }}
                         >
