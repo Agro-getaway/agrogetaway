@@ -135,7 +135,7 @@ const Types = () => {
         "Windbreak Agroforestry",
       ],
       imageUrl:
-        "https://images.unsplash.com/photo-1564469180403-9a9f5e1e6a17?q=80&w=1200&h=800&fit=crop",
+        "https://media.istockphoto.com/id/1361446534/photo/coconut-agroforestry-mix-faming.webp?b=1&s=170667a&w=0&k=20&c=c4aMZtH7BTmbOm7CJJZqQAwB619y4wsrnhrm2m8ARgI=",
     },
     {
       type: "Permaculture",
@@ -145,7 +145,7 @@ const Types = () => {
         "Relies on principles like diversity, companion planting, and sustainable land use planning.",
       bestFarms: ["Food Forests", "Permaculture Homesteads", "Keyhole Gardens"],
       imageUrl:
-        "https://images.unsplash.com/photo-1533075314390-4b0d3a6bb333?q=80&w=1200&h=800&fit=crop",
+        "https://thumbs.dreamstime.com/b/silverbeet-broccoli-farm-permaculture-growing-lots-beautiful-colours-heirloom-variety-seeds-59005989.jpg",
     },
     {
       type: "Floriculture",
