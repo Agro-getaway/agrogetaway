@@ -217,7 +217,7 @@ const Types = () => {
                   </Typography>
                   <Typography>
                     <Link To="/explore">
-                    <button>Farms</button>
+                      <Button>Farms</Button>
                     </Link>
                   </Typography>
                 </CardContent>
