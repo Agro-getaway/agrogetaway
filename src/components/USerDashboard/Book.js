@@ -1,6 +1,7 @@
 import { Typography } from "@mui/material";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+
 const BookingPage = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -163,22 +164,21 @@ const BookingPage = () => {
             />
           </>
         )}
-        <Link To="/signup">
-          <button
-            type="submit"
-            style={{
-              backgroundColor: "#283618",
-              color: "#F2E4CF",
-              padding: "10px 20px",
-              border: "none",
-              borderRadius: "5px",
-              cursor: "pointer",
-              marginTop: "10px",
-            }}
-          >
-            Book
-          </button>
-        </Link>
+
+        <button
+          type="submit"
+          style={{
+            backgroundColor: "#283618",
+            color: "#F2E4CF",
+            padding: "10px 20px",
+            border: "none",
+            borderRadius: "5px",
+            cursor: "pointer",
+            marginTop: "10px",
+          }}
+        >
+          Book
+        </button>
       </form>
 
       {/* Confirmation Modal */}
@@ -196,6 +196,7 @@ const BookingPage = () => {
           <h3>You will receive an email Shortly</h3>
           <Link to="/farms">
             <button
+              onClick={closeModal}
               style={{
                 backgroundColor: "#283618",
                 color: "#F2E4CF",
@@ -204,8 +205,6 @@ const BookingPage = () => {
                 borderRadius: "5px",
                 cursor: "pointer",
                 marginTop: "10px",
-                textDecoration: "none", // Add this to remove default link styling
-                display: "inline-block", // Add this to ensure proper button styling
               }}
             >
               Back to Dashboard
