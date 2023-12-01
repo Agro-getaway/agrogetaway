@@ -188,8 +188,8 @@ const Types = () => {
 
   return (
     <Paper elevation={3} className={classes.root}>
-      <Typography variant="h4" align="center" gutterBottom>
-        Farm Types and Conditions for Growth
+      <Typography variant="h4" align="left" gutterBottom>
+        <strong>Farm Types and Conditions for Growth</strong>
       </Typography>
       <Grid container spacing={3}>
         {farmData.map((farm, index) => (
@@ -218,7 +218,15 @@ const Types = () => {
                   </Typography>
                   <Typography>
                     <Link to="/farms" style={{ textDecoration: "none" }}>
-                      <Button variant="contained">Farms</Button>
+                      <Button
+                        variant="contained"
+                        style={{
+                          backgroundColor: "#4CAF50", // Set to the desired blue color
+                          color: "#FFFFFF", // Set to the desired text color
+                        }}
+                      >
+                        Farms
+                      </Button>
                     </Link>
                   </Typography>
                 </CardContent>
