@@ -121,7 +121,13 @@ const Explore = () => {
   };
 
   return (
-    <Container style={{ backgroundColor: "#F2E4CF", fontFamily: "helvetica" }}>
+    <Container
+      style={{
+        backgroundColor: "#F2E4CF",
+        fontFamily: "helvetica",
+        padding: "0",
+      }}
+    >
       <Typography variant="h2" align="center" gutterBottom>
         Learn, Explore, and Experience the Beauty Of Farming
       </Typography>

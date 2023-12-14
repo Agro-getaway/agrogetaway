@@ -155,8 +155,8 @@ const Types = () => {
     <Grid container spacing={3}>
       <Grid item xs={12}>
         <Paper elevation={3} style={{ padding: "20px", textAlign: "left" }}>
-          <Typography variant="h5" gutterBottom>
-            <strong>Farming Methods</strong>
+          <Typography variant="h3" gutterBottom>
+            <strong> Explore The Various Farming Methods</strong>
           </Typography>
           <Grid container spacing={2}>
             {farmData.map((farm, index) => (
@@ -175,7 +175,7 @@ const Types = () => {
                   />
                   <CardContent>
                     <Typography variant="h6" gutterBottom>
-                      {farm.type}
+                      <strong>{farm.type}</strong>
                     </Typography>
                     <Typography variant="body1" paragraph>
                       {farm.definition}
@@ -186,7 +186,10 @@ const Types = () => {
                     <div>
                       <Link to="/farms">
                         <Button
-                          style={{ backgroundColor: "#216c2e", color: "white" }}
+                          style={{
+                            backgroundColor: "#216c2e",
+                            color: "white",
+                          }}
                         >
                           Visit
                         </Button>
