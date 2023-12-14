@@ -1,5 +1,7 @@
+import PersonIcon from "@mui/icons-material/Person";
 import {
   AppBar,
+  Avatar,
   Button,
   Card,
   CardContent,
@@ -176,6 +178,9 @@ const Types = () => {
           <Button color="inherit" component={Link} to="/farms">
             <strong>Farms</strong>
           </Button>
+          <Avatar style={{ marginLeft: "10px" }}>
+            <PersonIcon />
+          </Avatar>
         </Toolbar>
       </AppBar>
       <Grid container spacing={3}>
