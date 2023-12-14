@@ -11,6 +11,7 @@ import SignUp from "./components/SignUp.js";
 
 import Poultry from "./components/poultry.js";
 import FarmTypes from "./components/types.js";
+import UserProfile from "./components/user.js";
 function App() {
   // const [isLogged, setIsLogged] = React.useState(true);
 
@@ -28,6 +29,7 @@ function App() {
         <Route path="/book" element={<Book />}></Route>
         <Route path="/types" element={<FarmTypes />}></Route>
         <Route path="/profile" element={<Profile />}></Route>
+        <Route path="/userprofile" element={<UserProfile />}></Route>
       </Routes>
     </>
   );
