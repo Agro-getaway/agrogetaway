@@ -5,9 +5,6 @@ import { Link } from "react-router-dom";
 const images = [
   " https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c2VlZGxpbmd8ZW58MHx8MHx8fDA%3D",
   "https://images.unsplash.com/photo-1606041974734-0341c2d2d988?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  // "https://unsplash.com/photos/green-plant-on-brown-soil-DUPFowqI6oI",
-  // "https://unsplash.com/photos/a-green-tractor-is-driving-through-a-field-eS6rqvLx7o0",
-  // "https://unsplash.com/photos/green-leafed-plants-during-daytime-2oYMwuFgnTg",
 ];
 
 const LandingPage = () => {

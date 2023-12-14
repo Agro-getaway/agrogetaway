@@ -111,7 +111,7 @@ const Explore = () => {
                     <Typography variant="caption"></Typography>
                     <div>
                       {/* Other content */}
-                      <Link to="/types">
+                      <Link to="/signup">
                         <Button
                           style={{ backgroundColor: "#216c2e", color: "white" }}
                         >
