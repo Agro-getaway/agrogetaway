@@ -161,7 +161,12 @@ const Types = () => {
           <Grid container spacing={2}>
             {farmData.map((farm, index) => (
               <Grid item xs={12} sm={6} md={4} key={index}>
-                <Card>
+                <Card
+                  style={{
+                    Width: "100%",
+                    height: "100%",
+                  }}
+                >
                   <CardMedia
                     component="img"
                     alt={farm.type}
@@ -175,7 +180,7 @@ const Types = () => {
                     <Typography variant="body1" paragraph>
                       {farm.definition}
                     </Typography>
-                    <Typography variant="body2" color="textSecondary">
+                    <Typography variant="body1" color="textSecondary">
                       {farm.conditions}
                     </Typography>
                     <div>
