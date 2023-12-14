@@ -1,10 +1,12 @@
 import {
+  AppBar,
   Button,
   Card,
   CardContent,
   CardMedia,
   Grid,
   Paper,
+  Toolbar,
   Typography,
 } from "@mui/material";
 import React from "react";
@@ -152,57 +154,82 @@ const farmData = [
 
 const Types = () => {
   return (
-    <Grid container spacing={3}>
-      <Grid item xs={12}>
-        <Paper elevation={3} style={{ padding: "20px", textAlign: "left" }}>
-          <Typography variant="h3" gutterBottom>
-            <strong> Explore The Various Farming Methods</strong>
+    <div>
+      <AppBar position="static" style={{ backgroundColor: "#216c2e" }}>
+        <Toolbar>
+          {/* Logo */}
+          <img
+            src="official.png"
+            alt="Farming Logo"
+            style={{ width: "50px" }}
+          />
+
+          {/* Title */}
+          <Typography variant="h6" component="div" style={{ flexGrow: 1 }}>
+            Farming Explorer
           </Typography>
-          <Grid container spacing={2}>
-            {farmData.map((farm, index) => (
-              <Grid item xs={12} sm={6} md={4} key={index}>
-                <Card
-                  style={{
-                    Width: "100%",
-                    height: "100%",
-                  }}
-                >
-                  <CardMedia
-                    component="img"
-                    alt={farm.type}
-                    height="300"
-                    image={farm.imageUrl}
-                  />
-                  <CardContent>
-                    <Typography variant="h6" gutterBottom>
-                      <strong>{farm.type}</strong>
-                    </Typography>
-                    <Typography variant="body1" paragraph>
-                      {farm.definition}
-                    </Typography>
-                    <Typography variant="body1" color="textSecondary">
-                      {farm.conditions}
-                    </Typography>
-                    <div>
-                      <Link to="/farms">
-                        <Button
-                          style={{
-                            backgroundColor: "#216c2e",
-                            color: "white",
-                          }}
-                        >
-                          Visit
-                        </Button>
-                      </Link>
-                    </div>
-                  </CardContent>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
-        </Paper>
+
+          {/* Buttons */}
+          <Button color="inherit" component={Link} to="/types">
+            <strong>Methods</strong>
+          </Button>
+          <Button color="inherit" component={Link} to="/farms">
+            <strong>Farms</strong>
+          </Button>
+        </Toolbar>
+      </AppBar>
+      <Grid container spacing={3}>
+        <Grid item xs={12}>
+          <Paper elevation={3} style={{ padding: "20px", textAlign: "left" }}>
+            <Typography variant="h3" gutterBottom>
+              <strong> Explore The Various Farming Methods</strong>
+            </Typography>
+            <Grid container spacing={2}>
+              {farmData.map((farm, index) => (
+                <Grid item xs={12} sm={6} md={4} key={index}>
+                  <Card
+                    style={{
+                      Width: "100%",
+                      height: "100%",
+                    }}
+                  >
+                    <CardMedia
+                      component="img"
+                      alt={farm.type}
+                      height="300"
+                      image={farm.imageUrl}
+                    />
+                    <CardContent>
+                      <Typography variant="h6" gutterBottom>
+                        <strong>{farm.type}</strong>
+                      </Typography>
+                      <Typography variant="body1" paragraph>
+                        {farm.definition}
+                      </Typography>
+                      <Typography variant="body1" color="textSecondary">
+                        {farm.conditions}
+                      </Typography>
+                      <div>
+                        <Link to="/farms">
+                          <Button
+                            style={{
+                              backgroundColor: "#216c2e",
+                              color: "white",
+                            }}
+                          >
+                            Visit
+                          </Button>
+                        </Link>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Grid>
+              ))}
+            </Grid>
+          </Paper>
+        </Grid>
       </Grid>
-    </Grid>
+    </div>
   );
 };
 
