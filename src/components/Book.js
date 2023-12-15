@@ -62,169 +62,190 @@ const BookingPage = () => {
   };
 
   return (
-    <Container maxWidth="md">
-      <Paper
-        elevation={3}
-        style={{
-          backgroundColor: "#F2E4CF",
-          color: "#283618",
-          padding: "20px",
-          borderRadius: "10px",
-          marginTop: "40px",
-        }}
-      >
-        <Typography variant="h4" align="center" gutterBottom>
-          Book a Model Farm Tour
-        </Typography>
+    <div
+      style={{
+        backgroundImage: `url('https://images.pexels.com/photos/840111/pexels-photo-840111.jpeg?auto=compress&cs=tinysrgb&w=600')`,
+        backgroundSize: "cover",
+        minHeight: "100vh",
+        maxHeight: "150vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <Container maxWidth="md">
+        <Grid container spacing={3}>
+          {/* Farm Photo Section */}
 
-        <form onSubmit={handleSubmit}>
-          <Grid container spacing={2}>
-            <Grid item xs={12} md={6}>
-              <TextField
-                label="Name"
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                fullWidth
-                required
-              />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <TextField
-                label="Location"
-                type="text"
-                name="location"
-                value={formData.location}
-                onChange={handleChange}
-                fullWidth
-                required
-              />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <TextField
-                label="Contact"
-                type="text"
-                name="contact"
-                value={formData.contact}
-                onChange={handleChange}
-                fullWidth
-                required
-              />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <TextField
-                label="Farming Activity"
-                type="text"
-                name="farmingActivity"
-                value={formData.farmingActivity}
-                onChange={handleChange}
-                fullWidth
-                required
-              />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <TextField
-                label="Tour Date"
-                type="date"
-                name="tourDate"
-                value={formData.tourDate}
-                onChange={handleChange}
-                fullWidth
-                required
-              />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <TextField
-                label="Number of People"
-                type="number"
-                name="numOfPeople"
-                value={formData.numOfPeople}
-                onChange={handleChange}
-                fullWidth
-                required
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <FormControlLabel
-                control={
-                  <Checkbox
-                    name="isSchool"
-                    checked={formData.isSchool}
-                    onChange={handleCheckboxChange}
-                  />
-                }
-                label="Is this a school tour?"
-                style={{ marginTop: "10px" }}
-              />
-            </Grid>
-            {formData.isSchool && (
-              <>
-                <Grid item xs={12} md={6}>
-                  <TextField
-                    label="Number of Students"
-                    type="number"
-                    name="numOfStudents"
-                    value={formData.numOfStudents}
-                    onChange={handleChange}
-                    fullWidth
-                    required
-                  />
+          {/* Form Section */}
+          <Grid item xs={12} md={6} sm={3}>
+            <Paper
+              elevation={5}
+              style={{
+                backgroundColor: "#F2E4CF",
+                color: "#283618",
+                padding: "60px",
+                borderRadius: "20px",
+                alignItems: "center",
+                width: "150%",
+              }}
+            >
+              <Typography variant="h4" align="center" gutterBottom>
+                Book a Model Farm Tour
+              </Typography>
+
+              <form onSubmit={handleSubmit}>
+                <Grid container spacing={2}>
+                  <Grid item xs={12} md={6}>
+                    <TextField
+                      label="Name"
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      fullWidth
+                      required
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <TextField
+                      label="Location"
+                      type="text"
+                      name="location"
+                      value={formData.location}
+                      onChange={handleChange}
+                      fullWidth
+                      required
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <TextField
+                      label="Contact"
+                      type="text"
+                      name="contact"
+                      value={formData.contact}
+                      onChange={handleChange}
+                      fullWidth
+                      required
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <TextField
+                      label="Farming Activity"
+                      type="text"
+                      name="farmingActivity"
+                      value={formData.farmingActivity}
+                      onChange={handleChange}
+                      fullWidth
+                      required
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <TextField
+                      label="Tour Date"
+                      type="date"
+                      name="tourDate"
+                      value={formData.tourDate}
+                      onChange={handleChange}
+                      fullWidth
+                      required
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <TextField
+                      label="Number of People"
+                      type="number"
+                      name="numOfPeople"
+                      value={formData.numOfPeople}
+                      onChange={handleChange}
+                      fullWidth
+                      required
+                    />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <FormControlLabel
+                      control={
+                        <Checkbox
+                          name="isSchool"
+                          checked={formData.isSchool}
+                          onChange={handleCheckboxChange}
+                        />
+                      }
+                      label="Is this a school tour?"
+                      style={{ marginTop: "10px" }}
+                    />
+                  </Grid>
+                  {formData.isSchool && (
+                    <>
+                      <Grid item xs={12} md={6}>
+                        <TextField
+                          label="Number of Students"
+                          type="number"
+                          name="numOfStudents"
+                          value={formData.numOfStudents}
+                          onChange={handleChange}
+                          fullWidth
+                          required
+                        />
+                      </Grid>
+                      <Grid item xs={12} md={6}>
+                        <TextField
+                          label="Main Teacher"
+                          type="text"
+                          name="mainTeacher"
+                          value={formData.mainTeacher}
+                          onChange={handleChange}
+                          fullWidth
+                          required
+                        />
+                      </Grid>
+                    </>
+                  )}
                 </Grid>
-                <Grid item xs={12} md={6}>
-                  <TextField
-                    label="Main Teacher"
-                    type="text"
-                    name="mainTeacher"
-                    value={formData.mainTeacher}
-                    onChange={handleChange}
-                    fullWidth
-                    required
-                  />
-                </Grid>
-              </>
-            )}
+
+                <Button
+                  type="submit"
+                  variant="contained"
+                  color="primary"
+                  style={{ marginTop: "20px" }}
+                >
+                  Book
+                </Button>
+              </form>
+
+              {/* Modal Section */}
+              {formData.showModal && (
+                <Paper
+                  elevation={3}
+                  style={{
+                    backgroundColor: "#F2E4CF",
+                    color: "#283618",
+                    padding: "20px",
+                    marginTop: "20px",
+                    borderRadius: "10px",
+                  }}
+                >
+                  <Typography variant="h6">Thank you for booking!</Typography>
+                  <Typography variant="subtitle1">
+                    You will receive an email shortly.
+                  </Typography>
+                  <Link to="/farms" style={{ textDecoration: "none" }}>
+                    <Button
+                      onClick={closeModal}
+                      variant="contained"
+                      color="primary"
+                      style={{ marginTop: "20px" }}
+                    >
+                      Thank you
+                    </Button>
+                  </Link>
+                </Paper>
+              )}
+            </Paper>
           </Grid>
-
-          <Button
-            type="submit"
-            variant="contained"
-            color="primary"
-            style={{ marginTop: "20px" }}
-          >
-            Book
-          </Button>
-        </form>
-
-        {formData.showModal && (
-          <Paper
-            elevation={3}
-            style={{
-              backgroundColor: "#F2E4CF",
-              color: "#283618",
-              padding: "20px",
-              marginTop: "20px",
-              borderRadius: "10px",
-            }}
-          >
-            <Typography variant="h6">Thank you for booking!</Typography>
-            <Typography variant="subtitle1">
-              You will receive an email shortly.
-            </Typography>
-            <Link to="/farms" style={{ textDecoration: "none" }}>
-              <Button
-                onClick={closeModal}
-                variant="contained"
-                color="primary"
-                style={{ marginTop: "20px" }}
-              >
-                Thank you
-              </Button>
-            </Link>
-          </Paper>
-        )}
-      </Paper>
-    </Container>
+        </Grid>
+      </Container>
+    </div>
   );
 };
 
