@@ -1,12 +1,16 @@
 // src/Explore.js
+import PersonIcon from "@mui/icons-material/Person";
 import SearchIcon from "@mui/icons-material/Search";
 import {
+  AppBar,
+  Avatar,
   Button,
   Container,
   Grid,
   IconButton,
   InputBase,
   Paper,
+  Toolbar,
   Typography,
 } from "@mui/material";
 import React, { useState } from "react";
@@ -121,67 +125,100 @@ const Explore = () => {
   };
 
   return (
-    <Container
-      style={{
-        backgroundColor: "#F2E4CF",
-        fontFamily: "helvetica",
-        padding: "0",
-      }}
-    >
-      <Typography variant="h2" align="center" gutterBottom>
-        Learn, Explore, and Experience the Beauty Of Farming
-      </Typography>
+    <div>
+      <AppBar position="static" style={{ backgroundColor: "#216c2e" }}>
+        <Toolbar>
+          {/* Logo */}
+          <img
+            src="official.png"
+            alt="Farming Logo"
+            style={{ width: "50px" }}
+          />
 
-      {/* Add the search bar */}
-      <Paper
-        elevation={3}
-        style={{ padding: "20px", textAlign: "left", marginBottom: "20px" }}
+          {/* Title */}
+          <Typography variant="h6" component="div" style={{ flexGrow: 1 }}>
+            Agrogetaway
+          </Typography>
+
+          {/* Buttons */}
+
+          <Button color="inherit" component={Link} to="/types">
+            <strong>Methods</strong>
+          </Button>
+          <Button color="inherit" component={Link} to="/aboutus">
+            <strong>About Us</strong>
+          </Button>
+          <Avatar style={{ marginLeft: "10px" }}>
+            <PersonIcon />
+          </Avatar>
+        </Toolbar>
+      </AppBar>
+      <Container
+        style={{
+          backgroundColor: "#F2E4CF",
+          fontFamily: "helvetica",
+          padding: "0",
+        }}
       >
-        <InputBase
-          placeholder="Search Farms..."
-          fullWidth
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          endAdornment={
-            <IconButton onClick={handleSearch} aria-label="search">
-              <SearchIcon />
-            </IconButton>
-          }
-        />
-      </Paper>
+        <Typography variant="h2" align="center" gutterBottom>
+          Learn, Explore, and Experience the Beauty Of Farming
+        </Typography>
 
-      {/* Experience Section */}
-      <Grid container spacing={2}>
-        {filteredFarms.map((farm) => (
-          <Grid item xs={12} sm={6} md={4} lg={3} key={farm.name}>
-            <img
-              src={farm.imageUrl}
-              alt={farm.name}
-              style={{
-                width: "100%",
-                height: "250px",
-                objectFit: "cover",
-                marginTop: "10px",
-              }}
-            />
-            <div style={{ marginBottom: "15px" }}>
-              <Typography variant="subtitle1">&nbsp; {farm.name}</Typography>
-              <Typography variant="subtitle1">
-                &nbsp; {farm.location}
-              </Typography>
-              <Typography variant="subtitle1">&nbsp; {farm.method}</Typography>
-              <div>
-                <Link to="/poultry">
-                  <Button style={{ backgroundColor: "green", color: "white" }}>
-                    More Details
-                  </Button>
-                </Link>
+        {/* Add the search bar */}
+        <Paper
+          elevation={3}
+          style={{ padding: "20px", textAlign: "left", marginBottom: "20px" }}
+        >
+          <InputBase
+            placeholder="Search Farms..."
+            fullWidth
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            endAdornment={
+              <IconButton onClick={handleSearch} aria-label="search">
+                <SearchIcon />
+              </IconButton>
+            }
+          />
+        </Paper>
+
+        {/* Experience Section */}
+        <Grid container spacing={2}>
+          {filteredFarms.map((farm) => (
+            <Grid item xs={12} sm={6} md={4} lg={3} key={farm.name}>
+              <img
+                src={farm.imageUrl}
+                alt={farm.name}
+                style={{
+                  width: "100%",
+                  height: "250px",
+                  objectFit: "cover",
+                  marginTop: "10px",
+                }}
+              />
+              <div style={{ marginBottom: "15px" }}>
+                <Typography variant="subtitle1">&nbsp; {farm.name}</Typography>
+                <Typography variant="subtitle1">
+                  &nbsp; {farm.location}
+                </Typography>
+                <Typography variant="subtitle1">
+                  &nbsp; {farm.method}
+                </Typography>
+                <div>
+                  <Link to="/poultry">
+                    <Button
+                      style={{ backgroundColor: "green", color: "white" }}
+                    >
+                      More Details
+                    </Button>
+                  </Link>
+                </div>
               </div>
-            </div>
-          </Grid>
-        ))}
-      </Grid>
-    </Container>
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
+    </div>
   );
 };
 

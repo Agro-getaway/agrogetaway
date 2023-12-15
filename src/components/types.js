@@ -168,15 +168,16 @@ const Types = () => {
 
           {/* Title */}
           <Typography variant="h6" component="div" style={{ flexGrow: 1 }}>
-            Farming Explorer
+            Agrogetaway
           </Typography>
 
           {/* Buttons */}
-          <Button color="inherit" component={Link} to="/types">
-            <strong>Methods</strong>
-          </Button>
+
           <Button color="inherit" component={Link} to="/farms">
             <strong>Farms</strong>
+          </Button>
+          <Button color="inherit" component={Link} to="/aboutus">
+            <strong>About Us</strong>
           </Button>
           <Avatar style={{ marginLeft: "10px" }}>
             <PersonIcon />
