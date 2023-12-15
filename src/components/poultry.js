@@ -102,7 +102,7 @@ const Poultry = () => {
             </p>
 
             <button
-              onClick={() => (window.location.href = "/signup")}
+              onClick={() => (window.location.href = "/book")}
               style={{
                 padding: "10px",
                 backgroundColor: "#4CAF50",

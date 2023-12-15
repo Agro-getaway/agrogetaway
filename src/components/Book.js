@@ -1,12 +1,21 @@
-import { Typography } from "@mui/material";
+import {
+  Button,
+  Checkbox,
+  Container,
+  FormControlLabel,
+  Grid,
+  Link,
+  Paper,
+  TextField,
+  Typography,
+} from "@mui/material";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 
 const BookingPage = () => {
   const [formData, setFormData] = useState({
     name: "",
     location: "",
-    Contact: "",
+    contact: "",
     farmingActivity: "",
     tourDate: "",
     numOfPeople: "",
@@ -29,7 +38,6 @@ const BookingPage = () => {
     setFormData({
       ...formData,
       [name]: checked,
-      // Reset school-related fields when isSchool checkbox is unchecked
       ...(name === "isSchool" &&
         !checked && {
           numOfStudents: "",
@@ -40,7 +48,6 @@ const BookingPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Process form data here, e.g., send to backend or perform necessary actions
     setFormData({
       ...formData,
       showModal: true,
@@ -55,275 +62,170 @@ const BookingPage = () => {
   };
 
   return (
-    <div
-      style={{
-        backgroundColor: "#F2E4CF",
-        color: "#283618",
-        padding: "20px",
-        borderRadius: "10px",
-        maxWidth: "30%",
-        margin: "auto",
-        marginTop: "40px",
-      }}
-    >
-      <Typography component="h1" variant="h4" align="center">
-        Book a model Farm Tour
-      </Typography>
-      <form onSubmit={handleSubmit}>
-        <label style={{ color: "#283618" }}>Name:</label>
-        <input
-          type="text"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-          style={{ width: "100%", marginBottom: "10px" }}
-        />
+    <Container maxWidth="md">
+      <Paper
+        elevation={3}
+        style={{
+          backgroundColor: "#F2E4CF",
+          color: "#283618",
+          padding: "20px",
+          borderRadius: "10px",
+          marginTop: "40px",
+        }}
+      >
+        <Typography variant="h4" align="center" gutterBottom>
+          Book a Model Farm Tour
+        </Typography>
 
-        <label style={{ color: "#283618" }}>Location:</label>
-        <input
-          type="text"
-          name="location"
-          value={formData.location}
-          onChange={handleChange}
-          required
-          style={{ width: "100%", marginBottom: "10px" }}
-        />
+        <form onSubmit={handleSubmit}>
+          <Grid container spacing={2}>
+            <Grid item xs={12} md={6}>
+              <TextField
+                label="Name"
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                fullWidth
+                required
+              />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <TextField
+                label="Location"
+                type="text"
+                name="location"
+                value={formData.location}
+                onChange={handleChange}
+                fullWidth
+                required
+              />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <TextField
+                label="Contact"
+                type="text"
+                name="contact"
+                value={formData.contact}
+                onChange={handleChange}
+                fullWidth
+                required
+              />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <TextField
+                label="Farming Activity"
+                type="text"
+                name="farmingActivity"
+                value={formData.farmingActivity}
+                onChange={handleChange}
+                fullWidth
+                required
+              />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <TextField
+                label="Tour Date"
+                type="date"
+                name="tourDate"
+                value={formData.tourDate}
+                onChange={handleChange}
+                fullWidth
+                required
+              />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <TextField
+                label="Number of People"
+                type="number"
+                name="numOfPeople"
+                value={formData.numOfPeople}
+                onChange={handleChange}
+                fullWidth
+                required
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    name="isSchool"
+                    checked={formData.isSchool}
+                    onChange={handleCheckboxChange}
+                  />
+                }
+                label="Is this a school tour?"
+                style={{ marginTop: "10px" }}
+              />
+            </Grid>
+            {formData.isSchool && (
+              <>
+                <Grid item xs={12} md={6}>
+                  <TextField
+                    label="Number of Students"
+                    type="number"
+                    name="numOfStudents"
+                    value={formData.numOfStudents}
+                    onChange={handleChange}
+                    fullWidth
+                    required
+                  />
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <TextField
+                    label="Main Teacher"
+                    type="text"
+                    name="mainTeacher"
+                    value={formData.mainTeacher}
+                    onChange={handleChange}
+                    fullWidth
+                    required
+                  />
+                </Grid>
+              </>
+            )}
+          </Grid>
 
-        <label style={{ color: "#283618" }}>Contact:</label>
-        <input
-          type="text"
-          name="location"
-          value={formData.location}
-          onChange={handleChange}
-          required
-          style={{ width: "100%", marginBottom: "10px" }}
-        />
+          <Button
+            type="submit"
+            variant="contained"
+            color="primary"
+            style={{ marginTop: "20px" }}
+          >
+            Book
+          </Button>
+        </form>
 
-        <label style={{ color: "#283618" }}>Farming Activity:</label>
-        <input
-          type="text"
-          name="farmingActivity"
-          value={formData.farmingActivity}
-          onChange={handleChange}
-          required
-          style={{ width: "100%", marginBottom: "10px" }}
-        />
-
-        <label style={{ color: "#283618" }}>Tour Date:</label>
-        <input
-          type="date"
-          name="tourDate"
-          value={formData.tourDate}
-          onChange={handleChange}
-          required
-          style={{ width: "100%", marginBottom: "10px" }}
-        />
-
-        <label style={{ color: "#283618" }}>Number of People:</label>
-        <input
-          type="number"
-          name="numOfPeople"
-          value={formData.numOfPeople}
-          onChange={handleChange}
-          required
-          style={{ width: "100%", marginBottom: "10px" }}
-        />
-
-        <label style={{ color: "#283618" }}>
-          <input
-            type="checkbox"
-            name="isSchool"
-            checked={formData.isSchool}
-            onChange={handleCheckboxChange}
-            style={{ marginRight: "5px" }}
-          />
-          Is this a school tour?
-        </label>
-
-        {formData.isSchool && (
-          <>
-            <label style={{ color: "#283618" }}>Number of Students:</label>
-            <input
-              type="number"
-              name="numOfStudents"
-              value={formData.numOfStudents}
-              onChange={handleChange}
-              required
-              style={{ width: "100%", marginBottom: "10px" }}
-            />
-
-            <label style={{ color: "#283618" }}>Main Teacher:</label>
-            <input
-              type="text"
-              name="mainTeacher"
-              value={formData.mainTeacher}
-              onChange={handleChange}
-              required
-              style={{ width: "100%", marginBottom: "10px" }}
-            />
-          </>
+        {formData.showModal && (
+          <Paper
+            elevation={3}
+            style={{
+              backgroundColor: "#F2E4CF",
+              color: "#283618",
+              padding: "20px",
+              marginTop: "20px",
+              borderRadius: "10px",
+            }}
+          >
+            <Typography variant="h6">Thank you for booking!</Typography>
+            <Typography variant="subtitle1">
+              You will receive an email shortly.
+            </Typography>
+            <Link to="/farms" style={{ textDecoration: "none" }}>
+              <Button
+                onClick={closeModal}
+                variant="contained"
+                color="primary"
+                style={{ marginTop: "20px" }}
+              >
+                Thank you
+              </Button>
+            </Link>
+          </Paper>
         )}
-
-        <button
-          type="submit"
-          style={{
-            backgroundColor: "#283618",
-            color: "#F2E4CF",
-            padding: "10px 20px",
-            border: "none",
-            borderRadius: "5px",
-            cursor: "pointer",
-            marginTop: "10px",
-          }}
-        >
-          Book
-        </button>
-      </form>
-
-      {/* Confirmation Modal */}
-      {formData.showModal && (
-        <div
-          style={{
-            backgroundColor: "#F2E4CF",
-            color: "#283618",
-            padding: "20px",
-            marginTop: "20px",
-            borderRadius: "10px",
-          }}
-        >
-          <h2>Thank you for booking!</h2>
-          <h3>You will receive an email Shortly</h3>
-          <Link to="/farms">
-            <button
-              onClick={closeModal}
-              style={{
-                backgroundColor: "#283618",
-                color: "#F2E4CF",
-                padding: "10px 20px",
-                border: "none",
-                borderRadius: "5px",
-                cursor: "pointer",
-                marginTop: "10px",
-              }}
-            >
-              Back to Dashboard
-            </button>
-          </Link>
-        </div>
-      )}
-    </div>
+      </Paper>
+    </Container>
   );
 };
 
 export default BookingPage;
-
-// import React, { useState } from 'react';
-
-// const BookingPage = () => {
-//   const [formData, setFormData] = useState({
-//     name: '',
-//     location: '',
-//     farmingActivity: '',
-//     tourDate: '',
-//     numOfPeople: '',
-//     numOfStudents: '',
-//     mainTeacher: '',
-//     showModal: false,
-//   });
-
-//   const handleChange = (e) => {
-//     const { name, value } = e.target;
-//     setFormData({
-//       ...formData,
-//       [name]: value,
-//     });
-//   };
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     // Process form data here, e.g., send to backend or perform necessary actions
-//     setFormData({
-//       ...formData,
-//       showModal: true,
-//     });
-//   };
-
-//   const closeModal = () => {
-//     setFormData({
-//       ...formData,
-//       showModal: false,
-//     });
-//   };
-
-//   return (
-//     <div
-//       style={{
-//         backgroundColor: '#F2E4CF',
-//         color: '#283618',
-//         padding: '20px',
-//         borderRadius: '10px',
-//         maxWidth: '400px',
-//         margin: 'auto',
-//       }}
-//     >
-//       <form onSubmit={handleSubmit}>
-//         <label>Name:</label>
-//         <input
-//           type="text"
-//           name="name"
-//           value={formData.name}
-//           onChange={handleChange}
-//           required
-//           style={{ width: '100%', marginBottom: '10px' }}
-//         />
-
-//         {/* Add other form inputs similarly */}
-
-//         <button
-//           type="submit"
-//           style={{
-//             backgroundColor: '#283618',
-//             color: '#F2E4CF',
-//             padding: '8px 16px',
-//             border: 'none',
-//             borderRadius: '5px',
-//             cursor: 'pointer',
-//           }}
-//         >
-//           Book
-//         </button>
-//       </form>
-
-//       {/* Confirmation Modal */}
-//       {formData.showModal && (
-//         <div
-//           style={{
-//             backgroundColor: '#F2E4CF',
-//             color: '#283618',
-//             padding: '20px',
-//             marginTop: '20px',
-//             borderRadius: '10px',
-//           }}
-//         >
-//           <h2>Thank you for booking a farm tour with Agrogetaway!</h2>
-//           <button
-//             onClick={closeModal}
-//             style={{
-//               backgroundColor: '#283618',
-//               color: '#F2E4CF',
-//               padding: '8px 16px',
-//               border: 'none',
-//               borderRadius: '5px',
-//               cursor: 'pointer',
-//             }}
-//           >
-//             Back to Dashboard
-//           </button>
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default BookingPage;
