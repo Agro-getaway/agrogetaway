@@ -7,8 +7,8 @@ import Home from "./components/Home";
 // import Farms from "./components/Farms.js";
 // import LandingPage from "./components/Home.js";
 // import Profile from "./components/Profile.js";
-// import SignIn from "./components/SignIn.js";
-// import SignUp from "./components/SignUp.js";
+import SignIn from "./components/SignIn.js";
+import SignUp from "./components/SignUp.js";
 // import AboutUs from "./components/aboutus.js";
 // import Poultry from "./components/poultry.js";
 // import FarmTypes from "./components/types.js";
@@ -20,13 +20,13 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        {/* <Route path="/" element={<LandingPage />}></Route>
+        {/* { <Route path="/" element={<LandingPage />}></Route> */}
         <Route path="/signin" element={<SignIn />}></Route>
-        <Route path="/aboutus" element={<AboutUs />}></Route>
+        {/* <Route path="/aboutus" element={<AboutUs />}></Route> */}
         <Route path="/signup" element={<SignUp />}></Route>
-        <Route path="/farms" element={<Farms />}></Route>
-        <Route path="/poultry" element={<Poultry />}></Route>
-        <Route path="/dashboard" element={<Types />}></Route>
+        {/* <Route path="/farms" element={<Farms />}></Route> */}
+        {/* <Route path="/poultry" element={<Poultry />}></Route> */}
+        {/* <Route path="/dashboard" element={<Types />}></Route> */}
         {/* {isLogged &&  */}
         {/* <Route path="/explore" element={<Explore />}></Route>
         <Route path="/book" element={<Book />}></Route>
