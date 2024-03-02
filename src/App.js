@@ -15,7 +15,8 @@ import SignIn from "./components/SignIn.js";
 import SignUp from "./components/SignUp.js";
 // import AboutUs from "./components/aboutus.js";
 // import Poultry from "./components/poultry.js";
-// import FarmTypes from "./components/types.js";
+import Livestock from "./components/Livestock.js";
+import FarmTypes from "./components/types.js";
 // import UserProfile from "./components/user.js";
 import Farms from "./components/Farms.js";
 function App() {
@@ -32,13 +33,14 @@ function App() {
         {/* <Route path="/farms" element={<Farms />}></Route> */}
         <Route path="/Dashboard" element={<Dashboard />}></Route>
         {/* <Route path="/poultry" element={<Poultry />}></Route> */}
+        <Route path="/livestock" element={<Livestock />}></Route>
         {/* <Route path="/Dashboard" element={<Dashboard />}></Route> */}
         <Route path="/Farms" element={<Farms />}></Route>
         {/* <Route path="/HamburgerMenu" element={<HamburgerMenu />}></Route> */}
         {/* {isLogged &&  */}
         {/* { <Route path="/explore" element={<Explore />}></Route> */}
         {/* <Route path="/book" element={<Book />}></Route> */}
-        {/* <Route path="/types" element={<FarmTypes />}></Route> */}
+        <Route path="/types" element={<FarmTypes />}></Route>
         {/* <Route path="/profile" element={<Profile />}></Route> */}
         {/* <Route path="/userprofile" element={<UserProfile />}></Route> */} 
       </Routes>
