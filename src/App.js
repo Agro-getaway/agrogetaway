@@ -15,7 +15,7 @@ import SignIn from "./components/SignIn.js";
 import SignUp from "./components/SignUp.js";
 // import AboutUs from "./components/aboutus.js";
 // import Poultry from "./components/poultry.js";
-import Livestock from "./components/Livestock.js";
+import Livestock from "./components/livestock.js";
 import FarmTypes from "./components/types.js";
 // import UserProfile from "./components/user.js";
 import Farms from "./components/Farms.js";
