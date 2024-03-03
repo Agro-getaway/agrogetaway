@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
-// import Book from "./components/Book.js";
+import Book from "./components/Book.js";
 // import Types from "./components/Dash.js";
 // import types from "./components/Dashboard.js";
 
@@ -39,7 +39,7 @@ function App() {
         {/* <Route path="/HamburgerMenu" element={<HamburgerMenu />}></Route> */}
         {/* {isLogged &&  */}
         {/* { <Route path="/explore" element={<Explore />}></Route> */}
-        {/* <Route path="/book" element={<Book />}></Route> */}
+        <Route path="/book" element={<Book />}></Route>
         <Route path="/types" element={<FarmTypes />}></Route>
         {/* <Route path="/profile" element={<Profile />}></Route> */}
         {/* <Route path="/userprofile" element={<UserProfile />}></Route> */} 
