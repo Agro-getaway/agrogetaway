@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Home from "./components/Home";
 import Book from "./components/Book.js";
+import Home from "./components/Home";
 // import Booking from "./components/Booking.js";
 // import Types from "./components/Dash.js";
 // import types from "./components/Dashboard.js";
@@ -14,9 +14,9 @@ import Dashboard from "./components/Dashboard1.js";
 // import Profile from "./components/Profile.js";
 // import HamburgerMenu from "./components/HamburgerMenu";
 import FarmAdmin from "./components/Admin.js";
+import BeeKeeping from "./components/BeeKeeping.js";
 import SignIn from "./components/SignIn.js";
 import SignUp from "./components/SignUp.js";
-import BeeKeeping from "./components/BeeKeeping.js";
 // import AboutUs from "./components/aboutus.js";
 // import Poultry from "./components/poultry.js";
 import Livestock from "./components/Livestock.js";
@@ -51,12 +51,11 @@ function App() {
         {/* <Route path="/booking" element={<Booking />}></Route> */}
         <Route path="/types" element={<FarmTypes />}></Route>
         {/* <Route path="/profile" element={<Profile />}></Route> */}
-<<<<<<< Updated upstream
-        {/* <Route path="/userprofile" element={<UserProfile />}></Route> */} 
-        <Route path="/BeeKeeping" element={<BeeKeeping />}></Route>
-=======
+
         {/* <Route path="/userprofile" element={<UserProfile />}></Route> */}
->>>>>>> Stashed changes
+        <Route path="/BeeKeeping" element={<BeeKeeping />}></Route>
+
+        {/* <Route path="/userprofile" element={<UserProfile />}></Route> */}
       </Routes>
     </>
   );
