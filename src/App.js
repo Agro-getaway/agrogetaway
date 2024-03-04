@@ -17,7 +17,7 @@ import SignUp from "./components/SignUp.js";
 import BeeKeeping from "./components/BeeKeeping.js";
 // import AboutUs from "./components/aboutus.js";
 // import Poultry from "./components/poultry.js";
-// import Livestock from "./components/Livestock.js";
+import Livestock from "./components/Livestock.js";
 import FarmTypes from "./components/types.js";
 // import UserProfile from "./components/user.js";
 import Farms from "./components/Farms.js";
@@ -35,7 +35,7 @@ function App() {
         {/* <Route path="/farms" element={<Farms />}></Route> */}
         <Route path="/Dashboard" element={<Dashboard />}></Route>
         {/* <Route path="/poultry" element={<Poultry />}></Route> */}
-        {/* <Route path="/livestock" element={<Livestock />}></Route> */}
+        <Route path="/livestock" element={<Livestock />}></Route>
         {/* <Route path="/Dashboard" element={<Dashboard />}></Route> */}
         <Route path="/Farms" element={<Farms />}></Route>
         {/* <Route path="/HamburgerMenu" element={<HamburgerMenu />}></Route> */}
