@@ -6,6 +6,7 @@ import Book from "./components/Book.js";
 // import Types from "./components/Dash.js";
 // import types from "./components/Dashboard.js";
 import Floriculture from "./components/Floriculture.js";
+import Mixed from "./components/Mixed.js";
 
 // import Explore from "./components/Dashboard.js";
 // import Farms from "./components/Farms.js";
@@ -18,10 +19,11 @@ import SignUp from "./components/SignUp.js";
 import BeeKeeping from "./components/BeeKeeping.js";
 // import AboutUs from "./components/aboutus.js";
 // import Poultry from "./components/poultry.js";
-import Livestock from "./components/Livestock.js";
+// import Livestock from "./components/Livestock.js";
 import FarmTypes from "./components/types.js";
 // import UserProfile from "./components/user.js";
 import Farms from "./components/Farms.js";
+
 function App() {
   // const [isLogged, setIsLogged] = React.useState(true);
 
@@ -36,9 +38,10 @@ function App() {
         {/* <Route path="/farms" element={<Farms />}></Route> */}
         <Route path="/Dashboard" element={<Dashboard />}></Route>
         {/* <Route path="/poultry" element={<Poultry />}></Route> */}
-        <Route path="/livestock" element={<Livestock />}></Route>
+        {/* <Route path="/livestock" element={<Livestock />}></Route> */}
         {/* <Route path="/Dashboard" element={<Dashboard />}></Route> */}
         <Route path="/Farms" element={<Farms />}></Route>
+        <Route path="/Mixed" element={<Mixed />}></Route>
         <Route path="/Floriculture" element={<Floriculture />}></Route>
         {/* <Route path="/HamburgerMenu" element={<HamburgerMenu />}></Route> */}
         {/* {isLogged &&  */}
@@ -46,6 +49,7 @@ function App() {
         <Route path="/book" element={<Book />}></Route>
         {/* <Route path="/booking" element={<Booking />}></Route> */}
         <Route path="/types" element={<FarmTypes />}></Route>
+        
         {/* <Route path="/profile" element={<Profile />}></Route> */}
         {/* <Route path="/userprofile" element={<UserProfile />}></Route> */} 
         <Route path="/BeeKeeping" element={<BeeKeeping />}></Route>
