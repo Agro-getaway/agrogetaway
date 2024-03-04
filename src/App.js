@@ -5,6 +5,7 @@ import Book from "./components/Book.js";
 // import Booking from "./components/Booking.js";
 // import Types from "./components/Dash.js";
 // import types from "./components/Dashboard.js";
+import Floriculture from "./components/Floriculture.js";
 
 // import Explore from "./components/Dashboard.js";
 // import Farms from "./components/Farms.js";
@@ -38,6 +39,7 @@ function App() {
         <Route path="/livestock" element={<Livestock />}></Route>
         {/* <Route path="/Dashboard" element={<Dashboard />}></Route> */}
         <Route path="/Farms" element={<Farms />}></Route>
+        <Route path="/Floriculture" element={<Floriculture />}></Route>
         {/* <Route path="/HamburgerMenu" element={<HamburgerMenu />}></Route> */}
         {/* {isLogged &&  */}
         {/* { <Route path="/explore" element={<Explore />}></Route> */}

@@ -6,17 +6,17 @@ import "slick-carousel/slick/slick.css";
 
 const Poultry = () => {
   const farmDetails = {
-    location: "Biyinzika Poultry Farm",
+    location: "Florence Floriculture Farm",
     about:
-      "Welcome to Poultry Paradise Farm! We specialize in raising healthy and happy poultry. Our mission is to provide the community with fresh and high-quality poultry products.",
-    typeOfFarming: "Free-Range Poultry Farming",
+      "Welcome to Florence Floriculture Farm! We specialize in cultivating a variety of beautiful flowers. Our mission is to spread joy through the beauty of nature.",
+    typeOfFarming: "Flower Cultivation",
     farmingDescription:
-      "Free-range poultry farming allows our chickens to roam freely outdoors, ensuring they have access to natural sunlight and fresh air. We prioritize their well-being and follow sustainable practices in poultry farming.",
+      "At Florence Floriculture Farm, we engage in the cultivation of various flowers using sustainable and eco-friendly practices. Our goal is to provide fresh and vibrant flowers to our community.",
     farmerInfo: {
-      name: "Mukasa John",
-      experience: "30 years in Poultry Farming",
+      name: "Isabella Rodriguez",
+      experience: "20 years in Floriculture",
       background:
-        "With a passion for poultry farming, John has decades of experience in raising chickens. He is committed to delivering top-notch poultry products to the local community.",
+        "With two decades of experience in floriculture, Isabella has a deep passion for flowers and their cultivation. She is dedicated to creating stunning floral arrangements for our customers.",
       photo:
         "https://img.freepik.com/free-photo/medium-shot-man-carrying-pot_23-2149142853.jpg?w=900&t=st=1701421575~exp=1701422175~hmac=51d221d07660229613460d25bf5106de6c8d31150e9ab3933742fa474eba9808",
     },
