@@ -13,6 +13,7 @@ import Dashboard from "./components/Dashboard1.js";
 // import LandingPage from "./components/Home.js";
 // import Profile from "./components/Profile.js";
 // import HamburgerMenu from "./components/HamburgerMenu";
+import FarmAdmin from "./components/Admin.js";
 import SignIn from "./components/SignIn.js";
 import SignUp from "./components/SignUp.js";
 import BeeKeeping from "./components/BeeKeeping.js";
@@ -22,6 +23,7 @@ import Livestock from "./components/Livestock.js";
 import FarmTypes from "./components/types.js";
 // import UserProfile from "./components/user.js";
 import Farms from "./components/Farms.js";
+import FarmerPage from "./components/modelfarmer.js";
 function App() {
   // const [isLogged, setIsLogged] = React.useState(true);
 
@@ -29,6 +31,8 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Home />}></Route>
+        <Route path="/admin" element={<FarmAdmin />}></Route>
+        <Route path="/model" element={<FarmerPage />}></Route>
         {/* { <Route path="/" element={<LandingPage />}></Route> */}
         <Route path="/signin" element={<SignIn />}></Route>
         {/* <Route path="/aboutus" element={<AboutUs />}></Route> */}
@@ -47,8 +51,12 @@ function App() {
         {/* <Route path="/booking" element={<Booking />}></Route> */}
         <Route path="/types" element={<FarmTypes />}></Route>
         {/* <Route path="/profile" element={<Profile />}></Route> */}
+<<<<<<< Updated upstream
         {/* <Route path="/userprofile" element={<UserProfile />}></Route> */} 
         <Route path="/BeeKeeping" element={<BeeKeeping />}></Route>
+=======
+        {/* <Route path="/userprofile" element={<UserProfile />}></Route> */}
+>>>>>>> Stashed changes
       </Routes>
     </>
   );
