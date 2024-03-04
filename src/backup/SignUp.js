@@ -41,7 +41,7 @@ export default function SignUp() {
   const adduser = async (member) => {
     try {
       const response = await axios.post(
-        "https://agrogetawy.onrender.com/user/",
+        "https://backend-production-f4cc.up.railway.app/user/",
         member
       );
       if (response.status === 201) {

@@ -55,11 +55,14 @@ import {
       try {
         // Make a POST request to the backend endpoint
       const response = await axios.post(
-        "http://agrogetawy.onrender.com/booking/create-booking",
+        "https://backend-production-f4cc.up.railway.app/booking/create-booking",
         formData
       );
       // Check the response and handle accordingly
       if (response.status === 200) {
+        // alert("Booking successfull..")
+        window.alert("Booking successful!");
+        
         // Booking successful, show modal or navigate to another page
         setFormData({
           ...formData,
