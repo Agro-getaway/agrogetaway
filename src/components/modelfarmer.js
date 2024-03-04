@@ -1,38 +1,19 @@
 import {
   Button,
   FormControl,
+  Grid,
   Input,
   InputLabel,
+  List,
+  ListItem,
   MenuItem,
   Select,
   TextField,
   Typography,
-  makeStyles,
 } from "@mui/material";
-import React, { useState } from "react";
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    "& .MuiTextField-root": {
-      margin: theme.spacing(1),
-      width: "25ch",
-    },
-  },
-  formControl: {
-    margin: theme.spacing(1),
-    minWidth: 120,
-  },
-  selectEmpty: {
-    marginTop: theme.spacing(2),
-  },
-  button: {
-    margin: theme.spacing(1),
-  },
-}));
+import React, { useEffect, useState } from "react";
 
 const FarmerPage = () => {
-  const classes = useStyles();
-
   const [farmDetails, setFarmDetails] = useState({
     description: "",
     services: [],
@@ -40,6 +21,33 @@ const FarmerPage = () => {
     location: "",
     bookings: [],
   });
+
+  useEffect(() => {
+    // Fetch farm details and bookings from backend API
+    // Update farmDetails state with the fetched data
+    fetchFarmData();
+  }, []); // Make sure to add dependencies if needed
+
+  const fetchFarmData = async () => {
+    try {
+      // Simulate fetching farm details and bookings from backend API
+      // Replace this with actual API calls
+      const initialFarmDetails = {
+        description: "Farm description",
+        services: ["Organic produce", "Farm tours"],
+        images: [
+          "https://via.placeholder.com/150",
+          "https://via.placeholder.com/150",
+          "https://via.placeholder.com/150",
+        ],
+        location: "Farm location",
+        bookings: [],
+      };
+      setFarmDetails(initialFarmDetails);
+    } catch (error) {
+      console.error("Error fetching farm data:", error);
+    }
+  };
 
   const handleDescriptionChange = (event) => {
     setFarmDetails({ ...farmDetails, description: event.target.value });
@@ -62,94 +70,135 @@ const FarmerPage = () => {
     setFarmDetails({ ...farmDetails, location: event.target.value });
   };
 
+  const handleServiceInput = (event) => {
+    // Add the new service to the list of services
+    const newService = event.target.value;
+    setFarmDetails({
+      ...farmDetails,
+      services: [...farmDetails.services, newService],
+    });
+  };
+
   const handleBookingView = () => {
-    // Fetch bookings for the current farmer from backend
-    // Update the bookings in the state
+    // Handle booking view logic
   };
 
   const handleSaveDetails = () => {
-    // Save farm details to backend
-    // Show success message to the farmer
+    // Check if required fields are filled
+    if (
+      !farmDetails.description ||
+      !farmDetails.location ||
+      farmDetails.services.length === 0
+    ) {
+      alert("Please fill in all required fields.");
+      return;
+    }
   };
-
   return (
-    <div>
+    <div style={{ padding: "20px" }}>
       <Typography variant="h4">Farmer Page</Typography>
-      <form className={classes.root} noValidate autoComplete="off">
-        <TextField
-          id="description"
-          label="Description"
-          multiline
-          rows={4}
-          value={farmDetails.description}
-          onChange={handleDescriptionChange}
-        />
-        <FormControl className={classes.formControl}>
-          <InputLabel id="services-label">Services</InputLabel>
-          <Select
-            labelId="services-label"
-            id="services"
+      <Grid container spacing={2}>
+        <Grid item xs={12}>
+          <TextField
+            id="description"
+            label="Description"
+            multiline
+            rows={4}
+            value={farmDetails.description}
+            onChange={handleDescriptionChange}
+            fullWidth
+          />
+        </Grid>
+        <Grid item xs={12}>
+          <FormControl fullWidth>
+            <InputLabel id="services-label">Services</InputLabel>
+            <Select
+              labelId="services-label"
+              id="services"
+              multiple
+              value={farmDetails.services}
+              onChange={handleServiceChange}
+              input={<Input />}
+            >
+              {farmDetails.services.map((service, index) => (
+                <MenuItem key={index} value={service}>
+                  {service}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+        </Grid>
+        <Grid item xs={12}>
+          <TextField
+            id="new-service"
+            label="Add New Service"
+            value={""}
+            onChange={handleServiceInput}
+            fullWidth
+          />
+        </Grid>
+        <Grid item xs={12}>
+          <input
+            type="file"
+            accept="image/*"
             multiple
-            value={farmDetails.services}
-            onChange={handleServiceChange}
-            input={<Input />}
-            MenuProps={{
-              PaperProps: {
-                style: {
-                  maxHeight: 300,
-                  width: 250,
-                },
-              },
-            }}
+            onChange={handleImageChange}
+          />
+        </Grid>
+        <Grid item xs={12}>
+          <TextField
+            id="location"
+            label="Location"
+            value={farmDetails.location}
+            onChange={handleLocationChange}
+            fullWidth
+          />
+        </Grid>
+        <Grid item xs={12}>
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={handleSaveDetails}
           >
-            <MenuItem value="Organic produce">Organic produce</MenuItem>
-            <MenuItem value="Farm tours">Farm tours</MenuItem>
-            <MenuItem value="CSA subscriptions">CSA subscriptions</MenuItem>
-            {/* Add more service options as needed */}
-          </Select>
-        </FormControl>
-        <input
-          type="file"
-          accept="image/*"
-          multiple
-          onChange={handleImageChange}
-        />
-        <TextField
-          id="location"
-          label="Location"
-          value={farmDetails.location}
-          onChange={handleLocationChange}
-        />
-        <Button
-          variant="contained"
-          color="primary"
-          onClick={handleSaveDetails}
-          className={classes.button}
-        >
-          Save Details
-        </Button>
-        <Button
-          variant="contained"
-          onClick={handleBookingView}
-          className={classes.button}
-        >
-          View Bookings
-        </Button>
-      </form>
-      <Typography variant="h6">Bookings</Typography>
-      <ul>
-        {farmDetails.bookings.map((booking, index) => (
-          <li key={index}>
-            <strong>Booking ID:</strong> {booking.id}
-            <br />
-            <strong>Date:</strong> {booking.date}
-            <br />
-            <strong>Customer:</strong> {booking.customerName}
-            <br />
-            {/* Add more booking details as needed */}
-          </li>
-        ))}
-      </ul>
+            Save Details
+          </Button>
+          <Button variant="contained" onClick={handleBookingView}>
+            View Bookings
+          </Button>
+        </Grid>
+        <Grid item xs={12}>
+          <Typography variant="h6">Bookings</Typography>
+          <List>
+            {farmDetails.bookings.map((booking, index) => (
+              <ListItem key={index}>
+                <Typography>
+                  <strong>Booking ID:</strong> {booking.id}
+                  <br />
+                  <strong>Date:</strong> {booking.date}
+                  <br />
+                  <strong>Customer:</strong> {booking.customerName}
+                  <br />
+                  {/* Add more booking details as needed */}
+                </Typography>
+              </ListItem>
+            ))}
+          </List>
+        </Grid>
+        <Grid item xs={12}>
+          <Typography variant="h6">Images</Typography>
+          <Grid container spacing={2}>
+            {farmDetails.images.map((imageUrl, index) => (
+              <Grid item key={index}>
+                <img
+                  src={imageUrl}
+                  alt={`Farm ${index + 1}`}
+                  style={{ maxWidth: "150px" }}
+                />
+              </Grid>
+            ))}
+          </Grid>
+        </Grid>
+      </Grid>
     </div>
   );
 };
