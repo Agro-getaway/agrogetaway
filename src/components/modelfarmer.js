@@ -332,7 +332,7 @@ const FarmerPage = () => {
   };
 
   return (
-    <div style={{ padding: "20px" }}>
+    <div style={{ padding: "20px", backgroundColor: "lightgreen" }}>
       <Typography variant="h4">Farmer Page</Typography>
       <Grid container spacing={2}>
         <Grid item xs={12}>
@@ -439,7 +439,7 @@ const FarmerPage = () => {
               <Grid item key={index}>
                 <img
                   src={URL.createObjectURL(file)}
-                  alt={`Farm Image ${index + 1}`}
+                  alt={`Farm ${index + 1}`}
                   style={{ maxWidth: "150px" }}
                 />
               </Grid>
