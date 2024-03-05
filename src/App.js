@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import { ClerkProvider, SignedIn, SignedOut, UserButton } from '@clerk/clerk-react'
 import Book from "./components/Book.js";
 import Home from "./components/Home";
 // import Booking from "./components/Booking.js";
@@ -7,7 +8,7 @@ import Home from "./components/Home";
 // import types from "./components/Dashboard.js";
 import Floriculture from "./components/Floriculture.js";
 import Mixed from "./components/Mixed.js";
-import FarmerPage from "./components/modelfarmer.js";
+
 
 // import Explore from "./components/Dashboard.js";
 // import Farms from "./components/Farms.js";
@@ -49,7 +50,7 @@ function App() {
         {/* <Route path="/HamburgerMenu" element={<HamburgerMenu />}></Route> */}
         {/* {isLogged &&  */}
         {/* { <Route path="/explore" element={<Explore />}></Route> */}
-        <Route path="/book" element={<Book />}></Route>
+        <SignedIn path="/book" element={<Book />}></SignedIn>
         {/* <Route path="/booking" element={<Booking />}></Route> */}
         <Route path="/types" element={<FarmTypes />}></Route>
         
