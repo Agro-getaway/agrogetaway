@@ -7,6 +7,7 @@ import Home from "./components/Home";
 // import types from "./components/Dashboard.js";
 import Floriculture from "./components/Floriculture.js";
 import Mixed from "./components/Mixed.js";
+import FarmerPage from "./components/modelfarmer.js";
 
 // import Explore from "./components/Dashboard.js";
 // import Farms from "./components/Farms.js";
