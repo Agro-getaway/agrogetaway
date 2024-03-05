@@ -1,22 +1,23 @@
-import { Grid, Paper } from "@mui/material";
+import { Grid, Paper, AppBar, Toolbar, Typography, Button, Link, Avatar } from "@mui/material";
 import React from "react";
+import PersonIcon from "@mui/icons-material/Person";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 
-const Poultry = () => {
+const BeeKeeping = () => {
   const farmDetails = {
-    location: "Biyinzika Poultry Farm",
+    location: "Balikowa Mixed Farm",
     about:
-      "Welcome to Poultry Paradise Farm! We specialize in raising healthy and happy poultry. Our mission is to provide the community with fresh and high-quality poultry products.",
-    typeOfFarming: "Free-Range Poultry Farming",
+      "We specialize in growing plants like maize, beans, and yummy fruits. Plus, there are chickens, goats, and a few cows running around",
+    typeOfFarming: "Mixed Farming",
     farmingDescription:
       "Free-range poultry farming allows our chickens to roam freely outdoors, ensuring they have access to natural sunlight and fresh air. We prioritize their well-being and follow sustainable practices in poultry farming.",
     farmerInfo: {
-      name: "Mukasa John",
-      experience: "30 years in Poultry Farming",
+      name: "Jackson Musisi",
+      experience: "10 years in Mixed Farming",
       background:
-        "With a passion for poultry farming, John has decades of experience in raising chickens. He is committed to delivering top-notch poultry products to the local community.",
+        "Jackson loves farming, and he learned all about it from his family. What's awesome is that his farm is like a nature-friendly place. He keeps the soil healthy using natural stuff and changes crops smartly. Jackson is so friendly that he even teaches others in the community about cool farming tricks. If you want to see a farm that's good for nature and people, book a tour to Alex's farm! It's like a little adventure in the countryside.",
       photo:
         "https://img.freepik.com/free-photo/medium-shot-man-carrying-pot_23-2149142853.jpg?w=900&t=st=1701421575~exp=1701422175~hmac=51d221d07660229613460d25bf5106de6c8d31150e9ab3933742fa474eba9808",
     },
@@ -55,6 +56,33 @@ const Poultry = () => {
 
   return (
     <div className="farm-profile-container">
+        <AppBar position="fixed" style={{ backgroundColor: "#216c2e" }}>
+        <Toolbar>
+          {/* Logo */}
+          <img
+            src="official.png"
+            alt="Farming Logo"
+            style={{ width: "50px" }}
+          />
+
+          {/* Title */}
+          <Typography variant="h6" component="div" style={{ flexGrow: 1 }}>
+            Agrogetaway
+          </Typography>
+
+          {/* Buttons */}
+
+          <Button color="inherit" component={Link} to="/types">
+            <strong>Methods</strong>
+          </Button>
+          <Button color="inherit" component={Link} to="/aboutus">
+            <strong>About Us</strong>
+          </Button>
+          <Avatar style={{ marginLeft: "10px" }}>
+            <PersonIcon />
+          </Avatar>
+        </Toolbar>
+      </AppBar>
       <Grid container spacing={2}>
         <Grid item xs={12} md={6} style={pictureStyle}>
           <div className="section">
@@ -122,4 +150,4 @@ const Poultry = () => {
   );
 };
 
-export default Poultry;
+export default BeeKeeping;
