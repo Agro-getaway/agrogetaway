@@ -1,184 +1,147 @@
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
-import { Avatar } from "@mui/material";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Checkbox from "@mui/material/Checkbox";
-import CssBaseline from "@mui/material/CssBaseline";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Grid from "@mui/material/Grid";
-import Link from "@mui/material/Link";
-import Paper from "@mui/material/Paper";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import TextField from "@mui/material/TextField";
-import Typography from "@mui/material/Typography";
-import axios from "axios";
-import * as React from "react";
-import { useNavigate } from "react-router-dom";
+import React from 'react';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Link from '@mui/material/Link';
+// import logo from "D:\agroget_away_backend\agrogetaway\src\Assets\Logo.png";
+import {
+  Container,
+  Box,
+  Typography,
+  TextField,
+  Button,
+  Grid,
+  CssBaseline,
+} from '@mui/material';
 
-function Copyright(props) {
-  return (
-    <Typography
-      variant="body2"
-      color="text.secondary"
-      align="center"
-      {...props}
-    >
-      {"Copyright © "}
-      <Link color="inherit" href="https://agrogetaway.vercel.app/">
-        Agrogetaway
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
+import axios from 'axios';
 
 const defaultTheme = createTheme();
 
-export default function SignIn() {
-  const navigate = useNavigate();
+const styles = {
+  root: {
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    height: '100vh',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  container: {
+    backgroundColor: 'white',
+    borderRadius: '30px',
+    boxShadow: '0 0 23px 0 rgba(0, 0, 0, 0.2)',
+    padding: '40px',
+    width: '400px',
+    textAlign: 'center',
+    marginLeft: '20px',
+  },
+  logo: {
+    textDecoration: 'none',
+    display: 'flex',
+    justifyContent: 'center',
+    marginBottom: '20px',
+  },
+};
 
-  // Function to handle sign-in
-  const signIn = async (credentials) => {
-    try {
-      const response = await axios.post(
-        "https://backend-production-f4cc.up.railway.app/user/api/auth/signin/",
-        credentials
-      );
-
-      if (response.status === 200) {
-        navigate("/types");
-      } else {
-        alert("Error in sign-in");
-      }
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  const handleSubmit = (event) => {
+function SignInForm({ onSubmit }) {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    const credentials = {
-      email: data.get("email"),
-      password: data.get("password"),
+    const data = new FormData(event.target);
+
+    const loginCredentials = {
+      email: data.get('email'),
+      password: data.get('password'),
     };
-    signIn(credentials);
+
+    if (!loginCredentials.email || !loginCredentials.password) {
+      alert('Please fill in all the required fields.');
+      return;
+    }
+
+    // Call the provided onSubmit function with the login credentials
+    await onSubmit(loginCredentials);
   };
 
   return (
+    <Box component="form" onSubmit={handleSubmit} sx={{ mt: 3 }}>
+      <TextField
+        margin="normal"
+        required
+        fullWidth
+        id="email"
+        label="Email Address"
+        name="email"
+        autoComplete="email"
+        autoFocus
+      />
+      <TextField
+        margin="normal"
+        required
+        fullWidth
+        name="password"
+        label="Password"
+        type="password"
+        id="password"
+        autoComplete="current-password"
+      />
+      <Button type="submit" fullWidth variant="contained" sx={{ mt: 2 }}>
+        Sign In
+      </Button>
+    </Box>
+  );
+}
+
+function SignIn({ onSubmit }) {
+  return (
     <ThemeProvider theme={defaultTheme}>
-      <Grid container component="main" sx={{ height: "100vh" }}>
-        <CssBaseline />
-        {/* <Grid
-          item
-          xs={false}
-          sm={4}
-          md={7}
-          sx={{
-            backgroundImage:
-              "url(https://img.freepik.com/free-photo/medium-shot-kid-working-cornfield_23-2149142840.jpg?w=900&t=st=1700771726~exp=1700772326~hmac=ef63127e315136f220658a3bf857d3e94644c5f367f336bab1762ad4676f02cc)",
-            backgroundRepeat: "no-repeat",
-            backgroundColor: (t) =>
-              t.palette.mode === "light"
-                ? t.palette.grey[50]
-                : t.palette.grey[900],
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        /> */}
-        <Grid
-          item
-          xs={12}
-          sm={8}
-          md={3.5}
-          component={Paper}
-          elevation={6}
-          square
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center", // Center the content vertically
-          }}
-        ></Grid>
-
-        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
-          <Box
-            sx={{
-              my: 8,
-              mx: 4,
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            <Avatar sx={{ m: 1, bgcolor: "#00390f" }}>
-              <LockOutlinedIcon />
-            </Avatar>
-
-            <Typography component="h1" variant="h5">
-              Sign in
+      <div style={styles.root}>
+        <div style={styles.container}>
+          <Link to="/" style={styles.logo}>
+            {/* Add your logo here */}
+            {/* <img
+              src={logo}
+              alt="Your Logo"
+              width="150"
+            /> */}
+          </Link>
+          <CssBaseline />
+          <Container maxWidth="xs">
+            <Typography component="h1" variant="h5" sx={{ textAlign: 'center' }}>
+              <b>Sign in</b>
             </Typography>
-            <Box
-              component="form"
-              noValidate
-              onSubmit={handleSubmit}
-              sx={{ mt: 1 }}
-            >
-              <TextField
-                margin="normal"
-                required
-                fullWidth
-                id="email"
-                label="Email Address"
-                name="email"
-                autoComplete="email"
-                autoFocus
-              />
-              <TextField
-                margin="normal"
-                required
-                fullWidth
-                name="password"
-                label="Password"
-                type="password"
-                id="password"
-                autoComplete="current-password"
-              />
-              <FormControlLabel
-                control={<Checkbox value="remember" color="primary" />}
-                label="Remember me"
-              />
-              <Button
-                type="submit"
-                fullWidth
-                variant="contained"
-                sx={{ mt: 3, mb: 2, backgroundColor: "#216c2e" }}
-              >
-                <strong>Sign In</strong>
-              </Button>
-              <Grid container spacing={2}>
-                <Grid item xs={12} sm={6}>
-                  <Link href="#" variant="body2">
-                    Forgot password?
-                  </Link>
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                  <Link
-                    to="/signup"
-                    variant="body2"
-                    style={{ textDecoration: "none" }}
-                  >
-                    Don't have an account? Create an account
-                  </Link>
-                </Grid>
+            <SignInForm onSubmit={onSubmit} />
+            <Grid container sx={{ mt: 2 }}>
+              <Grid item xs>
+                <Link href="/forgotpw" style={{ textDecoration: 'none' }}>
+                  Forgot password?
+                </Link>
               </Grid>
-              <Copyright sx={{ mt: 5 }} />
-            </Box>
-          </Box>
-        </Grid>
-      </Grid>
+              <Grid item>
+                <Link href="/signup" style={{ textDecoration: 'none' }}>
+                  Create an account
+                </Link>
+              </Grid>
+            </Grid>
+          </Container>
+        </div>
+      </div>
     </ThemeProvider>
   );
+}
+
+export default function SignInPage() {
+  const signIn = async (credentials) => {
+    try {
+      // Your sign-in logic using axios.post
+      // ...
+
+      // Placeholder alert for successful login
+      alert('Login successful! Redirect to the next page.');
+    } catch (error) {
+      console.error(error);
+      // Handle error, e.g., show error message to the user
+      alert('Error in sign-in');
+    }
+  };
+
+  return <SignIn onSubmit={signIn} />;
 }
