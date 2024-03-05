@@ -3,28 +3,22 @@ import { Route, Routes } from "react-router-dom";
 import { ClerkProvider, SignedIn, SignedOut, UserButton } from '@clerk/clerk-react'
 import Book from "./components/Book.js";
 import Home from "./components/Home";
-// import Booking from "./components/Booking.js";
-// import Types from "./components/Dash.js";
-// import types from "./components/Dashboard.js";
+
 import Floriculture from "./components/Floriculture.js";
 import Mixed from "./components/Mixed.js";
+import FarmerPage from "./components/modelfarmer.js";
 
 
-// import Explore from "./components/Dashboard.js";
-// import Farms from "./components/Farms.js";
 import Dashboard from "./components/Dashboard1.js";
-// import LandingPage from "./components/Home.js";
-// import Profile from "./components/Profile.js";
-// import HamburgerMenu from "./components/HamburgerMenu";
+
 import FarmAdmin from "./components/Admin.js";
 import BeeKeeping from "./components/BeeKeeping.js";
 import SignIn from "./components/SignIn.js";
 import SignUp from "./components/SignUp.js";
-// import AboutUs from "./components/aboutus.js";
-// import Poultry from "./components/poultry.js";
-// import Livestock from "./components/Livestock.js";
+import Poultry from "./components/poultry.js";
+
 import FarmTypes from "./components/types.js";
-// import UserProfile from "./components/user.js";
+
 import Farms from "./components/Farms.js";
 function App() {
   // const [isLogged, setIsLogged] = React.useState(true);
@@ -34,16 +28,13 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/admin" element={<FarmAdmin />}></Route>
-        {/* <Route path="/model" element={<FarmerPage />}></Route> */}
-        {/* { <Route path="/" element={<LandingPage />}></Route> */}
         <Route path="/signin" element={<SignIn />}></Route>
-        {/* <Route path="/aboutus" element={<AboutUs />}></Route> */}
+   
         <Route path="/signup" element={<SignUp />}></Route>
-        {/* <Route path="/farms" element={<Farms />}></Route> */}
+  
         <Route path="/Dashboard" element={<Dashboard />}></Route>
-        {/* <Route path="/poultry" element={<Poultry />}></Route> */}
-        {/* <Route path="/livestock" element={<Livestock />}></Route> */}
-        {/* <Route path="/Dashboard" element={<Dashboard />}></Route> */}
+        <Route path="/poultry" element={<Poultry />}></Route>
+
         <Route path="/Farms" element={<Farms />}></Route>
         <Route path="/Mixed" element={<Mixed />}></Route>
         <Route path="/Floriculture" element={<Floriculture />}></Route>
@@ -52,14 +43,13 @@ function App() {
         {/* { <Route path="/explore" element={<Explore />}></Route> */}
         <SignedIn path="/book" element={<Book />}></SignedIn>
         {/* <Route path="/booking" element={<Booking />}></Route> */}
+ 
+        <Route path="/book" element={<Book />}></Route>
+
         <Route path="/types" element={<FarmTypes />}></Route>
         
-        {/* <Route path="/profile" element={<Profile />}></Route> */}
-
-        {/* <Route path="/userprofile" element={<UserProfile />}></Route> */}
         <Route path="/BeeKeeping" element={<BeeKeeping />}></Route>
 
-        {/* <Route path="/userprofile" element={<UserProfile />}></Route> */}
       </Routes>
     </>
   );
