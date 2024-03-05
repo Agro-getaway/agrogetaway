@@ -94,7 +94,7 @@ import {
     return (
       <div
         style={{
-          backgroundImage: `url('https://images.pexels.com/photos/840111/pexels-photo-840111.jpeg?auto=compress&cs=tinysrgb&w=600')`,
+          backgroundColor: "F7C35F",
           backgroundSize: "cover",
           minHeight: "100vh",
           maxHeight: "150vh",
