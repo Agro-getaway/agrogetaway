@@ -55,7 +55,12 @@ const BeeKeeping = () => {
   };
 
   return (
-    <div className="farm-profile-container">
+    <div className="farm-profile-container"
+    style={{
+        backgroundColor: "FEFAE0",
+        backgroundSize: "cover",
+      }}
+    >
         <AppBar position="fixed" style={{ backgroundColor: "#216c2e" }}>
         <Toolbar>
           {/* Logo */}
