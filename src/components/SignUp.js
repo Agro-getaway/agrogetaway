@@ -200,7 +200,8 @@
 import * as React from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Link from '@mui/material/Link';
-// import { useNavigate } from 'react-router-dom';
+import axios from "axios";
+import { useNavigate } from 'react-router-dom';
 
 import {
   Container,
@@ -245,12 +246,32 @@ const styles = {
 
 export default function SignUp() {
   // const navigate = useNavigate();
+  const navigate = useNavigate();
+
+  const adduser = async (member) => {
+    try {
+      const response = await axios.post(
+        "https://backend-production-f4cc.up.railway.app/user/",
+        member
+      );
+      if (response.status === 201) {
+        alert("Account created successfully");
+        navigate("/types");
+      } else {
+        alert("Error in creating the account");
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
 
   const handleSignup = async (event) => {
     event.preventDefault();
     const data = new FormData(event.target);
 
     const signupCredentials = {
+      username: data.get('name'),
       email: data.get('email'),
       password: data.get('password'),
       // Add additional signup fields as needed
@@ -261,6 +282,8 @@ export default function SignUp() {
       return;
     }
 
+    const response = adduser(signupCredentials)
+    console.log(response)
     // TODO: Implement signup logic with your backend server
     alert('Signup functionality not implemented yet.');
     // Example: navigate('/login');

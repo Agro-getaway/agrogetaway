@@ -33,7 +33,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/admin" element={<FarmAdmin />}></Route>
-        <Route path="/model" element={<FarmerPage />}></Route>
+        {/* <Route path="/model" element={<FarmerPage />}></Route> */}
         {/* { <Route path="/" element={<LandingPage />}></Route> */}
         <Route path="/signin" element={<SignIn />}></Route>
         {/* <Route path="/aboutus" element={<AboutUs />}></Route> */}
