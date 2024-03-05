@@ -8,7 +8,8 @@ const images = [
 ];
 const aboutUsContent = {
   title: "About Us",
-  description: "We are a team of passionate individuals committed to revolutionizing the agricultural industry.",
+  description:
+    "We are a team of passionate individuals committed to revolutionizing the agricultural industry.",
   goals: "Our Goals",
   mission: "Our Mission",
   objectives: "Our Objectives",
@@ -37,7 +38,6 @@ const services = [
     imageUrl: "url_to_market_analysis_image",
   },
 ];
-
 
 const LandingPage = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -134,7 +134,11 @@ const LandingPage = () => {
                   }}
                 >
                   <div
-                    style={{ display: "flex", alignItems: "center", gap: "20px" }}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "20px",
+                    }}
                   >
                     <Link
                       to="/signup"
@@ -207,9 +211,9 @@ const LandingPage = () => {
                 fontFamily: "helvetica",
               }}
             >
-              Explore, learn, and experience the beauty of farming. Join farmers,
-              schools, and organizations on a journey to redefine the future of
-              agriculture.
+              Explore, learn, and experience the beauty of farming. Join
+              farmers, schools, and organizations on a journey to redefine the
+              future of agriculture.
             </Typography>
 
             <Typography
@@ -225,7 +229,7 @@ const LandingPage = () => {
               Farming Redefined
             </Typography>
 
-            <Link to="explore" style={{ textDecoration: "none" }}>
+            <Link to="farms" style={{ textDecoration: "none" }}>
               <Button
                 variant="contained"
                 size="large"
@@ -244,86 +248,97 @@ const LandingPage = () => {
         </Grid>
       </Paper>
 
-
       <Grid container justifyContent="center" style={{ padding: "40px 0" }}>
-          <Container>
-            <Typography
-              variant="h2"
-              align="center"
-              style={{
-                color: "white",
-                marginBottom: "20px",
-                fontFamily: "helvetica",
-              }}
-            >
-              {aboutUsContent.title}
-            </Typography>
-            <Typography
-              variant="body1"
-              align="center"
-              style={{
-                color: "white",
-                fontFamily: "helvetica",
-                marginBottom: "20px",
-              }}
-            >
-              {aboutUsContent.description}
-            </Typography>
+        <Container>
+          <Typography
+            variant="h2"
+            align="center"
+            style={{
+              color: "white",
+              marginBottom: "20px",
+              fontFamily: "helvetica",
+            }}
+          >
+            {aboutUsContent.title}
+          </Typography>
+          <Typography
+            variant="body1"
+            align="center"
+            style={{
+              color: "white",
+              fontFamily: "helvetica",
+              marginBottom: "20px",
+            }}
+          >
+            {aboutUsContent.description}
+          </Typography>
 
-            {/* Grid to organize goals, mission, objectives, and purpose */}
-            <Grid container spacing={3}>
-              <Grid item xs={12} sm={6}>
-                <Paper style={{ padding: "20px", backgroundColor: "#ffffffcc" }}>
-                  <Typography variant="h4" style={{ marginBottom: "10px", fontFamily: "helvetica" }}>
-                    {aboutUsContent.goals}
-                  </Typography>
-                  <Typography variant="body1" style={{ fontFamily: "helvetica" }}>
-                    - Goal 1<br />
-                    - Goal 2<br />
-                    - Goal 3<br />
-                    {/* Add your goals here */}
-                  </Typography>
-                </Paper>
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <Paper style={{ padding: "20px", backgroundColor: "#ffffffcc" }}>
-                  <Typography variant="h4" style={{ marginBottom: "10px", fontFamily: "helvetica" }}>
-                    {aboutUsContent.mission}
-                  </Typography>
-                  <Typography variant="body1" style={{ fontFamily: "helvetica" }}>
-                    {/* Add your mission statement here */}
-                    Our mission is to...
-                  </Typography>
-                </Paper>
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <Paper style={{ padding: "20px", backgroundColor: "#ffffffcc" }}>
-                  <Typography variant="h4" style={{ marginBottom: "10px", fontFamily: "helvetica" }}>
-                    {aboutUsContent.objectives}
-                  </Typography>
-                  <Typography variant="body1" style={{ fontFamily: "helvetica" }}>
-                    - Objective 1<br />
-                    - Objective 2<br />
-                    - Objective 3<br />
-                    {/* Add your objectives here */}
-                  </Typography>
-                </Paper>
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <Paper style={{ padding: "20px", backgroundColor: "#ffffffcc" }}>
-                  <Typography variant="h4" style={{ marginBottom: "10px", fontFamily: "helvetica" }}>
-                    {aboutUsContent.purpose}
-                  </Typography>
-                  <Typography variant="body1" style={{ fontFamily: "helvetica" }}>
-                    {/* Add purpose of the project */}
-                    The purpose of our project is to...
-                  </Typography>
-                </Paper>
-              </Grid>
+          {/* Grid to organize goals, mission, objectives, and purpose */}
+          <Grid container spacing={3}>
+            <Grid item xs={12} sm={6}>
+              <Paper style={{ padding: "20px", backgroundColor: "#ffffffcc" }}>
+                <Typography
+                  variant="h4"
+                  style={{ marginBottom: "10px", fontFamily: "helvetica" }}
+                >
+                  {aboutUsContent.goals}
+                </Typography>
+                <Typography variant="body1" style={{ fontFamily: "helvetica" }}>
+                  - Goal 1<br />
+                  - Goal 2<br />
+                  - Goal 3<br />
+                  {/* Add your goals here */}
+                </Typography>
+              </Paper>
             </Grid>
-          </Container>
-        </Grid>
-        
+            <Grid item xs={12} sm={6}>
+              <Paper style={{ padding: "20px", backgroundColor: "#ffffffcc" }}>
+                <Typography
+                  variant="h4"
+                  style={{ marginBottom: "10px", fontFamily: "helvetica" }}
+                >
+                  {aboutUsContent.mission}
+                </Typography>
+                <Typography variant="body1" style={{ fontFamily: "helvetica" }}>
+                  {/* Add your mission statement here */}
+                  Our mission is to...
+                </Typography>
+              </Paper>
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <Paper style={{ padding: "20px", backgroundColor: "#ffffffcc" }}>
+                <Typography
+                  variant="h4"
+                  style={{ marginBottom: "10px", fontFamily: "helvetica" }}
+                >
+                  {aboutUsContent.objectives}
+                </Typography>
+                <Typography variant="body1" style={{ fontFamily: "helvetica" }}>
+                  - Objective 1<br />
+                  - Objective 2<br />
+                  - Objective 3<br />
+                  {/* Add your objectives here */}
+                </Typography>
+              </Paper>
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <Paper style={{ padding: "20px", backgroundColor: "#ffffffcc" }}>
+                <Typography
+                  variant="h4"
+                  style={{ marginBottom: "10px", fontFamily: "helvetica" }}
+                >
+                  {aboutUsContent.purpose}
+                </Typography>
+                <Typography variant="body1" style={{ fontFamily: "helvetica" }}>
+                  {/* Add purpose of the project */}
+                  The purpose of our project is to...
+                </Typography>
+              </Paper>
+            </Grid>
+          </Grid>
+        </Container>
+      </Grid>
+
       {/* Services Section */}
       <Grid container justifyContent="center" style={{ padding: "40px 0" }}>
         <Container>
@@ -344,7 +359,11 @@ const LandingPage = () => {
                 <Paper
                   style={{ padding: "20px", backgroundColor: "#ffffffcc" }}
                 >
-                  <img src={service.imageUrl} alt={service.name} style={{ marginBottom: "10px", width: "100%" }} />
+                  <img
+                    src={service.imageUrl}
+                    alt={service.name}
+                    style={{ marginBottom: "10px", width: "100%" }}
+                  />
                   <Typography
                     variant="h4"
                     style={{ marginBottom: "10px", fontFamily: "helvetica" }}

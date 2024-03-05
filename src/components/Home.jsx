@@ -225,7 +225,7 @@ const LandingPage = () => {
               Farming Redefined
             </Typography>
 
-            <Link to="explore" style={{ textDecoration: "none" }}>
+            <Link to="farms" style={{ textDecoration: "none" }}>
               <Button
                 variant="contained"
                 size="large"
