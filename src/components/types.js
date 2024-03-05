@@ -216,7 +216,7 @@ const Types = () => {
                         {farm.conditions}
                       </Typography>
                       <div>
-                        <Link to="/farms">
+                        <Link to="/dashboard">
                           <Button
                             style={{
                               backgroundColor: "#216c2e",
